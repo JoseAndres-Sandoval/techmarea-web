@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Marea | Tienda y Servicio Técnico</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ENCABEZADO / NAVEGACIÓN -->
+    <header class="header">
+        <div class="logo">
+            <h1>TECH <span>MAREA</span></h1>
+        </div>
+        <nav class="navegacion">
+            <div class="menu-hamburguesa" id="btn-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul id="enlaces-menu"> 
+                <li><a href="#tienda">Tienda</a></li>
+                <li><a href="#categorias">Categorías</a></li>
+                <li><a href="#servicio">Servicio Técnico</a></li>
+                <li><a href="#seguimiento">Seguimiento</a></li>
+                
+                <!-- BOTONES DINÁMICOS DE AUTENTICACIÓN -->
+                <li id="menu-registro"><a href="#" class="btn-registro-menu" id="btn-abrir-registro">Registrarse / Ingresar</a></li>
+                
+                <li id="menu-usuario" style="display: none;">
+                    <a href="#" class="btn-registro-menu" id="btn-perfil" style="background-color: transparent; border: 1px solid var(--color-cian); color: var(--color-cian) !important; cursor: default; font-size: 0.9rem; padding: 6px 12px;">HOLA!</a>
+                </li>
+                <li id="menu-salir" style="display: none;">
+                    <a href="#" id="btn-cerrar-sesion" style="color: #ff4757; font-weight: bold; padding: 6px 16px;">Salir</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- BANNER PRINCIPAL DIVIDIDO (HERO) -->
+    <section class="banner-principal">
+        <div class="mitad-izquierda" id="tienda">
+            <div class="contenido-banner">
+                <h2>Explora la Tecnología</h2>
+                <p>Encuentra los mejores accesorios, periféricos y equipos para tu setup.</p>
+                <a href="#categorias" class="btn-neon">Ver Catálogo</a>
+            </div>
+        </div>
+
+        <div class="mitad-derecha" id="servicio">
+            <div class="contenido-banner">
+                <h2>Servicio Técnico Especializado</h2>
+                <p>Reparamos tus equipos con precisión, herramientas profesionales y garantía.</p>
+                <a href="#seguimiento" class="btn-neon">Consultar Reparación</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- GRILLA DE CATEGORÍAS -->
+    <section class="seccion-categorias" id="categorias">
+        <h2 class="titulo-seccion">Nuestras Categorías</h2>
+        
+        <div class="grilla-productos">
+            <div class="tarjeta-categoria">
+                <img src="assets/img/auricular.png" alt="Auriculares" class="imagen-producto">
+                <h3>Auriculares</h3>
+                <p>In-ear, over-ear y headsets gamer.</p>
+                <a href="auriculares.html" class="enlace-categoria">Ver más &rarr;</a>
+            </div>
+            <div class="tarjeta-categoria">
+                <img src="assets/img/parlante.png" alt="Parlantes" class="imagen-producto">
+                <h3>Parlantes</h3>
+                <p>Sonido portátil y sistemas de audio.</p>
+                <a href="parlantes.html" class="enlace-categoria">Ver más &rarr;</a>
+            </div>
+            <div class="tarjeta-categoria">
+                <img src="assets/img/Cables.png" alt="Cables" class="imagen-producto">
+                <h3>Cables</h3>
+                <p>HDMI, USB, Thunderbolt y más.</p>
+                <a href="cables.html" class="enlace-categoria">Ver más &rarr;</a>
+            </div>
+            <div class="tarjeta-categoria">
+                <img src="assets/img/Cargador.png" alt="Cargadores" class="imagen-producto">
+                <h3>Cargadores</h3>
+                <p>Rápidos y compatibles con tus dispositivos.</p>
+                <a href="cargador.html" class="enlace-categoria">Ver más &rarr;</a>
+            </div>
+            <div class="tarjeta-categoria">
+                <img src="assets/img/funda.png" alt="Funda" class="imagen-producto">
+                <h3>Fundas</h3>
+                <p>Protección para tu dispositivo.</p>
+                <a href="fundas.html" class="enlace-categoria">Ver más &rarr;</a>
+            </div>
+            <div class="tarjeta-categoria">
+                <img src="assets/img/powerbank.png" alt="PowerBank" class="imagen-producto">
+                <h3>PowerBank</h3>
+                <p>Recarga on-the-go con alta capacidad.</p>
+                <a href="powerbank.html" class="enlace-categoria">Ver más &rarr;</a>
+            </div>
+            <div class="tarjeta-categoria">
+                <img src="assets/img/reloj.png" alt="Reloj Inteligente" class="imagen-producto">
+                <h3>Reloj Inteligente</h3>
+                <p>Monitorea tu salud y actividad física.</p>
+                <a href="relojes.html" class="enlace-categoria">Ver más &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE SEGUIMIENTO -->
+    <section class="seccion-seguimiento" id="seguimiento" style="padding: 60px 20px; text-align: center; background-color: #111; color: white; border-top: 1px solid #333;">
+        <div class="contenedor-seguimiento" style="max-width: 600px; margin: 0 auto;">
+            <h2 class="titulo-seccion">Estado de tu <span>Reparación</span></h2>
+            <p style="margin-bottom: 30px; color: #ccc;">Ingresá el número de orden que te dimos en el local para conocer el progreso de tu equipo.</p>
+
+            <div class="caja-busqueda" style="display: flex; flex-direction: column; gap: 15px; max-width: 400px; margin: 0 auto;">
+                <input type="text" id="input-orden" class="input-orden" placeholder="Ej: 1001" style="padding: 15px; border-radius: 8px; border: 1px solid #444; background: #222; color: white; font-size: 1rem; text-align: center;">
+                <button id="btn-consultar-orden" class="btn-neon" style="padding: 15px; font-size: 1rem; cursor: pointer; border: none; width: 100%;">
+                    Consultar Estado
+                </button>
+            </div>
+
+            <div id="resultado-reparacion" style="margin-top: 30px; display: none; padding: 20px; background: #222; border-radius: 8px; border-left: 4px solid var(--color-cian); text-align: left;">
+                <h4 id="estado-titulo" style="color: var(--color-cian); margin-bottom: 10px; font-size: 1.2rem;"></h4>
+                <p id="estado-detalle" style="margin: 0; line-height: 1.5; color: #eee;"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PIE DE PÁGINA TIPO E-COMMERCE -->
+    <footer class="footer-ecommerce" id="contacto">
+        <div class="footer-grid">
+            <div class="footer-columna">
+                <h3>TECH <span>MAREA</span></h3>
+                <p>Tu tienda de confianza para encontrar los mejores accesorios, periféricos y un servicio técnico de excelencia para tus dispositivos.</p>
+            </div>
+            <div class="footer-columna">
+                <h4>Navegación</h4>
+                <a href="#tienda">Nuestra Tienda</a>
+                <a href="#categorias">Ver Categorías</a>
+                <a href="#servicio">Servicio Técnico</a>
+                <a href="#seguimiento">Seguimiento de Órdenes</a>
+            </div>
+            <div class="footer-columna">
+                <h4>Contacto</h4>
+                <p>📍 Av. Tecnológica 404, Mendoza</p>
+                <p>📞 +54 9 261 313-2991</p>
+                <p>✉️ info@techmarea.com.ar</p>
+                <div class="redes-ecommerce">
+                    <a href="#">Instagram</a>
+                    <a href="#">Facebook</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Tech Marea. Todos los derechos reservados.</p>
+            <div class="medios-pago">
+                <span>💳 Pagos seguros con MercadoPago, Débito y Crédito.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BURBUJA DE WHATSAPP FLOTANTE -->
+    <a href="https://wa.me/5492613132991?text=%C2%A1Hola%20Tech%20Marea!%20%F0%9F%8C%8A%20Tengo%20una%20consulta%20desde%20la%20p%C3%A1gina%20web." target="_blank" class="whatsapp-flotante" title="Chatear con nosotros">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+
+    <!-- ========================================== -->
+    <!-- MODALES DE AUTENTICACIÓN -->
+    <!-- ========================================== -->
+    
+    <!-- 1. MODAL DE REGISTRO -->
+    <div id="modal-registro">
+        <div class="modal-contenido-registro">
+            <span class="cerrar-modal-registro" id="btn-cerrar-registro">&times;</span>
+            <h3>Crear Cuenta</h3>
+            <form id="form-registro-auth">
+                <input type="text" id="reg-nombre" placeholder="Nombre completo" required>
+                <input type="email" id="reg-email" placeholder="Correo electrónico" required>
+                <input type="password" id="reg-password" placeholder="Contraseña" required>
+                <button type="submit" class="btn-neon" style="width: 100%; margin-top: 10px;">Registrarse</button>
+            </form>
+            <p style="margin-top: 20px; font-size: 0.9rem; text-align: center; color: #ccc;">
+                ¿Ya tenés cuenta? <a href="#" id="link-ir-login" style="color: var(--color-cian); text-decoration: none; font-weight: bold;">Iniciar sesión</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- 2. MODAL DE LOGIN -->
+    <div id="modal-login" style="display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.85); backdrop-filter: blur(5px); align-items: center; justify-content: center;">
+        <div class="modal-contenido-registro">
+            <span class="cerrar-modal-registro" id="btn-cerrar-login">&times;</span>
+            <h3>Iniciar Sesión</h3>
+            <form id="form-login-auth">
+                <input type="email" id="login-email" placeholder="Correo electrónico" required>
+                <input type="password" id="login-password" placeholder="Contraseña" required>
+                <button type="submit" class="btn-neon" style="width: 100%; margin-top: 10px;">Ingresar</button>
+            </form>
+            <p style="margin-top: 20px; font-size: 0.9rem; text-align: center; color: #ccc;">
+                ¿No tenés cuenta? <a href="#" id="link-ir-registro" style="color: var(--color-cian); text-decoration: none; font-weight: bold;">Registrate acá</a>
+            </p>
+        </div>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

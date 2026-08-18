@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cables | Tech Marea</title>
+    <!-- Fuentes y CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="header">
+        <div class="logo">
+            <h1>TECH <span>MAREA</span></h1>
+        </div>
+        
+        <!-- Botón Hamburguesa -->
+        <div class="menu-hamburguesa" id="btn-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav class="navegacion" id="enlaces-menu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#tienda">Tienda</a></li>
+                <li><a href="index.html#servicio">Servicio Técnico</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                
+                <!-- Ícono del carrito -->
+                <li>
+                    <a href="#" id="btn-abrir-carrito" class="icono-carrito">
+                        🛒 Carrito <span id="contador-carrito">0</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- VENTANA DEL CARRITO -->
+    <div id="ventana-carrito" class="carrito-oculto">
+        <div class="cabecera-carrito">
+            <h3>Tu Compra</h3>
+            <button id="btn-cerrar-carrito" class="btn-cerrar">X</button>
+        </div>
+        
+        <div id="lista-carrito-items">
+            <p class="carrito-vacio">El carrito está vacío.</p>
+        </div>
+        
+        <div class="pie-carrito">
+            <h4>Total: <span id="total-carrito">$0</span></h4>
+            <div style="display: flex; gap: 10px; margin-top: 15px;">
+                <button id="btn-vaciar-carrito" style="width: 40%; padding: 10px; background: transparent; border: 1px solid #ff4c4c; color: #ff4c4c; font-weight: bold; cursor: pointer; text-transform: uppercase; letter-spacing: 1px; font-family: inherit; transition: 0.3s;">
+                    VACIAR
+                </button>
+                <button id="btn-pagar" style="width: 60%; padding: 10px; background: transparent; border: 1px solid #00d2ff; color: #00d2ff; font-weight: bold; cursor: pointer; text-transform: uppercase; letter-spacing: 1px; font-family: inherit; transition: 0.3s;">
+                    IR A PAGAR
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECCIÓN CATÁLOGO DE PRODUCTOS -->
+    <main class="seccion-catalogo">
+        <h2 class="titulo-seccion">Catálogo de <span>Cables</span></h2>
+        
+        <div class="controles-catalogo">
+            <input type="text" id="buscador-productos" placeholder="Buscar cable... (ej: Sync, USB-C)" class="input-busqueda">
+            
+            <select id="filtro-categorias" class="select-categoria">
+                <option value="todos">Todos los tipos</option>
+                <option value="usb-c">USB Type-C</option>
+                <option value="lightning">iPhone / Lightning</option>
+                <option value="hdmi">HDMI / Video</option>
+            </select>
+        </div>
+        
+        <div id="contenedor-productos" class="grilla-articulos">
+            <!-- Los productos se generarán con JS -->
+        </div>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer" id="contacto">
+        <div class="footer-copyright">
+            <p>&copy; 2026 Tech Marea. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- MODAL PARA ZOOM DE IMÁGENES -->
+    <div id="modalImagen" class="modal-zoom">
+        <span class="cerrar-modal">&times;</span>
+        <span class="flecha-modal izq" id="flechaIzq">&#10094;</span>
+        <img class="modal-contenido" id="imgAmpliacion">
+        <span class="flecha-modal der" id="flechaDer">&#10095;</span>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script type="module" src="js/cables.js"></script>
+</body>
+</html>

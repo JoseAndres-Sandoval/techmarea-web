@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Marea | Panel de Administración</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body style="background-color: #0b0b0b; color: white; font-family: 'Montserrat', sans-serif; padding: 40px 20px;">
+
+    <div style="max-width: 650px; margin: 0 auto; background: #161616; padding: 30px; border-radius: 12px; border: 1px solid #333;">
+        
+        <!-- PANTALLA 1: LOGIN (CONTRASEÑA) -->
+        <div id="seccion-login">
+            <h2 style="color: var(--color-cian); text-align: center; margin-bottom: 20px;">🔒 Acceso Restringido</h2>
+            <p style="text-align: center; color: #aaa; margin-bottom: 20px;">Ingresá la contraseña de administrador para continuar.</p>
+            
+            <div style="display: flex; flex-direction: column; gap: 15px;">
+                <input type="password" id="input-password" placeholder="Contraseña" style="padding: 15px; border-radius: 8px; border: 1px solid #444; background: #222; color: white; font-size: 1rem; text-align: center;">
+                <button id="btn-login" class="btn-neon" style="padding: 15px; font-size: 1rem; cursor: pointer; border: none;">Ingresar</button>
+            </div>
+        </div>
+
+        <!-- PANTALLA 2: PANEL DE CARGA Y GESTIÓN (OCULTO HASTA PONER CONTRASEÑA) -->
+        <div id="seccion-panel" style="display: none;">
+            <h2 style="color: var(--color-cian); text-align: center; margin-bottom: 10px;">Panel de Administración</h2>
+            <p style="text-align: center; color: #aaa; margin-bottom: 30px; font-size: 0.9rem;">Cargá nuevas órdenes o eliminalas cuando el cliente retire su equipo.</p>
+            
+            <form id="form-reparacion" style="display: flex; flex-direction: column; gap: 15px; margin-bottom: 40px;">
+                <div>
+                    <label style="display: block; margin-bottom: 5px; font-size: 0.9rem; color: #ccc;">Número de Orden:</label>
+                    <input type="text" id="admin-orden" placeholder="Ej: 1004" required style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #444; background: #222; color: white; box-sizing: border-box;">
+                </div>
+
+                <div>
+                    <label style="display: block; margin-bottom: 5px; font-size: 0.9rem; color: #ccc;">Equipo / Modelo:</label>
+                    <input type="text" id="admin-equipo" placeholder="Ej: Motorola Edge 30" required style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #444; background: #222; color: white; box-sizing: border-box;">
+                </div>
+
+                <div>
+                    <label style="display: block; margin-bottom: 5px; font-size: 0.9rem; color: #ccc;">Estado actual:</label>
+                    <select id="admin-estado" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #444; background: #222; color: white; box-sizing: border-box;">
+                        <option value="En revisión">En revisión</option>
+                        <option value="Esperando repuesto">Esperando repuesto</option>
+                        <option value="Listo para retirar">Listo para retirar</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label style="display: block; margin-bottom: 5px; font-size: 0.9rem; color: #ccc;">Detalle o Diagnóstico:</label>
+                    <textarea id="admin-detalle" rows="3" placeholder="Ej: Cambio de módulo completado con éxito." required style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #444; background: #222; color: white; box-sizing: border-box; resize: none;"></textarea>
+                </div>
+
+                <button type="submit" class="btn-neon" style="padding: 15px; font-size: 1rem; cursor: pointer; border: none; margin-top: 10px;">Guardar Orden en la Nube</button>
+            </form>
+            
+            <div id="mensaje-exito" style="display: none; margin-bottom: 30px; padding: 12px; background: #0b3d0b; color: #4eff4e; text-align: center; border-radius: 6px; font-weight: 600;">
+                ¡Orden guardada con éxito en Firebase!
+            </div>
+
+            <!-- SECCIÓN DE ÓRDENES ACTIVAS / ELIMINAR -->
+            <hr style="border: 0; border-top: 1px solid #333; margin-bottom: 30px;">
+            <h3 style="color: white; margin-bottom: 15px; font-size: 1.2rem;">📋 Órdenes Activas en el Local</h3>
+            <div id="lista-ordenes-admin" style="display: flex; flex-direction: column; gap: 10px;">
+                <!-- Acá se cargan dinámicamente las órdenes -->
+                <p style="color: #777; font-size: 0.9rem;">Cargando órdenes...</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="module" src="js/admin.js"></script>
+</body>
+</html>
