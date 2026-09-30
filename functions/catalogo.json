@@ -1,0 +1,382 @@
+{
+  "1": {
+    "nombre": "Xaea Vibe Box 30W",
+    "precio": 45000,
+    "archivo": "parlantes"
+  },
+  "2": {
+    "nombre": "Xaea Dual Storm",
+    "precio": 68500,
+    "archivo": "parlantes"
+  },
+  "3": {
+    "nombre": "Xaea Bloomline - Azul",
+    "precio": 35000,
+    "archivo": "parlantes"
+  },
+  "4": {
+    "nombre": "Xaea Bloomline - Rojo",
+    "precio": 35000,
+    "archivo": "parlantes"
+  },
+  "5": {
+    "nombre": "Xaea Bloomline - Negro",
+    "precio": 35000,
+    "archivo": "parlantes"
+  },
+  "6": {
+    "nombre": "Parlante Torre Xaea",
+    "precio": 46531,
+    "archivo": "parlantes"
+  },
+  "7": {
+    "nombre": "Parlante Halo 3\"",
+    "precio": 28000,
+    "archivo": "parlantes"
+  },
+  "8": {
+    "nombre": "Parlante BT 3\"x2 MODV-003U",
+    "precio": 22321,
+    "archivo": "parlantes"
+  },
+  "9": {
+    "nombre": "Parlante Xaea MODX0050 5W GRIS",
+    "precio": 33000,
+    "archivo": "parlantes"
+  },
+  "10": {
+    "nombre": "Parlante Xaea MODX0050 5W ROJO",
+    "precio": 33000,
+    "archivo": "parlantes"
+  },
+  "11": {
+    "nombre": "Xaea Dot Mini 3\" - Negro",
+    "precio": 17291,
+    "archivo": "parlantes"
+  },
+  "12": {
+    "nombre": "Xaea Dot Mini 3\" - Rojo",
+    "precio": 17291,
+    "archivo": "parlantes"
+  },
+  "13": {
+    "nombre": "Xaea Dot Mini 3\" - Verde",
+    "precio": 17291,
+    "archivo": "parlantes"
+  },
+  "14": {
+    "nombre": "Xaea Exo Mini 3\" - Azul",
+    "precio": 17307,
+    "archivo": "parlantes"
+  },
+  "15": {
+    "nombre": "Xaea Exo Mini 3\" - Camuflado",
+    "precio": 17307,
+    "archivo": "parlantes"
+  },
+  "16": {
+    "nombre": "Xaea Exo Mini 3\" - Negro",
+    "precio": 17307,
+    "archivo": "parlantes"
+  },
+  "17": {
+    "nombre": "Xaea Exo Mini 3\" - Rojo",
+    "precio": 17307,
+    "archivo": "parlantes"
+  },
+  "18": {
+    "nombre": "Xaea Groove 3\" - Negro",
+    "precio": 12673,
+    "archivo": "parlantes"
+  },
+  "19": {
+    "nombre": "Xaea Groove 3\" - Azul",
+    "precio": 12673,
+    "archivo": "parlantes"
+  },
+  "20": {
+    "nombre": "Xaea Groove 3\" - Rojo",
+    "precio": 12673,
+    "archivo": "parlantes"
+  },
+  "21": {
+    "nombre": "Xaea Groove 3\" - Verde",
+    "precio": 12673,
+    "archivo": "parlantes"
+  },
+  "22": {
+    "nombre": "Xaea MODX-004J 3\" - Celeste",
+    "precio": 15000,
+    "archivo": "parlantes"
+  },
+  "23": {
+    "nombre": "Xaea MODX-004J 3\" - Negro",
+    "precio": 15000,
+    "archivo": "parlantes"
+  },
+  "24": {
+    "nombre": "Xaea MODX-004J 3\" - Rosado",
+    "precio": 15000,
+    "archivo": "parlantes"
+  },
+  "25": {
+    "nombre": "Xaea MODX-004J 3\" - Verde",
+    "precio": 15000,
+    "archivo": "parlantes"
+  },
+  "26": {
+    "nombre": "Xaea Blade MODX-106 3\" - Azul",
+    "precio": 11441,
+    "archivo": "parlantes"
+  },
+  "27": {
+    "nombre": "Xaea Blade MODX-106 3\" - Camuflado",
+    "precio": 11441,
+    "archivo": "parlantes"
+  },
+  "28": {
+    "nombre": "Xaea Blade MODX-106 3\" - Negro",
+    "precio": 11441,
+    "archivo": "parlantes"
+  },
+  "29": {
+    "nombre": "Xaea Blade MODX-106 3\" - Rojo",
+    "precio": 11441,
+    "archivo": "parlantes"
+  },
+  "100": {
+    "nombre": "Auricular Xaea MODX-701 M103 - Verde",
+    "precio": 15000,
+    "archivo": "auriculares"
+  },
+  "101": {
+    "nombre": "Auricular Xaea MODX-701 M103 - Celeste",
+    "precio": 15000,
+    "archivo": "auriculares"
+  },
+  "102": {
+    "nombre": "Auricular BT MODX-708 Orejas de Gato - Rosa",
+    "precio": 7124,
+    "archivo": "auriculares"
+  },
+  "103": {
+    "nombre": "Auricular BT MODX-708 Orejas de Gato - Violeta",
+    "precio": 7124,
+    "archivo": "auriculares"
+  },
+  "104": {
+    "nombre": "Auricular TWS ANC MODX-00AI XAEA (Beige) - Beige",
+    "precio": 17423,
+    "archivo": "auriculares"
+  },
+  "105": {
+    "nombre": "Auricular TWS ANC MODX-00AI XAEA (Negro) - Negro",
+    "precio": 17423,
+    "archivo": "auriculares"
+  },
+  "106": {
+    "nombre": "Auricular TWS ANC MODX-00AI XAEA (Blanco) - Blanco",
+    "precio": 17423,
+    "archivo": "auriculares"
+  },
+  "107": {
+    "nombre": "Auricular TWS MODX-056 Runbeat XAEA (Naranja) - Naranja",
+    "precio": 25174,
+    "archivo": "auriculares"
+  },
+  "108": {
+    "nombre": "Auricular TWS MODX-056 Runbeat XAEA (Negro) - Negro",
+    "precio": 25174,
+    "archivo": "auriculares"
+  },
+  "109": {
+    "nombre": "Auricular TWS MODX-056 Runbeat XAEA (Azul) - Azul",
+    "precio": 25174,
+    "archivo": "auriculares"
+  },
+  "110": {
+    "nombre": "Auricular TWS MODX-056 Runbeat XAEA (Verde) - Verde",
+    "precio": 25174,
+    "archivo": "auriculares"
+  },
+  "111": {
+    "nombre": "Auricular TWS MODX-056 Runbeat XAEA (Lila) - Lila",
+    "precio": 25174,
+    "archivo": "auriculares"
+  },
+  "112": {
+    "nombre": "Auricular TWS ANC MODX-0024 XAEA (Negro) - Negro",
+    "precio": 14966,
+    "archivo": "auriculares"
+  },
+  "113": {
+    "nombre": "Auricular TWS ANC MODX-0023 XAEA (Negro) - Negro",
+    "precio": 13301,
+    "archivo": "auriculares"
+  },
+  "114": {
+    "nombre": "Auricular TWS ANC MODX-0023 XAEA (Blanco) - Blanco",
+    "precio": 13301,
+    "archivo": "auriculares"
+  },
+  "115": {
+    "nombre": "Auricular TWS NOX MODX-051 XAEA (Negro) - Negro",
+    "precio": 21156,
+    "archivo": "auriculares"
+  },
+  "116": {
+    "nombre": "Auricular TWS NOX MODX-051 XAEA (Blanco) - Blanco",
+    "precio": 21156,
+    "archivo": "auriculares"
+  },
+  "117": {
+    "nombre": "Auricular Manos Libres MODX-045 Thunder-C XAEA (Negro) - Negro",
+    "precio": 4441,
+    "archivo": "auriculares"
+  },
+  "200": {
+    "nombre": "Cable Sync-C Plus MODX-008S XAEA (Blanco) - Blanco",
+    "precio": 2475,
+    "archivo": "cables"
+  },
+  "201": {
+    "nombre": "Cable TC-TC AX MODX-002B XAEA (Violeta) - Violeta",
+    "precio": 1751,
+    "archivo": "cables"
+  },
+  "202": {
+    "nombre": "Cable Tipo C - Lightning MODX-098 Athenea XAEA (Celeste) - Celeste",
+    "precio": 3865,
+    "archivo": "cables"
+  },
+  "203": {
+    "nombre": "Cable Tipo C - Tipo C MODX-097 Athenea XAEA (Beige) - Beige",
+    "precio": 3042,
+    "archivo": "cables"
+  },
+  "204": {
+    "nombre": "Cable Tipo C - Tipo C MODX-097 Athenea XAEA (Negro) - Negro",
+    "precio": 3042,
+    "archivo": "cables"
+  },
+  "205": {
+    "nombre": "Cable Tipo C - Tipo C MODX-097 Athenea XAEA (Azul Metal) - Azul Metal",
+    "precio": 3042,
+    "archivo": "cables"
+  },
+  "206": {
+    "nombre": "Cable Tipo C - Tipo C MODX-097 Athenea XAEA (Celeste) - Celeste",
+    "precio": 3042,
+    "archivo": "cables"
+  },
+  "207": {
+    "nombre": "Cable Tipo C - Tipo C MODX-097 Athenea XAEA (Lila) - Lila",
+    "precio": 3042,
+    "archivo": "cables"
+  },
+  "208": {
+    "nombre": "Cable Tipo C - Tipo C MODX-105 Hera XAEA (Azul) - Azul",
+    "precio": 2667,
+    "archivo": "cables"
+  },
+  "209": {
+    "nombre": "Cable Tipo C - Tipo C MODX-105 Hera XAEA (Champagne) - Champagne",
+    "precio": 2667,
+    "archivo": "cables"
+  },
+  "210": {
+    "nombre": "Cable USB Lightning MODX-104 Zeus XAEA (Dorado) - Dorado",
+    "precio": 2518,
+    "archivo": "cables"
+  },
+  "211": {
+    "nombre": "Cable USB Lightning MODX-104 Zeus XAEA (Plata) - Plata",
+    "precio": 2518,
+    "archivo": "cables"
+  },
+  "212": {
+    "nombre": "Cable USB Lightning MODX-104 Zeus XAEA (Marrón) - Marrón",
+    "precio": 2518,
+    "archivo": "cables"
+  },
+  "213": {
+    "nombre": "Cable USB Lightning MODX-104 Zeus XAEA (Verde) - Verde",
+    "precio": 2518,
+    "archivo": "cables"
+  },
+  "214": {
+    "nombre": "Cable USB V8 MOD 73 Qualy 4.4 AMP XAEA (Blanco) - Blanco",
+    "precio": 1363,
+    "archivo": "cables"
+  },
+  "215": {
+    "nombre": "Cable USB Tipo C MOD 74 Qualy 4.4 AMP XAEA (Blanco) - Blanco",
+    "precio": 1363,
+    "archivo": "cables"
+  },
+  "216": {
+    "nombre": "Cable USB Lightning MOD96 Wolverine XAEA (Negro) - Negro",
+    "precio": 2116,
+    "archivo": "cables"
+  },
+  "217": {
+    "nombre": "Cable USB MODX-026 Thor Tipo C XAEA (Rojo) - Rojo",
+    "precio": 2237,
+    "archivo": "cables"
+  },
+  "218": {
+    "nombre": "Cable USB MODX-026 Thor Tipo C XAEA (Negro) - Negro",
+    "precio": 2237,
+    "archivo": "cables"
+  },
+  "300": {
+    "nombre": "Adaptador Cargador 220V MODX-507 Raptor 45W XAEA (Blanco) - Blanco",
+    "precio": 4479,
+    "archivo": "cargador"
+  },
+  "301": {
+    "nombre": "Adaptador Cargador 220V MODX-516 Hyper 55W XAEA (Blanco) - Blanco",
+    "precio": 10518,
+    "archivo": "cargador"
+  },
+  "302": {
+    "nombre": "Adaptador Cargador 220V MODX-616 Extreme 65W XAEA (Blanco) - Blanco",
+    "precio": 13655,
+    "archivo": "cargador"
+  },
+  "303": {
+    "nombre": "Adaptador Cargador 220V MODX-A016 Optimum 45W XAEA (Blanco) - Blanco",
+    "precio": 5289,
+    "archivo": "cargador"
+  },
+  "304": {
+    "nombre": "Cargador Intensify 30W 1USB 1TC + Cable USB a Tipo C XAEA (Blanco) - Blanco",
+    "precio": 5303,
+    "archivo": "cargador"
+  },
+  "305": {
+    "nombre": "Adaptador Cargador Auto 12V Voltair MODX-00C4 45W 2 Tipo C XAEA - Negro",
+    "precio": 9268,
+    "archivo": "cargador"
+  },
+  "306": {
+    "nombre": "Adaptador Cargador Auto 12V Voltair MODX-517 3A 1USB + 1TC XAEA (Verde) - Verde",
+    "precio": 7125,
+    "archivo": "cargador"
+  },
+  "400": {
+    "nombre": "Power Bank Inalámbrico Nuvia G1 MODX-000K XAEA (Negro) - Negro",
+    "precio": 23297,
+    "archivo": "powerbank"
+  },
+  "401": {
+    "nombre": "Power Bank Inalámbrico Nuvia G1 MODX-000K XAEA (Blanco) - Blanco",
+    "precio": 23297,
+    "archivo": "powerbank"
+  },
+  "402": {
+    "nombre": "Power Bank Inalámbrico Nuvia G1 MODX-000K XAEA (Verde) - Verde",
+    "precio": 23297,
+    "archivo": "powerbank"
+  }
+}

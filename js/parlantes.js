@@ -1,22 +1,9 @@
 // =========================================
 // INICIALIZACIÓN DE FIREBASE
 // =========================================
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
-import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
-
-const firebaseConfig = {
-    apiKey: "AIzaSyCHV9m2iYtx70sqT0C5AlSiRQIrP2AL6zI",
-    authDomain: "tech-marea-db.firebaseapp.com",
-    projectId: "tech-marea-db",
-    storageBucket: "tech-marea-db.firebasestorage.app",
-    messagingSenderId: "120154130587",
-    appId: "1:120154130587:web:390fd3c12fc7b3460cde3e"
-};
-
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-const auth = getAuth(app);
+import { doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+import { db, auth, pagarConMercadoPago, WHATSAPP } from "./config.js";
 
 // =========================================
 // 1. BASE DE DATOS DE PRODUCTOS (PARLANTES: 1 - 99)
@@ -26,7 +13,7 @@ const catalogoParlantes = [
         id: 1, 
         nombre: "Xaea Vibe Box 30W",
         categoria: "portatil", 
-        imagen: "assets/img/parlante-30W.jpeg",
+        imagen: "assets/img/parlante-30W.webp",
         specs: "<li><strong>Potencia:</strong> 30W (2 altavoces de 15W)</li><li><strong>Conectividad:</strong> Bluetooth y función TWS</li><li><strong>Puertos:</strong> USB, Micro SD, AUX, Tipo-C</li><li><strong>Batería:</strong> 2000 mAh recargable</li><li><strong>Extras:</strong> LED RGB y protección agua IPX5</li>",
         precio: 45000 
     },
@@ -34,7 +21,7 @@ const catalogoParlantes = [
         id: 2,
         nombre: "Xaea Dual Storm",
         categoria: "modular", 
-        imagen: "assets/img/Parlante Inalambrico Xaea Dual.png",
+        imagen: "assets/img/Parlante Inalambrico Xaea Dual.webp",
         specs: "<li><strong>Diseño:</strong> Modular 2 en 1 (se puede separar)</li><li><strong>Potencia:</strong> 10W total (5W por cada módulo)</li><li><strong>Conectividad:</strong> Bluetooth 5.3, FM, MicroSD y TWS</li><li><strong>Batería:</strong> 1200 mAh por módulo (Tipo-C)</li><li><strong>Extras:</strong> RGB dinámico, IPX6 y micrófono</li>",
         precio: 68500
     },
@@ -43,8 +30,8 @@ const catalogoParlantes = [
         nombre: "Xaea Bloomline",
         categoria: "portatil", 
         color: "Azul", 
-        imagen: "assets/img/PARLANTE 3” BLOOMLINE – MODX-0051 – XAEA – AZUL.png", 
-        imagenHover: "assets/img/PARLANTE 3” BLOOMLINE – MODX-0051 – XAEA – AZUL (2).png", 
+        imagen: "assets/img/PARLANTE 3” BLOOMLINE – MODX-0051 – XAEA – AZUL.webp", 
+        imagenHover: "assets/img/PARLANTE 3” BLOOMLINE – MODX-0051 – XAEA – AZUL (2).webp", 
         specs: "<li><strong>Potencia:</strong> 10W (Estéreo, 2 parlantes)</li><li><strong>Conectividad:</strong> Bluetooth y Sintonizador de Radio</li><li><strong>Color:</strong> Azul</li><li><strong>Batería:</strong> Recargable (Tiempo de carga: 1h)</li><li><strong>Voltaje:</strong> 5V</li><li><strong>Extras:</strong> Luces LED integradas y diseño portátil</li>",
         precio: 35000
     },
@@ -53,8 +40,8 @@ const catalogoParlantes = [
         nombre: "Xaea Bloomline",
         categoria: "portatil", 
         color: "Rojo",
-        imagen: "assets/img/PARLANTE 3” BLOOMLINE – MODX-0051 – XAEA – ROJO.png", 
-        imagenHover: "assets/img/PARLANTE 3” BLOOMLINE – MODX-0051 – XAEA – ROJO - 1.png", 
+        imagen: "assets/img/PARLANTE 3” BLOOMLINE – MODX-0051 – XAEA – ROJO.webp", 
+        imagenHover: "assets/img/PARLANTE 3” BLOOMLINE – MODX-0051 – XAEA – ROJO - 1.webp", 
         specs: "<li><strong>Potencia:</strong> 10W (Estéreo, 2 parlantes)</li><li><strong>Conectividad:</strong> Bluetooth y Sintonizador de Radio</li><li><strong>Color:</strong> Rojo</li><li><strong>Batería:</strong> Recargable (Tiempo de carga: 1h)</li><li><strong>Voltaje:</strong> 5V</li><li><strong>Extras:</strong> Luces LED integradas y diseño portátil</li>",
         precio: 35000
     },
@@ -63,8 +50,8 @@ const catalogoParlantes = [
         nombre: "Xaea Bloomline",
         categoria: "portatil", 
         color: "Negro",
-        imagen: "assets/img/PARLANTE 3” BLOOMLINE – MODX-0051 – XAEA – NEGRO.png", 
-        imagenHover: "assets/img/PARLANTE 3” BLOOMLINE – MODX-0051 – XAEA – NEGRO -1.png", 
+        imagen: "assets/img/PARLANTE 3” BLOOMLINE – MODX-0051 – XAEA – NEGRO.webp", 
+        imagenHover: "assets/img/PARLANTE 3” BLOOMLINE – MODX-0051 – XAEA – NEGRO -1.webp", 
         specs: "<li><strong>Potencia:</strong> 10W (Estéreo, 2 parlantes)</li><li><strong>Conectividad:</strong> Bluetooth y Sintonizador de Radio</li><li><strong>Color:</strong> Negro</li><li><strong>Batería:</strong> Recargable (Tiempo de carga: 1h)</li><li><strong>Voltaje:</strong> 5V</li><li><strong>Extras:</strong> Luces LED integradas y diseño portátil</li>",
         precio: 35000
     },
@@ -72,7 +59,7 @@ const catalogoParlantes = [
         id: 6,
         nombre: "Parlante Torre Xaea",
         categoria: "torre", 
-        imagen: "assets/img/PARLANTE TORRE 5”X2 MODX-003S – XAEA – NEGRO.png",
+        imagen: "assets/img/PARLANTE TORRE 5”X2 MODX-003S – XAEA – NEGRO.webp",
         specs: "<li><strong>Tipo:</strong> Torre (Ideal para living o quincho)</li><li><strong>Potencia:</strong> 10W (2 parlantes integrados)</li><li><strong>Conectividad:</strong> Bluetooth y radio FM</li><li><strong>Energía:</strong> Batería recargable (Voltaje 220V)</li><li><strong>Extras:</strong> Luces LED y micrófono interno</li>",
         precio: 46531
     },
@@ -80,8 +67,8 @@ const catalogoParlantes = [
         id: 7,
         nombre: "Parlante Halo 3\"",
         categoria: "portatil", 
-        imagen: "assets/img/Parlante 3'' Modx-004r - Xaea - Negro-1.png",
-        imagenHover: "assets/img/Parlante 3'' Modx-004r - Xaea - Negro2.png", 
+        imagen: "assets/img/Parlante 3'' Modx-004r - Xaea - Negro-1.webp",
+        imagenHover: "assets/img/Parlante 3'' Modx-004r - Xaea - Negro2.webp", 
         specs: "<li><strong>Potencia:</strong> 8W (Altavoz compacto de 3 pulgadas)</li><li><strong>Conectividad:</strong> Bluetooth, FM, USB, MicroSD (TF) y TWS</li><li><strong>Batería:</strong> 1200 mAh (Hasta 4hs de reproducción)</li><li><strong>Carga:</strong> Rápida mediante puerto USB Tipo-C</li><li><strong>Extras:</strong> Iluminación LED integrada</li>",
         precio: 28000
     },
@@ -89,7 +76,7 @@ const catalogoParlantes = [
         id: 8,
         nombre: "Parlante BT 3\"x2 MODV-003U",
         categoria: "portatil",
-        imagen: "assets/img/PARLANTE 3”X2 CH5 MODV-003U – VARIOS – NEGRO.png",
+        imagen: "assets/img/PARLANTE 3”X2 CH5 MODV-003U – VARIOS – NEGRO.webp",
         specs: "<li><strong>Potencia:</strong> 10W (Doble parlante de 3\")</li><li><strong>Conectividad:</strong> Bluetooth, FM, USB, MicroSD (TF), AUX y TWS</li><li><strong>Batería:</strong> 1200mAh (Carga rápida Tipo-C)</li><li><strong>Medidas:</strong> 21 x 8 x 10 cm</li><li><strong>Extras:</strong> Luces LED RGB y sonido envolvente</li>",
         precio: 22321
     },
@@ -97,7 +84,7 @@ const catalogoParlantes = [
         id: 9,
         nombre: "Parlante Xaea MODX0050 5W GRIS",
         categoria: "portatil",
-        imagen: "assets/img/Parlante Xaea Modx-0050 3 5w gris.png", 
+        imagen: "assets/img/Parlante Xaea Modx-0050 3 5w gris.webp", 
         specs: "<li><strong>Potencia:</strong> 5W</li><li><strong>Conectividad:</strong> Bluetooth y Sintonizador de Radio</li><li><strong>Batería:</strong> Recargable (Carga en 1.5h) vía Tipo-C</li><li><strong>Voltaje:</strong> 3.7V</li><li><strong>Extras:</strong> Luces LED y diseño portátil (Gris Oscuro)</li>",
         precio: 33000
     },
@@ -105,7 +92,7 @@ const catalogoParlantes = [
         id: 10,
         nombre: "Parlante Xaea MODX0050 5W ROJO",
         categoria: "portatil",
-        imagen: "assets/img/Parlante Xaea Modx-0050 3 5w gris rojo.png", 
+        imagen: "assets/img/Parlante Xaea Modx-0050 3 5w gris rojo.webp", 
         specs: "<li><strong>Potencia:</strong> 5W</li><li><strong>Conectividad:</strong> Bluetooth y Sintonizador de Radio</li><li><strong>Batería:</strong> Recargable (Carga en 1.5h) vía Tipo-C</li><li><strong>Voltaje:</strong> 3.7V</li><li><strong>Extras:</strong> Luces LED y diseño portátil (Gris Oscuro)</li>",
         precio: 33000
     },
@@ -114,8 +101,8 @@ const catalogoParlantes = [
         nombre: "Xaea Dot Mini 3\"",
         categoria: "portatil", 
         color: "Negro",
-        imagen: "assets/img/PARLANTE 3” DOT MINI – MODX-004X – XAEA.png", 
-        imagenHover: "assets/img/PARLANTE 3” DOT MINI – MODX-004X – XAEA - NEGRO.png", 
+        imagen: "assets/img/PARLANTE 3” DOT MINI – MODX-004X – XAEA.webp", 
+        imagenHover: "assets/img/PARLANTE 3” DOT MINI – MODX-004X – XAEA - NEGRO.webp", 
         specs: "<li><strong>Potencia:</strong> 10W (Altavoz de 3 pulgadas)</li><li><strong>Conectividad:</strong> Bluetooth, FM, USB, MicroSD (TF) y TWS</li><li><strong>Color:</strong> Negro</li><li><strong>Batería:</strong> 1800mAh (Hasta 6hs de autonomía) vía Tipo-C</li><li><strong>Medidas:</strong> 13 x 8.7 x 10.5 cm</li><li><strong>Extras:</strong> Iluminación LED y diseño ultra compacto</li>",
         precio: 17291
     },
@@ -124,8 +111,8 @@ const catalogoParlantes = [
         nombre: "Xaea Dot Mini 3\"",
         categoria: "portatil", 
         color: "Rojo",
-        imagen: "assets/img/PARLANTE 3” DOT MINI – MODX-004X – XAEA.png", 
-        imagenHover: "assets/img/PARLANTE 3” DOT MINI – MODX-004X – XAEA - ROJO.png", 
+        imagen: "assets/img/PARLANTE 3” DOT MINI – MODX-004X – XAEA.webp", 
+        imagenHover: "assets/img/PARLANTE 3” DOT MINI – MODX-004X – XAEA - ROJO.webp", 
         specs: "<li><strong>Potencia:</strong> 10W (Altavoz de 3 pulgadas)</li><li><strong>Conectividad:</strong> Bluetooth, FM, USB, MicroSD (TF) y TWS</li><li><strong>Color:</strong> Rojo</li><li><strong>Batería:</strong> 1800mAh (Hasta 6hs de autonomía) vía Tipo-C</li><li><strong>Medidas:</strong> 13 x 8.7 x 10.5 cm</li><li><strong>Extras:</strong> Iluminación LED y diseño ultra compacto</li>",
         precio: 17291
     },
@@ -134,8 +121,8 @@ const catalogoParlantes = [
         nombre: "Xaea Dot Mini 3\"",
         categoria: "portatil", 
         color: "Verde",
-        imagen: "assets/img/PARLANTE 3” DOT MINI – MODX-004X – XAEA.png", 
-        imagenHover: "assets/img/PARLANTE 3” DOT MINI – MODX-004X – XAEA - VERDE.png", 
+        imagen: "assets/img/PARLANTE 3” DOT MINI – MODX-004X – XAEA.webp", 
+        imagenHover: "assets/img/PARLANTE 3” DOT MINI – MODX-004X – XAEA - VERDE.webp", 
         specs: "<li><strong>Potencia:</strong> 10W (Altavoz de 3 pulgadas)</li><li><strong>Conectividad:</strong> Bluetooth, FM, USB, MicroSD (TF) y TWS</li><li><strong>Color:</strong> Verde</li><li><strong>Batería:</strong> 1800mAh (Hasta 6hs de autonomía) vía Tipo-C</li><li><strong>Medidas:</strong> 13 x 8.7 x 10.5 cm</li><li><strong>Extras:</strong> Iluminación LED y diseño ultra compacto</li>",
         precio: 17291
     },
@@ -144,8 +131,8 @@ const catalogoParlantes = [
         nombre: "Xaea Exo Mini 3\"",
         categoria: "portatil", 
         color: "Azul",
-        imagen: "assets/img/PARLANTE 3” EXO MINI – MODX-004W – XAEA.png", 
-        imagenHover: "assets/img/PARLANTE 3” EXO MINI – MODX-004W – XAEA - AZUL.png", 
+        imagen: "assets/img/PARLANTE 3” EXO MINI – MODX-004W – XAEA.webp", 
+        imagenHover: "assets/img/PARLANTE 3” EXO MINI – MODX-004W – XAEA - AZUL.webp", 
         specs: "<li><strong>Potencia:</strong> 8W (Altavoz de 3 pulgadas)</li><li><strong>Conectividad:</strong> Bluetooth, FM, USB, MicroSD (TF) y TWS</li><li><strong>Color:</strong> Azul</li><li><strong>Batería:</strong> 1200mAh (Hasta 5hs de autonomía) vía Tipo-C</li><li><strong>Medidas:</strong> 17 x 10 x 7 cm</li><li><strong>Extras:</strong> Luces LED y cable de carga incluido</li>",
         precio: 17307
     },
@@ -154,8 +141,8 @@ const catalogoParlantes = [
         nombre: "Xaea Exo Mini 3\"",
         categoria: "portatil", 
         color: "Camuflado",
-        imagen: "assets/img/PARLANTE 3” DOT MINI – MODX-004X – XAEA.png", 
-        imagenHover: "assets/img/PARLANTE 3” EXO MINI – MODX-004W – XAEA - CAMUFLADO.png", 
+        imagen: "assets/img/PARLANTE 3” DOT MINI – MODX-004X – XAEA.webp", 
+        imagenHover: "assets/img/PARLANTE 3” EXO MINI – MODX-004W – XAEA - CAMUFLADO.webp", 
         specs: "<li><strong>Potencia:</strong> 8W (Altavoz de 3 pulgadas)</li><li><strong>Conectividad:</strong> Bluetooth, FM, USB, MicroSD (TF) y TWS</li><li><strong>Color:</strong> Camuflado</li><li><strong>Batería:</strong> 1200mAh (Hasta 5hs de autonomía) vía Tipo-C</li><li><strong>Medidas:</strong> 17 x 10 x 7 cm</li><li><strong>Extras:</strong> Luces LED y cable de carga incluido</li>",
         precio: 17307
     },
@@ -164,8 +151,8 @@ const catalogoParlantes = [
         nombre: "Xaea Exo Mini 3\"",
         categoria: "portatil", 
         color: "Negro",
-        imagen: "assets/img/PARLANTE 3” DOT MINI – MODX-004X – XAEA.png", 
-        imagenHover: "assets/img/PARLANTE 3” EXO MINI – MODX-004W – XAEA - NEGRO.png", 
+        imagen: "assets/img/PARLANTE 3” DOT MINI – MODX-004X – XAEA.webp", 
+        imagenHover: "assets/img/PARLANTE 3” EXO MINI – MODX-004W – XAEA - NEGRO.webp", 
         specs: "<li><strong>Potencia:</strong> 8W (Altavoz de 3 pulgadas)</li><li><strong>Conectividad:</strong> Bluetooth, FM, USB, MicroSD (TF) y TWS</li><li><strong>Color:</strong> Negro</li><li><strong>Batería:</strong> 1200mAh (Hasta 5hs de autonomía) vía Tipo-C</li><li><strong>Medidas:</strong> 17 x 10 x 7 cm</li><li><strong>Extras:</strong> Luces LED y cable de carga incluido</li>",
         precio: 17307
     },
@@ -174,8 +161,8 @@ const catalogoParlantes = [
         nombre: "Xaea Exo Mini 3\"",
         categoria: "portatil", 
         color: "Rojo",
-        imagen: "assets/img/PARLANTE 3” DOT MINI – MODX-004X – XAEA.png", 
-        imagenHover: "assets/img/PARLANTE 3” EXO MINI – MODX-004W – XAEA - ROJO.png", 
+        imagen: "assets/img/PARLANTE 3” DOT MINI – MODX-004X – XAEA.webp", 
+        imagenHover: "assets/img/PARLANTE 3” EXO MINI – MODX-004W – XAEA - ROJO.webp", 
         specs: "<li><strong>Potencia:</strong> 8W (Altavoz de 3 pulgadas)</li><li><strong>Conectividad:</strong> Bluetooth, FM, USB, MicroSD (TF) y TWS</li><li><strong>Color:</strong> Rojo</li><li><strong>Batería:</strong> 1200mAh (Hasta 5hs de autonomía) vía Tipo-C</li><li><strong>Medidas:</strong> 17 x 10 x 7 cm</li><li><strong>Extras:</strong> Luces LED y cable de carga incluido</li>",
         precio: 17307
     },
@@ -184,8 +171,8 @@ const catalogoParlantes = [
         nombre: "Xaea Groove 3\"",
         categoria: "portatil", 
         color: "Negro",
-        imagen: "assets/img/PARLANTE 3” GROOVE – MODX-101 – XAEA.png", 
-        imagenHover: "assets/img/PARLANTE 3” GROOVE – MODX-101 – XAEA - NEGRO.png", 
+        imagen: "assets/img/PARLANTE 3” GROOVE – MODX-101 – XAEA.webp", 
+        imagenHover: "assets/img/PARLANTE 3” GROOVE – MODX-101 – XAEA - NEGRO.webp", 
         specs: "<li><strong>Potencia:</strong> 800W (Altavoz 3\" BT LED)</li><li><strong>Conectividad:</strong> USB, AUX 3.5mm, Radio FM, MicroSD y TWS</li><li><strong>Color:</strong> Negro</li><li><strong>Batería:</strong> 800mAh 3.7V (Carga Tipo-C)</li><li><strong>Medidas:</strong> 11.5 x 8.5 x 8.5 cm</li><li><strong>Extras:</strong> Guía para celular, cable de carga y manual</li>",
         precio: 12673
     },
@@ -194,8 +181,8 @@ const catalogoParlantes = [
         nombre: "Xaea Groove 3\"",
         categoria: "portatil", 
         color: "Azul",
-        imagen: "assets/img/PARLANTE 3” GROOVE – MODX-101 – XAEA.png", 
-        imagenHover: "assets/img/PARLANTE 3” GROOVE – MODX-101 – XAEA - AZUL.png", 
+        imagen: "assets/img/PARLANTE 3” GROOVE – MODX-101 – XAEA.webp", 
+        imagenHover: "assets/img/PARLANTE 3” GROOVE – MODX-101 – XAEA - AZUL.webp", 
         specs: "<li><strong>Potencia:</strong> 800W (Altavoz 3\" BT LED)</li><li><strong>Conectividad:</strong> USB, AUX 3.5mm, Radio FM, MicroSD y TWS</li><li><strong>Color:</strong> Azul</li><li><strong>Batería:</strong> 800mAh 3.7V (Carga Tipo-C)</li><li><strong>Medidas:</strong> 11.5 x 8.5 x 8.5 cm</li><li><strong>Extras:</strong> Guía para celular, cable de carga y manual</li>",
         precio: 12673
     },
@@ -204,8 +191,8 @@ const catalogoParlantes = [
         nombre: "Xaea Groove 3\"",
         categoria: "portatil", 
         color: "Rojo",
-        imagen: "assets/img/PARLANTE 3” GROOVE – MODX-101 – XAEA.png", 
-        imagenHover: "assets/img/PARLANTE 3” GROOVE – MODX-101 – XAEA - ROJO.png", 
+        imagen: "assets/img/PARLANTE 3” GROOVE – MODX-101 – XAEA.webp", 
+        imagenHover: "assets/img/PARLANTE 3” GROOVE – MODX-101 – XAEA - ROJO.webp", 
         specs: "<li><strong>Potencia:</strong> 800W (Altavoz 3\" BT LED)</li><li><strong>Conectividad:</strong> USB, AUX 3.5mm, Radio FM, MicroSD y TWS</li><li><strong>Color:</strong> Rojo</li><li><strong>Batería:</strong> 800mAh 3.7V (Carga Tipo-C)</li><li><strong>Medidas:</strong> 11.5 x 8.5 x 8.5 cm</li><li><strong>Extras:</strong> Guía para celular, cable de carga y manual</li>",
         precio: 12673
     },
@@ -214,8 +201,8 @@ const catalogoParlantes = [
         nombre: "Xaea Groove 3\"",
         categoria: "portatil", 
         color: "Verde",
-        imagen: "assets/img/PARLANTE 3” GROOVE – MODX-101 – XAEA.png", 
-        imagenHover: "assets/img/PARLANTE 3” GROOVE – MODX-101 – XAEA - VERDE.png", 
+        imagen: "assets/img/PARLANTE 3” GROOVE – MODX-101 – XAEA.webp", 
+        imagenHover: "assets/img/PARLANTE 3” GROOVE – MODX-101 – XAEA - VERDE.webp", 
         specs: "<li><strong>Potencia:</strong> 800W (Altavoz 3\" BT LED)</li><li><strong>Conectividad:</strong> USB, AUX 3.5mm, Radio FM, MicroSD y TWS</li><li><strong>Color:</strong> Verde</li><li><strong>Batería:</strong> 800mAh 3.7V (Carga Tipo-C)</li><li><strong>Medidas:</strong> 11.5 x 8.5 x 8.5 cm</li><li><strong>Extras:</strong> Guía para celular, cable de carga y manual</li>",
         precio: 12673
     },
@@ -224,8 +211,8 @@ const catalogoParlantes = [
         nombre: "Xaea MODX-004J 3\"",
         categoria: "portatil", 
         color: "Celeste",
-        imagen: "assets/img/PARLANTE 3” MODX-004J – XAEA.png", 
-        imagenHover: "assets/img/PARLANTE 3” MODX-004J – XAEA - CELESTE.png", 
+        imagen: "assets/img/PARLANTE 3” MODX-004J – XAEA.webp", 
+        imagenHover: "assets/img/PARLANTE 3” MODX-004J – XAEA - CELESTE.webp", 
         specs: "<li><strong>Potencia:</strong> 8W Reales</li><li><strong>Conectividad:</strong> Inalámbrica, USB, MicroSD (TF), FM y TWS</li><li><strong>Color:</strong> Celeste</li><li><strong>Batería:</strong> 1200mAh (3hs de uso) vía Tipo-C</li><li><strong>Extras:</strong> Iluminación LED RGB dinámica y cable incluido</li>",
         precio: 15000 
     },
@@ -234,8 +221,8 @@ const catalogoParlantes = [
         nombre: "Xaea MODX-004J 3\"",
         categoria: "portatil", 
         color: "Negro",
-        imagen: "assets/img/PARLANTE 3” MODX-004J – XAEA.png", 
-        imagenHover: "assets/img/PARLANTE 3” MODX-004J – XAEA - NEGRO.png", 
+        imagen: "assets/img/PARLANTE 3” MODX-004J – XAEA.webp", 
+        imagenHover: "assets/img/PARLANTE 3” MODX-004J – XAEA - NEGRO.webp", 
         specs: "<li><strong>Potencia:</strong> 8W Reales</li><li><strong>Conectividad:</strong> Inalámbrica, USB, MicroSD (TF), FM y TWS</li><li><strong>Color:</strong> Negro</li><li><strong>Batería:</strong> 1200mAh (3hs de uso) vía Tipo-C</li><li><strong>Extras:</strong> Iluminación LED RGB dinámica y cable incluido</li>",
         precio: 15000 
     },
@@ -244,8 +231,8 @@ const catalogoParlantes = [
         nombre: "Xaea MODX-004J 3\"",
         categoria: "portatil", 
         color: "Rosado",
-        imagen: "assets/img/PARLANTE 3” MODX-004J – XAEA.png", 
-        imagenHover: "assets/img/PARLANTE 3” MODX-004J – XAEA - ROSADO.png", 
+        imagen: "assets/img/PARLANTE 3” MODX-004J – XAEA.webp", 
+        imagenHover: "assets/img/PARLANTE 3” MODX-004J – XAEA - ROSADO.webp", 
         specs: "<li><strong>Potencia:</strong> 8W Reales</li><li><strong>Conectividad:</strong> Inalámbrica, USB, MicroSD (TF), FM y TWS</li><li><strong>Color:</strong> Rosado</li><li><strong>Batería:</strong> 1200mAh (3hs de uso) vía Tipo-C</li><li><strong>Extras:</strong> Iluminación LED RGB dinámica y cable incluido</li>",
         precio: 15000 
     },
@@ -254,8 +241,8 @@ const catalogoParlantes = [
         nombre: "Xaea MODX-004J 3\"",
         categoria: "portatil", 
         color: "Verde",
-        imagen: "assets/img/PARLANTE 3” MODX-004J – XAEA.png", 
-        imagenHover: "assets/img/PARLANTE 3” MODX-004J – XAEA - VERDE.png", 
+        imagen: "assets/img/PARLANTE 3” MODX-004J – XAEA.webp", 
+        imagenHover: "assets/img/PARLANTE 3” MODX-004J – XAEA - VERDE.webp", 
         specs: "<li><strong>Potencia:</strong> 8W Reales</li><li><strong>Conectividad:</strong> Inalámbrica, USB, MicroSD (TF), FM y TWS</li><li><strong>Color:</strong> Verde</li><li><strong>Batería:</strong> 1200mAh (3hs de uso) vía Tipo-C</li><li><strong>Extras:</strong> Iluminación LED RGB dinámica y cable incluido</li>",
         precio: 15000 
     },
@@ -264,8 +251,8 @@ const catalogoParlantes = [
         nombre: "Xaea Blade MODX-106 3\"",
         categoria: "portatil", 
         color: "Azul",
-        imagen: "assets/img/PARLANTE 3” MODX-106 BLADE – XAEA.png", 
-        imagenHover: "assets/img/PARLANTE 3” MODX-106 BLADE – XAEA - AZUL.png", 
+        imagen: "assets/img/PARLANTE 3” MODX-106 BLADE – XAEA.webp", 
+        imagenHover: "assets/img/PARLANTE 3” MODX-106 BLADE – XAEA - AZUL.webp", 
         specs: "<li><strong>Potencia:</strong> 500W (Altavoz 3\" BT LED)</li><li><strong>Conectividad:</strong> USB, AUX 3.5mm, Radio FM, MicroSD y TWS</li><li><strong>Color:</strong> Azul</li><li><strong>Batería:</strong> 1200mAh 3.7V (Carga Tipo-C)</li><li><strong>Medidas:</strong> 12.8 x 9 x 9 cm</li><li><strong>Extras:</strong> Cable de carga y manual incluidos</li>",
         precio: 11441 
     },
@@ -274,8 +261,8 @@ const catalogoParlantes = [
         nombre: "Xaea Blade MODX-106 3\"",
         categoria: "portatil", 
         color: "Camuflado",
-        imagen: "assets/img/PARLANTE 3” MODX-106 BLADE – XAEA.png", 
-        imagenHover: "assets/img/PARLANTE 3” MODX-106 BLADE – XAEA - CAMUFLADO.png", 
+        imagen: "assets/img/PARLANTE 3” MODX-106 BLADE – XAEA.webp", 
+        imagenHover: "assets/img/PARLANTE 3” MODX-106 BLADE – XAEA - CAMUFLADO.webp", 
         specs: "<li><strong>Potencia:</strong> 500W (Altavoz 3\" BT LED)</li><li><strong>Conectividad:</strong> USB, AUX 3.5mm, Radio FM, MicroSD y TWS</li><li><strong>Color:</strong> Camuflado</li><li><strong>Batería:</strong> 1200mAh 3.7V (Carga Tipo-C)</li><li><strong>Medidas:</strong> 12.8 x 9 x 9 cm</li><li><strong>Extras:</strong> Cable de carga y manual incluidos</li>",
         precio: 11441 
     },
@@ -284,8 +271,8 @@ const catalogoParlantes = [
         nombre: "Xaea Blade MODX-106 3\"",
         categoria: "portatil", 
         color: "Negro",
-        imagen: "assets/img/PARLANTE 3” MODX-106 BLADE – XAEA.png", 
-        imagenHover: "assets/img/PARLANTE 3” MODX-106 BLADE – XAEA - NEGRO.png", 
+        imagen: "assets/img/PARLANTE 3” MODX-106 BLADE – XAEA.webp", 
+        imagenHover: "assets/img/PARLANTE 3” MODX-106 BLADE – XAEA - NEGRO.webp", 
         specs: "<li><strong>Potencia:</strong> 500W (Altavoz 3\" BT LED)</li><li><strong>Conectividad:</strong> USB, AUX 3.5mm, Radio FM, MicroSD y TWS</li><li><strong>Color:</strong> Negro</li><li><strong>Batería:</strong> 1200mAh 3.7V (Carga Tipo-C)</li><li><strong>Medidas:</strong> 12.8 x 9 x 9 cm</li><li><strong>Extras:</strong> Cable de carga y manual incluidos</li>",
         precio: 11441 
     },
@@ -294,8 +281,8 @@ const catalogoParlantes = [
         nombre: "Xaea Blade MODX-106 3\"",
         categoria: "portatil", 
         color: "Rojo",
-        imagen: "assets/img/PARLANTE 3” MODX-106 BLADE – XAEA.png", 
-        imagenHover: "assets/img/PARLANTE 3” MODX-106 BLADE – XAEA - ROJO.png", 
+        imagen: "assets/img/PARLANTE 3” MODX-106 BLADE – XAEA.webp", 
+        imagenHover: "assets/img/PARLANTE 3” MODX-106 BLADE – XAEA - ROJO.webp", 
         specs: "<li><strong>Potencia:</strong> 500W (Altavoz 3\" BT LED)</li><li><strong>Conectividad:</strong> USB, AUX 3.5mm, Radio FM, MicroSD y TWS</li><li><strong>Color:</strong> Rojo</li><li><strong>Batería:</strong> 1200mAh 3.7V (Carga Tipo-C)</li><li><strong>Medidas:</strong> 12.8 x 9 x 9 cm</li><li><strong>Extras:</strong> Cable de carga y manual incluidos</li>",
         precio: 11441 
     }
@@ -558,7 +545,7 @@ if (btnPagar) {
             return;
         }
 
-        const numeroWhatsApp = "5492613132991"; 
+        const numeroWhatsApp = WHATSAPP; 
         let mensaje = "¡Hola Tech Marea! 🌊 Quiero realizar el siguiente pedido:\n\n";
         let totalPedido = 0;
 
@@ -578,33 +565,7 @@ if (btnPagar) {
 }
 
 if (btnMercadoPago) {
-    btnMercadoPago.addEventListener("click", async () => {
-        if (carrito.length === 0) {
-            alert("El carrito está vacío.");
-            return;
-        }
-
-        try {
-            const respuesta = await fetch("http://127.0.0.1:5001/tech-marea-db/us-central1/crearPreferencia", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({ items: carrito })
-            });
-
-            const datos = await respuesta.json();
-
-            if (datos.init_point) {
-                window.location.href = datos.init_point;
-            } else {
-                alert("Hubo un error al generar el pago.");
-            }
-        } catch (error) {
-            console.error("Error al conectar con el servidor de pago:", error);
-            alert("No se pudo conectar con el servidor local de pagos.");
-        }
-    });
+    btnMercadoPago.addEventListener("click", () => pagarConMercadoPago(carrito, btnMercadoPago));
 }
 
 // =========================================

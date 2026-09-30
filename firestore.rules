@@ -1,0 +1,46 @@
+rules_version = '2';
+
+// Reglas de seguridad de la base de datos de Tech Marea.
+// Se publican con:  firebase deploy --only firestore:rules
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function estaLogueado() {
+      return request.auth != null;
+    }
+
+    // Es admin si su UID está cargado en la colección "admins" (se carga a mano desde la consola)
+    function esAdmin() {
+      return estaLogueado()
+        && exists(/databases/$(database)/documents/admins/$(request.auth.uid));
+    }
+
+    // Lista de administradores: cada uno solo puede ver su propia ficha; nadie puede modificarla desde la web
+    match /admins/{uid} {
+      allow read: if estaLogueado() && request.auth.uid == uid;
+      allow write: if false;
+    }
+
+    // Reparaciones: cualquiera puede consultar UNA orden si conoce el número,
+    // pero solo el admin puede ver la lista completa, crear, editar o borrar.
+    match /reparaciones/{orden} {
+      allow get: if true;
+      allow list, create, update, delete: if esAdmin();
+    }
+
+    // Carrito de cada cliente: solo lo ve y lo modifica su dueño
+    match /carritos/{uid} {
+      allow read, write: if estaLogueado() && request.auth.uid == uid;
+    }
+
+    // Datos de cada cliente: solo los ve y los modifica su dueño
+    match /usuarios/{uid} {
+      allow read, write: if estaLogueado() && request.auth.uid == uid;
+    }
+
+    // Todo lo demás, cerrado
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

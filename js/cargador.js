@@ -1,22 +1,9 @@
 // =========================================
 // INICIALIZACIÓN DE FIREBASE (NUEVO)
 // =========================================
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
-import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
-
-const firebaseConfig = {
-    apiKey: "AIzaSyCHV9m2iYtx70sqT0C5AlSiRQIrP2AL6zI",
-    authDomain: "tech-marea-db.firebaseapp.com",
-    projectId: "tech-marea-db",
-    storageBucket: "tech-marea-db.firebasestorage.app",
-    messagingSenderId: "120154130587",
-    appId: "1:120154130587:web:390fd3c12fc7b3460cde3e"
-};
-
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-const auth = getAuth(app);
+import { doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+import { db, auth, pagarConMercadoPago, WHATSAPP } from "./config.js";
 
 
 // =========================================
@@ -28,8 +15,8 @@ const catalogoCargadores = [
         nombre: "Adaptador Cargador 220V MODX-507 Raptor 45W XAEA (Blanco)",
         categoria: "cargador-pared",
         color: "Blanco",
-        imagen: "assets/img/ADAPTADOR-CARGADOR 220V MODX-507 RAPTOR – 5,1A – 45W – 1TC + PD – XAEA – BLANCO.png",
-        imagenHover: "assets/img/ADAPTADOR-CARGADOR 220V MODX-507 RAPTOR – 5,1A – 45W – 1TC + PD – XAEA – BLANCO1.png",
+        imagen: "assets/img/ADAPTADOR-CARGADOR 220V MODX-507 RAPTOR – 5,1A – 45W – 1TC + PD – XAEA – BLANCO.webp",
+        imagenHover: "assets/img/ADAPTADOR-CARGADOR 220V MODX-507 RAPTOR – 5,1A – 45W – 1TC + PD – XAEA – BLANCO1.webp",
         specs: "<li><strong>Potencia:</strong> 45W de salida máxima</li><li><strong>Amperaje y Voltaje:</strong> 5.1A / 9VCC</li><li><strong>Conexión:</strong> 1 Puerto Tipo C (Power Delivery)</li><li><strong>Material:</strong> Plástico ABS resistente</li>",
         precio: 4479
     },
@@ -38,8 +25,8 @@ const catalogoCargadores = [
         nombre: "Adaptador Cargador 220V MODX-516 Hyper 55W XAEA (Blanco)",
         categoria: "cargador-pared",
         color: "Blanco",
-        imagen: "assets/img/ADAPTADOR-CARGADOR 220V MODX-516 HYPER – 5,4A – 1USB + 1TC – XAEA – BLANCO.png",
-        imagenHover: "assets/img/ADAPTADOR-CARGADOR 220V MODX-516 HYPER – 5,4A – 1USB + 1TC – XAEA – BLANCO1.png",
+        imagen: "assets/img/ADAPTADOR-CARGADOR 220V MODX-516 HYPER – 5,4A – 1USB + 1TC – XAEA – BLANCO.webp",
+        imagenHover: "assets/img/ADAPTADOR-CARGADOR 220V MODX-516 HYPER – 5,4A – 1USB + 1TC – XAEA – BLANCO1.webp",
         specs: "<li><strong>Potencia:</strong> 55W Total (USB-C: 55W / USB-A: 18W)</li><li><strong>Amperaje:</strong> 5.4A</li><li><strong>Conexión:</strong> 1 Puerto Tipo C + 1 Puerto USB-A</li><li><strong>Tensión de Entrada:</strong> AC 100-220V</li>",
         precio: 10518
     },
@@ -48,8 +35,8 @@ const catalogoCargadores = [
         nombre: "Adaptador Cargador 220V MODX-616 Extreme 65W XAEA (Blanco)",
         categoria: "cargador-pared",
         color: "Blanco",
-        imagen: "assets/img/ADAPTADOR-CARGADOR 220V MODX-616 EXTREME – 6,2A – 1USB + 2TC – XAEA – BLANCO.png",
-        imagenHover: "assets/img/ADAPTADOR-CARGADOR 220V MODX-616 EXTREME – 6,2A – 1USB + 2TC – XAEA – BLANCO1.png",
+        imagen: "assets/img/ADAPTADOR-CARGADOR 220V MODX-616 EXTREME – 6,2A – 1USB + 2TC – XAEA – BLANCO.webp",
+        imagenHover: "assets/img/ADAPTADOR-CARGADOR 220V MODX-616 EXTREME – 6,2A – 1USB + 2TC – XAEA – BLANCO1.webp",
         specs: "<li><strong>Potencia:</strong> 65W Total (USB-C: 65W / USB-A: 18W)</li><li><strong>Amperaje:</strong> 6.2A</li><li><strong>Conexión:</strong> 2 Puertos Tipo C + 1 Puerto USB-A</li><li><strong>Material:</strong> Plástico ABS resistente</li>",
         precio: 13655
     },
@@ -58,8 +45,8 @@ const catalogoCargadores = [
         nombre: "Adaptador Cargador 220V MODX-A016 Optimum 45W XAEA (Blanco)",
         categoria: "cargador-pared",
         color: "Blanco",
-        imagen: "assets/img/ADAPTADOR-CARGADOR 220V MODX-A016 OPTIMUM – 5A – TIPO C – XAEA.png",
-        imagenHover: "assets/img/ADAPTADOR-CARGADOR 220V MODX-A016 OPTIMUM – 5A – TIPO C – XAEA1.png",
+        imagen: "assets/img/ADAPTADOR-CARGADOR 220V MODX-A016 OPTIMUM – 5A – TIPO C – XAEA.webp",
+        imagenHover: "assets/img/ADAPTADOR-CARGADOR 220V MODX-A016 OPTIMUM – 5A – TIPO C – XAEA1.webp",
         specs: "<li><strong>Potencia:</strong> 45W (Power Delivery)</li><li><strong>Amperaje y Voltaje:</strong> 5A / 9VCC</li><li><strong>Conexión:</strong> 1 Puerto Tipo C</li><li><strong>Material:</strong> Plástico ABS resistente</li>",
         precio: 5289
     },
@@ -68,8 +55,8 @@ const catalogoCargadores = [
         nombre: "Cargador Intensify 30W 1USB 1TC + Cable USB a Tipo C XAEA (Blanco)",
         categoria: "cargador-pared",
         color: "Blanco",
-        imagen: "assets/img/CARGADOR 220V MODX-C015 – INTENSIFY – 1USB 1TC + CABLE USB A TIPO C – XAEA – BLANCO.png",
-        imagenHover: "assets/img/CARGADOR 220V MODX-C015 – INTENSIFY – 1USB 1TC + CABLE USB A TIPO C – XAEA – BLANCO1.png",
+        imagen: "assets/img/CARGADOR 220V MODX-C015 – INTENSIFY – 1USB 1TC + CABLE USB A TIPO C – XAEA – BLANCO.webp",
+        imagenHover: "assets/img/CARGADOR 220V MODX-C015 – INTENSIFY – 1USB 1TC + CABLE USB A TIPO C – XAEA – BLANCO1.webp",
         specs: "<li><strong>Potencia:</strong> 30W</li><li><strong>Conexión:</strong> 1 Puerto Tipo C + 1 Puerto USB-A</li><li><strong>Tensión y Salida:</strong> AC 100-220V / 5VCC</li><li><strong>Extras:</strong> Incluye cable USB a Tipo C (1 metro, 2A)</li>",
         precio: 5303
     },
@@ -78,8 +65,8 @@ const catalogoCargadores = [
         nombre: "Adaptador Cargador Auto 12V Voltair MODX-00C4 45W 2 Tipo C XAEA",
         categoria: "cargador-auto",
         color: "Negro", 
-        imagen: "assets/img/ADAPTADOR CARGADOR 12V VOLTAIR 2 TIPO C MODX-00C4 – XAEA – NEGRO.png",
-        imagenHover: "assets/img/ADAPTADOR CARGADOR 12V VOLTAIR 2 TIPO C MODX-00C4 – XAEA – NEGRO1.png",
+        imagen: "assets/img/ADAPTADOR CARGADOR 12V VOLTAIR 2 TIPO C MODX-00C4 – XAEA – NEGRO.webp",
+        imagenHover: "assets/img/ADAPTADOR CARGADOR 12V VOLTAIR 2 TIPO C MODX-00C4 – XAEA – NEGRO1.webp",
         specs: "<li><strong>Potencia:</strong> 45W (Carga rápida Power Delivery)</li><li><strong>Conexión:</strong> 2 Puertos Tipo C</li><li><strong>Entrada:</strong> 12-24V (Ideal para autos)</li><li><strong>Material:</strong> Aleación de aluminio resistente</li>",
         precio: 9268
     },
@@ -88,8 +75,8 @@ const catalogoCargadores = [
         nombre: "Adaptador Cargador Auto 12V Voltair MODX-517 3A 1USB + 1TC XAEA (Verde)",
         categoria: "cargador-auto",
         color: "Verde",
-        imagen: "assets/img/ADAPTADOR-CARGADOR 12V VOLTAIR MODX-517 – 3A – 1USB + 1TC – XAEA – VERDE.png",
-        imagenHover: "assets/img/ADAPTADOR-CARGADOR 12V VOLTAIR MODX-517 – 3A – 1USB + 1TC – XAEA – VERDE1.png",
+        imagen: "assets/img/ADAPTADOR-CARGADOR 12V VOLTAIR MODX-517 – 3A – 1USB + 1TC – XAEA – VERDE.webp",
+        imagenHover: "assets/img/ADAPTADOR-CARGADOR 12V VOLTAIR MODX-517 – 3A – 1USB + 1TC – XAEA – VERDE1.webp",
         specs: "<li><strong>Potencia:</strong> 45W (Carga rápida Power Delivery)</li><li><strong>Conexión:</strong> 1 Puerto USB-A + 1 Puerto Tipo C</li><li><strong>Entrada:</strong> 12-24V (Ideal para autos)</li><li><strong>Material:</strong> Aleación de aluminio (Verde militar)</li>",
         precio: 7125
     }
@@ -352,7 +339,7 @@ if (btnPagar) {
             return;
         }
 
-        const numeroWhatsApp = "5492613132991"; 
+        const numeroWhatsApp = WHATSAPP; 
         let mensaje = "¡Hola Tech Marea! 🌊 Quiero realizar el siguiente pedido:\n\n";
         let totalPedido = 0;
 
@@ -372,34 +359,7 @@ if (btnPagar) {
 }
 
 if (btnMercadoPago) {
-    btnMercadoPago.addEventListener("click", async () => {
-        if (carrito.length === 0) {
-            alert("El carrito está vacío.");
-            return;
-        }
-
-        try {
-            // Conexión directa al emulador local en ejecución
-            const respuesta = await fetch("http://127.0.0.1:5001/tech-marea-db/us-central1/crearPreferencia", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({ items: carrito })
-            });
-
-            const datos = await respuesta.json();
-
-            if (datos.init_point) {
-                window.location.href = datos.init_point;
-            } else {
-                alert("Hubo un error al generar el pago.");
-            }
-        } catch (error) {
-            console.error("Error al conectar con el servidor de pago:", error);
-            alert("No se pudo conectar con el servidor local de pagos.");
-        }
-    });
+    btnMercadoPago.addEventListener("click", () => pagarConMercadoPago(carrito, btnMercadoPago));
 }
 
 // =========================================

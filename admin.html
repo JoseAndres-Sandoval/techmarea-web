@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <meta name="robots" content="noindex, nofollow">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Marea | Panel de Administración</title>
@@ -11,19 +12,22 @@
 
     <div style="max-width: 650px; margin: 0 auto; background: #161616; padding: 30px; border-radius: 12px; border: 1px solid #333;">
         
-        <!-- PANTALLA 1: LOGIN (CONTRASEÑA) -->
+        <!-- PANTALLA 1: LOGIN (CUENTA DE ADMINISTRADOR) -->
         <div id="seccion-login">
             <h2 style="color: var(--color-cian); text-align: center; margin-bottom: 20px;">🔒 Acceso Restringido</h2>
-            <p style="text-align: center; color: #aaa; margin-bottom: 20px;">Ingresá la contraseña de administrador para continuar.</p>
+            <p style="text-align: center; color: #aaa; margin-bottom: 20px;">Ingresá con tu cuenta de administrador.</p>
             
-            <div style="display: flex; flex-direction: column; gap: 15px;">
-                <input type="password" id="input-password" placeholder="Contraseña" style="padding: 15px; border-radius: 8px; border: 1px solid #444; background: #222; color: white; font-size: 1rem; text-align: center;">
-                <button id="btn-login" class="btn-neon" style="padding: 15px; font-size: 1rem; cursor: pointer; border: none;">Ingresar</button>
-            </div>
+            <form id="form-login-admin" style="display: flex; flex-direction: column; gap: 15px;">
+                <input type="email" id="input-email" placeholder="Correo" autocomplete="username" required style="padding: 15px; border-radius: 8px; border: 1px solid #444; background: #222; color: white; font-size: 1rem; text-align: center;">
+                <input type="password" id="input-password" placeholder="Contraseña" autocomplete="current-password" required style="padding: 15px; border-radius: 8px; border: 1px solid #444; background: #222; color: white; font-size: 1rem; text-align: center;">
+                <button type="submit" id="btn-login" class="btn-neon" style="padding: 15px; font-size: 1rem; cursor: pointer; border: none;">Ingresar</button>
+            </form>
+            <p id="mensaje-login" style="text-align: center; color: #ff6b6b; margin-top: 15px; min-height: 1em;"></p>
         </div>
 
         <!-- PANTALLA 2: PANEL DE CARGA Y GESTIÓN (OCULTO HASTA PONER CONTRASEÑA) -->
         <div id="seccion-panel" style="display: none;">
+            <div style="display: flex; justify-content: flex-end;"><button id="btn-salir-admin" style="background: none; border: 1px solid #555; color: #aaa; padding: 6px 12px; border-radius: 6px; cursor: pointer; font-family: inherit;">Cerrar sesión</button></div>
             <h2 style="color: var(--color-cian); text-align: center; margin-bottom: 10px;">Panel de Administración</h2>
             <p style="text-align: center; color: #aaa; margin-bottom: 30px; font-size: 0.9rem;">Cargá nuevas órdenes o eliminalas cuando el cliente retire su equipo.</p>
             

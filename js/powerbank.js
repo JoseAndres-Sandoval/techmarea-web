@@ -1,22 +1,9 @@
 // =========================================
 // INICIALIZACIÓN DE FIREBASE
 // =========================================
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
-import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
-
-const firebaseConfig = {
-    apiKey: "AIzaSyCHV9m2iYtx70sqT0C5AlSiRQIrP2AL6zI",
-    authDomain: "tech-marea-db.firebaseapp.com",
-    projectId: "tech-marea-db",
-    storageBucket: "tech-marea-db.firebasestorage.app",
-    messagingSenderId: "120154130587",
-    appId: "1:120154130587:web:390fd3c12fc7b3460cde3e"
-};
-
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-const auth = getAuth(app);
+import { doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+import { db, auth, pagarConMercadoPago, WHATSAPP } from "./config.js";
 
 // =========================================
 // 1. BASE DE DATOS DE PRODUCTOS (POWERBANKS: 400 - 499)
@@ -27,8 +14,8 @@ const catalogoPowerBanks = [
         nombre: "Power Bank Inalámbrico Nuvia G1 MODX-000K XAEA (Negro)",
         categoria: "inalambrico",
         color: "Negro",
-        imagen: "assets/img/POWER BANK INALAMBRICO NUVIA G1 MODX-000K – XAEA – NEGRO.png",
-        imagenHover: "assets/img/POWER BANK INALAMBRICO NUVIA G1 MODX-000K – XAEA – NEGRO1.png",
+        imagen: "assets/img/POWER BANK INALAMBRICO NUVIA G1 MODX-000K – XAEA – NEGRO.webp",
+        imagenHover: "assets/img/POWER BANK INALAMBRICO NUVIA G1 MODX-000K – XAEA – NEGRO1.webp",
         specs: "<li><strong>Capacidad:</strong> 20.000mAh con pantalla digital</li><li><strong>Carga Inalámbrica:</strong> 15W (Compatible con MagSafe)</li><li><strong>Carga por Cable:</strong> Hasta 22.5W (Doble salida Tipo C + Tipo A)</li><li><strong>Extras:</strong> Sistemas de protección inteligente</li>",
         precio: 23297
     },
@@ -37,8 +24,8 @@ const catalogoPowerBanks = [
         nombre: "Power Bank Inalámbrico Nuvia G1 MODX-000K XAEA (Blanco)",
         categoria: "inalambrico",
         color: "Blanco",
-        imagen: "assets/img/POWER BANK INALAMBRICO NUVIA G1 MODX-000K – XAEA – NEGRO.png",
-        imagenHover: "assets/img/POWER BANK INALAMBRICO NUVIA G1 MODX-000K – XAEA – BLANCO.png",
+        imagen: "assets/img/POWER BANK INALAMBRICO NUVIA G1 MODX-000K – XAEA – NEGRO.webp",
+        imagenHover: "assets/img/POWER BANK INALAMBRICO NUVIA G1 MODX-000K – XAEA – BLANCO.webp",
         specs: "<li><strong>Capacidad:</strong> 20.000mAh con pantalla digital</li><li><strong>Carga Inalámbrica:</strong> 15W (Compatible con MagSafe)</li><li><strong>Carga por Cable:</strong> Hasta 22.5W (Doble salida Tipo C + Tipo A)</li><li><strong>Extras:</strong> Sistemas de protección inteligente</li>",
         precio: 23297
     },
@@ -47,8 +34,8 @@ const catalogoPowerBanks = [
         nombre: "Power Bank Inalámbrico Nuvia G1 MODX-000K XAEA (Verde)",
         categoria: "inalambrico",
         color: "Verde",
-        imagen: "assets/img/POWER BANK INALAMBRICO NUVIA G1 MODX-000K – XAEA – NEGRO.png",
-        imagenHover: "assets/img/POWER BANK INALAMBRICO NUVIA G1 MODX-000K – XAEA – VERDE.png",
+        imagen: "assets/img/POWER BANK INALAMBRICO NUVIA G1 MODX-000K – XAEA – NEGRO.webp",
+        imagenHover: "assets/img/POWER BANK INALAMBRICO NUVIA G1 MODX-000K – XAEA – VERDE.webp",
         specs: "<li><strong>Capacidad:</strong> 20.000mAh con pantalla digital</li><li><strong>Carga Inalámbrica:</strong> 15W (Compatible con MagSafe)</li><li><strong>Carga por Cable:</strong> Hasta 22.5W (Doble salida Tipo C + Tipo A)</li><li><strong>Extras:</strong> Sistemas de protección inteligente</li>",
         precio: 23297
     }
@@ -311,7 +298,7 @@ if (btnPagar) {
             return;
         }
 
-        const numeroWhatsApp = "5492613132991"; 
+        const numeroWhatsApp = WHATSAPP; 
         let mensaje = "¡Hola Tech Marea! 🌊 Quiero realizar el siguiente pedido:\n\n";
         let totalPedido = 0;
 
@@ -331,33 +318,7 @@ if (btnPagar) {
 }
 
 if (btnMercadoPago) {
-    btnMercadoPago.addEventListener("click", async () => {
-        if (carrito.length === 0) {
-            alert("El carrito está vacío.");
-            return;
-        }
-
-        try {
-            const respuesta = await fetch("http://127.0.0.1:5001/tech-marea-db/us-central1/crearPreferencia", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({ items: carrito })
-            });
-
-            const datos = await respuesta.json();
-
-            if (datos.init_point) {
-                window.location.href = datos.init_point;
-            } else {
-                alert("Hubo un error al generar el pago.");
-            }
-        } catch (error) {
-            console.error("Error al conectar con el servidor de pago:", error);
-            alert("No se pudo conectar con el servidor local de pagos.");
-        }
-    });
+    btnMercadoPago.addEventListener("click", () => pagarConMercadoPago(carrito, btnMercadoPago));
 }
 
 // =========================================

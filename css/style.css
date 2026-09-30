@@ -99,14 +99,14 @@ body {
 }
 
 .mitad-izquierda {
-    background-image: linear-gradient(rgba(11, 12, 16, 0.85), rgba(11, 12, 16, 0.85)), url('../assets/img/fondo-tienda.jpg');
+    background-image: linear-gradient(rgba(11, 12, 16, 0.85), rgba(11, 12, 16, 0.85)), url('../assets/img/fondo-tienda.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .mitad-derecha {
-    background-image: linear-gradient(rgba(11, 12, 16, 0.85), rgba(11, 12, 16, 0.85)), url('../assets/img/fondo-servicio.jpg');
+    background-image: linear-gradient(rgba(11, 12, 16, 0.85), rgba(11, 12, 16, 0.85)), url('../assets/img/fondo-servicio.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

@@ -1,22 +1,9 @@
 // =========================================
 // INICIALIZACIÓN DE FIREBASE
 // =========================================
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
-import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
-
-const firebaseConfig = {
-    apiKey: "AIzaSyCHV9m2iYtx70sqT0C5AlSiRQIrP2AL6zI",
-    authDomain: "tech-marea-db.firebaseapp.com",
-    projectId: "tech-marea-db",
-    storageBucket: "tech-marea-db.firebasestorage.app",
-    messagingSenderId: "120154130587",
-    appId: "1:120154130587:web:390fd3c12fc7b3460cde3e"
-};
-
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-const auth = getAuth(app);
+import { doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+import { db, auth, pagarConMercadoPago, WHATSAPP } from "./config.js";
 
 // =========================================
 // 1. BASE DE DATOS DE PRODUCTOS (AURICULARES: 100 - 199)
@@ -27,8 +14,8 @@ const catalogoAuriculares = [
         nombre: "Auricular Xaea MODX-701 M103",
         categoria: "auricular", 
         color: "Verde",
-        imagen: "assets/img/AURICULAR BT MODX-707 KIDS - VERDE.png", 
-        imagenHover: "assets/img/AURICULAR BT MODX-707 KIDS - VERDE2.png",
+        imagen: "assets/img/AURICULAR BT MODX-707 KIDS - VERDE.webp", 
+        imagenHover: "assets/img/AURICULAR BT MODX-707 KIDS - VERDE2.webp",
         specs: "<li><strong>Conectividad:</strong> Bluetooth V5.0 (10m)</li><li><strong>Funciones:</strong> Lector TF, Radio FM, MP3</li><li><strong>Color:</strong> Verde</li><li><strong>Batería:</strong> 150mAh (3hs de uso) - Entrada V8</li><li><strong>Controles:</strong> Volumen, canciones y llamadas</li><li><strong>Extras:</strong> Cable de carga y cable auxiliar incluidos</li>",
         precio: 15000 
     },
@@ -37,8 +24,8 @@ const catalogoAuriculares = [
         nombre: "Auricular Xaea MODX-701 M103",
         categoria: "auricular", 
         color: "Celeste",
-        imagen: "assets/img/AURICULAR BT MODX-707 KIDS - CELESTE.png", 
-        imagenHover: "assets/img/AURICULAR BT MODX-707 KIDS - CELESTE2.png", 
+        imagen: "assets/img/AURICULAR BT MODX-707 KIDS - CELESTE.webp", 
+        imagenHover: "assets/img/AURICULAR BT MODX-707 KIDS - CELESTE2.webp", 
         specs: "<li><strong>Conectividad:</strong> Bluetooth V5.0 (10m)</li><li><strong>Funciones:</strong> Lector TF, Radio FM, MP3</li><li><strong>Color:</strong> Celeste</li><li><strong>Batería:</strong> 150mAh (3hs de uso) - Entrada V8</li><li><strong>Controles:</strong> Volumen, canciones y llamadas</li><li><strong>Extras:</strong> Cable de carga y cable auxiliar incluidos</li>",
         precio: 15000 
     },
@@ -47,8 +34,8 @@ const catalogoAuriculares = [
         nombre: "Auricular BT MODX-708 Orejas de Gato",
         categoria: "auricular", 
         color: "Rosa",
-        imagen: "assets/img/AURICULAR BT MODX-708-ROSA.png", 
-        imagenHover: "assets/img/AURICULAR BT MODX-708-ROSA2.png", 
+        imagen: "assets/img/AURICULAR BT MODX-708-ROSA.webp", 
+        imagenHover: "assets/img/AURICULAR BT MODX-708-ROSA2.webp", 
         specs: "<li><strong>Diseño:</strong> Infantil con orejitas de gato</li><li><strong>Conectividad:</strong> Bluetooth (10m)</li><li><strong>Funciones:</strong> TF, Auxiliar, Radio FM</li><li><strong>Batería:</strong> 150mAh (3hs de uso) - Puerto V8</li><li><strong>Micrófono y Controles:</strong> Sí</li><li><strong>Extras:</strong> Cable de carga y cable auxiliar (0,80m)</li>",
         precio: 7124
     },
@@ -57,8 +44,8 @@ const catalogoAuriculares = [
         nombre: "Auricular BT MODX-708 Orejas de Gato",
         categoria: "auricular", 
         color: "Violeta",
-        imagen: "assets/img/AURICULAR BT MODX-708-VIOLETA.png", 
-        imagenHover: "assets/img/AURICULAR BT MODX-708-VIOLETA2.png", 
+        imagen: "assets/img/AURICULAR BT MODX-708-VIOLETA.webp", 
+        imagenHover: "assets/img/AURICULAR BT MODX-708-VIOLETA2.webp", 
         specs: "<li><strong>Diseño:</strong> Infantil con orejitas de gato</li><li><strong>Conectividad:</strong> Bluetooth (10m)</li><li><strong>Funciones:</strong> TF, Auxiliar, Radio FM</li><li><strong>Batería:</strong> 150mAh (3hs de uso) - Puerto V8</li><li><strong>Micrófono y Controles:</strong> Sí</li><li><strong>Extras:</strong> Cable de carga y cable auxiliar (0,80m)</li>",
         precio: 7124
     },
@@ -67,8 +54,8 @@ const catalogoAuriculares = [
         nombre: "Auricular TWS ANC MODX-00AI XAEA (Beige)",
         categoria: "in-ear",
         color: "Beige",
-        imagen: "assets/img/MANOS LIBRES TWS ANC SIMIL CUERO MODX-00AI – XAEA – BEIGE.png",
-        imagenHover: "assets/img/MANOS LIBRES TWS ANC SIMIL CUERO MODX-00AI – XAEA – BEIGE1.png",
+        imagen: "assets/img/MANOS LIBRES TWS ANC SIMIL CUERO MODX-00AI – XAEA – BEIGE.webp",
+        imagenHover: "assets/img/MANOS LIBRES TWS ANC SIMIL CUERO MODX-00AI – XAEA – BEIGE1.webp",
         specs: "<li><strong>Conectividad:</strong> Bluetooth V5.4 (Rango 10m)</li><li><strong>Tecnología:</strong> ANC y ENC con 4 micrófonos integrados</li><li><strong>Batería:</strong> 8 horas (Estuche de carga 400mAh)</li><li><strong>Material:</strong> Diseño premium con textura símil cuero</li>",
         precio: 17423
     },
@@ -77,8 +64,8 @@ const catalogoAuriculares = [
         nombre: "Auricular TWS ANC MODX-00AI XAEA (Negro)",
         categoria: "in-ear",
         color: "Negro",
-        imagen: "assets/img/MANOS LIBRES TWS ANC SIMIL CUERO MODX-00AI – XAEA – NEGRO.png",
-        imagenHover: "assets/img/MANOS LIBRES TWS ANC SIMIL CUERO MODX-00AI – XAEA – NEGRO1.png",
+        imagen: "assets/img/MANOS LIBRES TWS ANC SIMIL CUERO MODX-00AI – XAEA – NEGRO.webp",
+        imagenHover: "assets/img/MANOS LIBRES TWS ANC SIMIL CUERO MODX-00AI – XAEA – NEGRO1.webp",
         specs: "<li><strong>Conectividad:</strong> Bluetooth V5.4 (Rango 10m)</li><li><strong>Tecnología:</strong> ANC y ENC con 4 micrófonos integrados</li><li><strong>Batería:</strong> 8 horas (Estuche de carga 400mAh)</li><li><strong>Material:</strong> Diseño premium con textura símil cuero</li>",
         precio: 17423
     },
@@ -87,8 +74,8 @@ const catalogoAuriculares = [
         nombre: "Auricular TWS ANC MODX-00AI XAEA (Blanco)",
         categoria: "in-ear",
         color: "Blanco",
-        imagen: "assets/img/MANOS LIBRES TWS ANC SIMIL CUERO MODX-00AI – XAEA – BLANCO.png",
-        imagenHover: "assets/img/MANOS LIBRES TWS ANC SIMIL CUERO MODX-00AI – XAEA – BLANCO1.png",
+        imagen: "assets/img/MANOS LIBRES TWS ANC SIMIL CUERO MODX-00AI – XAEA – BLANCO.webp",
+        imagenHover: "assets/img/MANOS LIBRES TWS ANC SIMIL CUERO MODX-00AI – XAEA – BLANCO1.webp",
         specs: "<li><strong>Conectividad:</strong> Bluetooth V5.4 (Rango 10m)</li><li><strong>Tecnología:</strong> ANC y ENC con 4 micrófonos integrados</li><li><strong>Batería:</strong> 8 horas (Estuche de carga 400mAh)</li><li><strong>Material:</strong> Diseño premium con textura símil cuero</li>",
         precio: 17423
     },
@@ -97,8 +84,8 @@ const catalogoAuriculares = [
         nombre: "Auricular TWS MODX-056 Runbeat XAEA (Naranja)",
         categoria: "in-ear",
         color: "Naranja",
-        imagen: "assets/img/MANOS LIBRES TWS MODX-056 RUNBEAT – XAEA.png",
-        imagenHover: "assets/img/MANOS LIBRES TWS MODX-056 RUNBEAT – XAEA - NARANJA.png",
+        imagen: "assets/img/MANOS LIBRES TWS MODX-056 RUNBEAT – XAEA.webp",
+        imagenHover: "assets/img/MANOS LIBRES TWS MODX-056 RUNBEAT – XAEA - NARANJA.webp",
         specs: "<li><strong>Diseño:</strong> In-Ear con control táctil y micrófono</li><li><strong>Batería:</strong> 4 horas de reproducción (Estuche 200mAh, Auricular 30mAh)</li><li><strong>Carga:</strong> Puerto Tipo C</li><li><strong>Accesorios:</strong> Pulsera (modo reloj), funda de silicona y cable</li>",
         precio: 25174
     },
@@ -107,8 +94,8 @@ const catalogoAuriculares = [
         nombre: "Auricular TWS MODX-056 Runbeat XAEA (Negro)",
         categoria: "in-ear",
         color: "Negro",
-        imagen: "assets/img/MANOS LIBRES TWS MODX-056 RUNBEAT – XAEA.png",
-        imagenHover: "assets/img/MANOS LIBRES TWS MODX-056 RUNBEAT – XAEA - NEGRO.png",
+        imagen: "assets/img/MANOS LIBRES TWS MODX-056 RUNBEAT – XAEA.webp",
+        imagenHover: "assets/img/MANOS LIBRES TWS MODX-056 RUNBEAT – XAEA - NEGRO.webp",
         specs: "<li><strong>Diseño:</strong> In-Ear con control táctil y micrófono</li><li><strong>Batería:</strong> 4 horas de reproducción (Estuche 200mAh, Auricular 30mAh)</li><li><strong>Carga:</strong> Puerto Tipo C</li><li><strong>Accesorios:</strong> Pulsera (modo reloj), funda de silicona y cable</li>",
         precio: 25174
     },
@@ -117,8 +104,8 @@ const catalogoAuriculares = [
         nombre: "Auricular TWS MODX-056 Runbeat XAEA (Azul)",
         categoria: "in-ear",
         color: "Azul",
-        imagen: "assets/img/MANOS LIBRES TWS MODX-056 RUNBEAT – XAEA.png",
-        imagenHover: "assets/img/MANOS LIBRES TWS MODX-056 RUNBEAT – XAEA - AZUL.png",
+        imagen: "assets/img/MANOS LIBRES TWS MODX-056 RUNBEAT – XAEA.webp",
+        imagenHover: "assets/img/MANOS LIBRES TWS MODX-056 RUNBEAT – XAEA - AZUL.webp",
         specs: "<li><strong>Diseño:</strong> In-Ear con control táctil y micrófono</li><li><strong>Batería:</strong> 4 horas de reproducción (Estuche 200mAh, Auricular 30mAh)</li><li><strong>Carga:</strong> Puerto Tipo C</li><li><strong>Accesorios:</strong> Pulsera (modo reloj), funda de silicona y cable</li>",
         precio: 25174
     },
@@ -127,8 +114,8 @@ const catalogoAuriculares = [
         nombre: "Auricular TWS MODX-056 Runbeat XAEA (Verde)",
         categoria: "in-ear",
         color: "Verde",
-        imagen: "assets/img/MANOS LIBRES TWS MODX-056 RUNBEAT – XAEA.png",
-        imagenHover: "assets/img/MANOS LIBRES TWS MODX-056 RUNBEAT – XAEA - VERDE.png",
+        imagen: "assets/img/MANOS LIBRES TWS MODX-056 RUNBEAT – XAEA.webp",
+        imagenHover: "assets/img/MANOS LIBRES TWS MODX-056 RUNBEAT – XAEA - VERDE.webp",
         specs: "<li><strong>Diseño:</strong> In-Ear con control táctil y micrófono</li><li><strong>Batería:</strong> 4 horas de reproducción (Estuche 200mAh, Auricular 30mAh)</li><li><strong>Carga:</strong> Puerto Tipo C</li><li><strong>Accesorios:</strong> Pulsera (modo reloj), funda de silicona y cable</li>",
         precio: 25174
     },
@@ -137,8 +124,8 @@ const catalogoAuriculares = [
         nombre: "Auricular TWS MODX-056 Runbeat XAEA (Lila)",
         categoria: "in-ear",
         color: "Lila",
-        imagen: "assets/img/MANOS LIBRES TWS MODX-056 RUNBEAT – XAEA.png",
-        imagenHover: "assets/img/MANOS LIBRES TWS MODX-056 RUNBEAT – XAEA – LILA.png",
+        imagen: "assets/img/MANOS LIBRES TWS MODX-056 RUNBEAT – XAEA.webp",
+        imagenHover: "assets/img/MANOS LIBRES TWS MODX-056 RUNBEAT – XAEA – LILA.webp",
         specs: "<li><strong>Diseño:</strong> In-Ear con control táctil y micrófono</li><li><strong>Batería:</strong> 4 horas de reproducción (Estuche 200mAh, Auricular 30mAh)</li><li><strong>Carga:</strong> Puerto Tipo C</li><li><strong>Accesorios:</strong> Pulsera (modo reloj), funda de silicona y cable</li>",
         precio: 25174
     },
@@ -147,8 +134,8 @@ const catalogoAuriculares = [
         nombre: "Auricular TWS ANC MODX-0024 XAEA (Negro)",
         categoria: "in-ear",
         color: "Negro",
-        imagen: "assets/img/MANOS LIBRES TWS ANC MODX-0024 – XAEA – NEGRO.png",
-        imagenHover: "assets/img/MANOS LIBRES TWS ANC MODX-0024 – XAEA – NEGRO1.png",
+        imagen: "assets/img/MANOS LIBRES TWS ANC MODX-0024 – XAEA – NEGRO.webp",
+        imagenHover: "assets/img/MANOS LIBRES TWS ANC MODX-0024 – XAEA – NEGRO1.webp",
         specs: "<li><strong>Conectividad:</strong> Bluetooth 5.4 con control táctil</li><li><strong>Audio:</strong> Cancelación Activa de Ruido (ANC) y altavoces de 10mm</li><li><strong>Batería:</strong> Hasta 8 horas de reproducción (Estuche 380mAh, Auricular 40mAh)</li><li><strong>Extras:</strong> Pantalla indicadora LED y carga rápida (1 hora)</li>",
         precio: 14966
     },
@@ -157,8 +144,8 @@ const catalogoAuriculares = [
         nombre: "Auricular TWS ANC MODX-0023 XAEA (Negro)",
         categoria: "in-ear",
         color: "Negro",
-        imagen: "assets/img/MANOS LIBRES TWS ANC MODX-0023 – XAEA – NEGRO.png",
-        imagenHover: "assets/img/MANOS LIBRES TWS ANC MODX-0023 – XAEA – NEGRO1.png",
+        imagen: "assets/img/MANOS LIBRES TWS ANC MODX-0023 – XAEA – NEGRO.webp",
+        imagenHover: "assets/img/MANOS LIBRES TWS ANC MODX-0023 – XAEA – NEGRO1.webp",
         specs: "<li><strong>Conectividad:</strong> Bluetooth 5.4 con control táctil</li><li><strong>Audio:</strong> Cancelación Activa de Ruido (ANC) y parlantes dinámicos de 10mm</li><li><strong>Batería:</strong> 8 horas de autonomía (Estuche 380mAh, Auricular 40mAh)</li><li><strong>Extras:</strong> Luces LED y carga rápida Tipo C (1 hora)</li>",
         precio: 13301
     },
@@ -167,8 +154,8 @@ const catalogoAuriculares = [
         nombre: "Auricular TWS ANC MODX-0023 XAEA (Blanco)",
         categoria: "in-ear",
         color: "Blanco",
-        imagen: "assets/img/MANOS LIBRES TWS ANC MODX-0023 – XAEA – NEGRO.png",
-        imagenHover: "assets/img/MANOS LIBRES TWS ANC MODX-0023 – XAEA – BLANCO.PNG",
+        imagen: "assets/img/MANOS LIBRES TWS ANC MODX-0023 – XAEA – NEGRO.webp",
+        imagenHover: "assets/img/MANOS LIBRES TWS ANC MODX-0023 – XAEA – BLANCO.webp",
         specs: "<li><strong>Conectividad:</strong> Bluetooth 5.4 con control táctil</li><li><strong>Audio:</strong> Cancelación Activa de Ruido (ANC) y parlantes dinámicos de 10mm</li><li><strong>Batería:</strong> 8 horas de autonomía (Estuche 380mAh, Auricular 40mAh)</li><li><strong>Extras:</strong> Luces LED y carga rápida Tipo C (1 hora)</li>",
         precio: 13301
     },
@@ -177,8 +164,8 @@ const catalogoAuriculares = [
         nombre: "Auricular TWS NOX MODX-051 XAEA (Negro)",
         categoria: "in-ear",
         color: "Negro",
-        imagen: "assets/img/MANOS LIBRES TWS – NOX – MODX-051 – XAEA – NEGRO.png",
-        imagenHover: "assets/img/MANOS LIBRES TWS – NOX – MODX-051 – XAEA – NEGRO1.png",
+        imagen: "assets/img/MANOS LIBRES TWS – NOX – MODX-051 – XAEA – NEGRO.webp",
+        imagenHover: "assets/img/MANOS LIBRES TWS – NOX – MODX-051 – XAEA – NEGRO1.webp",
         specs: "<li><strong>Conectividad:</strong> Bluetooth 5.4 con pantalla táctil multifunción</li><li><strong>Audio:</strong> Doble cancelación de ruido (ANC + ENC + EQ) y parlantes de 13mm</li><li><strong>Batería:</strong> 8 horas de reproducción (Estuche 400mAh, Auricular 40mAh)</li><li><strong>Carga:</strong> Rápida en 1 hora (Puerto Tipo C)</li>",
         precio: 21156
     },
@@ -187,8 +174,8 @@ const catalogoAuriculares = [
         nombre: "Auricular TWS NOX MODX-051 XAEA (Blanco)",
         categoria: "in-ear",
         color: "Blanco",
-        imagen: "assets/img/MANOS LIBRES TWS – NOX – MODX-051 – XAEA – BLANCO.png",
-        imagenHover: "assets/img/MANOS LIBRES TWS – NOX – MODX-051 – XAEA – BLANCO1.png",
+        imagen: "assets/img/MANOS LIBRES TWS – NOX – MODX-051 – XAEA – BLANCO.webp",
+        imagenHover: "assets/img/MANOS LIBRES TWS – NOX – MODX-051 – XAEA – BLANCO1.webp",
         specs: "<li><strong>Conectividad:</strong> Bluetooth 5.4 con pantalla táctil multifunción</li><li><strong>Audio:</strong> Doble cancelación de ruido (ANC + ENC + EQ) y parlantes de 13mm</li><li><strong>Batería:</strong> 8 horas de reproducción (Estuche 400mAh, Auricular 40mAh)</li><li><strong>Carga:</strong> Rápida en 1 hora (Puerto Tipo C)</li>",
         precio: 21156
     },
@@ -197,8 +184,8 @@ const catalogoAuriculares = [
         nombre: "Auricular Manos Libres MODX-045 Thunder-C XAEA (Negro)",
         categoria: "cableado",
         color: "Negro",
-        imagen: "assets/img/MANOS LIBRES – MODX-045 THUNDER-C – XAEA - NEGRO.png",
-        imagenHover: "assets/img/MANOS LIBRES – MODX-045 THUNDER-C – XAEA - NEGRO1.png",
+        imagen: "assets/img/MANOS LIBRES – MODX-045 THUNDER-C – XAEA - NEGRO.webp",
+        imagenHover: "assets/img/MANOS LIBRES – MODX-045 THUNDER-C – XAEA - NEGRO1.webp",
         specs: "<li><strong>Conectividad:</strong> Cable con ficha Tipo C (1 metro)</li><li><strong>Audio:</strong> Cancelación de sonido y micrófono integrado</li><li><strong>Controles:</strong> Mando integrado para volumen, canciones y llamadas</li><li><strong>Material:</strong> Plástico ABS resistente</li>",
         precio: 4441
     }
@@ -461,7 +448,7 @@ if (btnPagar) {
             return;
         }
 
-        const numeroWhatsApp = "5492613132991"; 
+        const numeroWhatsApp = WHATSAPP; 
         let mensaje = "¡Hola Tech Marea! 🌊 Quiero realizar el siguiente pedido:\n\n";
         let totalPedido = 0;
 
@@ -481,33 +468,7 @@ if (btnPagar) {
 }
 
 if (btnMercadoPago) {
-    btnMercadoPago.addEventListener("click", async () => {
-        if (carrito.length === 0) {
-            alert("El carrito está vacío.");
-            return;
-        }
-
-        try {
-            const respuesta = await fetch("http://127.0.0.1:5001/tech-marea-db/us-central1/crearPreferencia", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({ items: carrito })
-            });
-
-            const datos = await respuesta.json();
-
-            if (datos.init_point) {
-                window.location.href = datos.init_point;
-            } else {
-                alert("Hubo un error al generar el pago.");
-            }
-        } catch (error) {
-            console.error("Error al conectar con el servidor de pago:", error);
-            alert("No se pudo conectar con el servidor local de pagos.");
-        }
-    });
+    btnMercadoPago.addEventListener("click", () => pagarConMercadoPago(carrito, btnMercadoPago));
 }
 
 // =========================================

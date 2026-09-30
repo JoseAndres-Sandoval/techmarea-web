@@ -1,22 +1,9 @@
 // =========================================
 // INICIALIZACIÓN DE FIREBASE
 // =========================================
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
-import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
-
-const firebaseConfig = {
-    apiKey: "AIzaSyCHV9m2iYtx70sqT0C5AlSiRQIrP2AL6zI",
-    authDomain: "tech-marea-db.firebaseapp.com",
-    projectId: "tech-marea-db",
-    storageBucket: "tech-marea-db.firebasestorage.app",
-    messagingSenderId: "120154130587",
-    appId: "1:120154130587:web:390fd3c12fc7b3460cde3e"
-};
-
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-const auth = getAuth(app);
+import { doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+import { db, auth, pagarConMercadoPago, WHATSAPP } from "./config.js";
 
 // =========================================
 // 1. BASE DE DATOS DE PRODUCTOS (CABLES: 200 - 299)
@@ -27,8 +14,8 @@ const catalogoCables = [
         nombre: "Cable Sync-C Plus MODX-008S XAEA (Blanco)",
         categoria: "usb-c",
         color: "Blanco",
-        imagen: "assets/img/cable-sync-c-008s.png",
-        imagenHover: "assets/img/cable-sync-c-008s-blanco.png",
+        imagen: "assets/img/cable-sync-c-008s.webp",
+        imagenHover: "assets/img/cable-sync-c-008s-blanco.webp",
         specs: "<li><strong>Conexión:</strong> USB-C a USB-C</li><li><strong>Carga:</strong> Rápida hasta 3A</li><li><strong>Construcción:</strong> Tecnología 5 Core (Cobre 100% puro)</li><li><strong>Protección:</strong> Doble mallado premium resistente</li><li><strong>Largo:</strong> 0.95 m (Grosor: 3.5 mm)</li>",
         precio: 2475
     },
@@ -37,8 +24,8 @@ const catalogoCables = [
         nombre: "Cable TC-TC AX MODX-002B XAEA (Violeta)",
         categoria: "usb-c",
         color: "Violeta",
-        imagen: "assets/img/CABLE TC-TC AX MODX-002B – XAEA – VIOLETA.png",
-        imagenHover: "assets/img/CABLE TC-TC AX MODX-002B – XAEA – VIOLETA1.png",
+        imagen: "assets/img/CABLE TC-TC AX MODX-002B – XAEA – VIOLETA.webp",
+        imagenHover: "assets/img/CABLE TC-TC AX MODX-002B – XAEA – VIOLETA1.webp",
         specs: "<li><strong>Conexión:</strong> Tipo C a Tipo C (Conector 90°)</li><li><strong>Carga:</strong> Rápida y estable (5-Core)</li><li><strong>Construcción:</strong> 100% Cobre (90 filamentos de 0.1mm)</li><li><strong>Cubierta:</strong> PVC de doble inyección</li><li><strong>Largo:</strong> 1.5 metros</li>",
         precio: 1751
     },
@@ -47,8 +34,8 @@ const catalogoCables = [
         nombre: "Cable Tipo C - Lightning MODX-098 Athenea XAEA (Celeste)",
         categoria: "lightning",
         color: "Celeste",
-        imagen: "assets/img/CABLE TIPO C – LIGHTNING MODX-098 – ATHENEA – XAEA-CELESTE.png",
-        imagenHover: "assets/img/CABLE TIPO C – LIGHTNING MODX-098 – ATHENEA – XAEA – CELESTE1.png",
+        imagen: "assets/img/CABLE TIPO C – LIGHTNING MODX-098 – ATHENEA – XAEA-CELESTE.webp",
+        imagenHover: "assets/img/CABLE TIPO C – LIGHTNING MODX-098 – ATHENEA – XAEA – CELESTE1.webp",
         specs: "<li><strong>Conexión:</strong> Tipo C a Lightning</li><li><strong>Tecnología:</strong> Core 5 (100% cobre)</li><li><strong>Material:</strong> Cubierta TPE doble inyección ignífuga</li><li><strong>Largo:</strong> 1 metro</li>",
         precio: 3865
     },
@@ -57,8 +44,8 @@ const catalogoCables = [
         nombre: "Cable Tipo C - Tipo C MODX-097 Athenea XAEA (Beige)",
         categoria: "usb-c",
         color: "Beige",
-        imagen: "assets/img/CABLE TIPO C – TIPO C MODX-097 – ATHENEA – XAEA.png",
-        imagenHover: "assets/img/CABLE TIPO C – TIPO C MODX-097 – ATHENEA – XAEA – AZUL METAL.png",
+        imagen: "assets/img/CABLE TIPO C – TIPO C MODX-097 – ATHENEA – XAEA.webp",
+        imagenHover: "assets/img/CABLE TIPO C – TIPO C MODX-097 – ATHENEA – XAEA – AZUL METAL.webp",
         specs: "<li><strong>Conexión:</strong> Tipo C a Tipo C</li><li><strong>Tecnología:</strong> Core 5 (100% cobre)</li><li><strong>Material:</strong> Cubierta TPE doble inyección ignífuga</li><li><strong>Largo:</strong> 1 metro</li>",
         precio: 3042
     },
@@ -67,8 +54,8 @@ const catalogoCables = [
         nombre: "Cable Tipo C - Tipo C MODX-097 Athenea XAEA (Negro)",
         categoria: "usb-c",
         color: "Negro",
-        imagen: "assets/img/CABLE TIPO C – TIPO C MODX-097 – ATHENEA – XAEA.png",
-        imagenHover: "assets/img/CABLE TIPO C – TIPO C MODX-097 – ATHENEA – XAEA - NEGRO.png",
+        imagen: "assets/img/CABLE TIPO C – TIPO C MODX-097 – ATHENEA – XAEA.webp",
+        imagenHover: "assets/img/CABLE TIPO C – TIPO C MODX-097 – ATHENEA – XAEA - NEGRO.webp",
         specs: "<li><strong>Conexión:</strong> Tipo C a Tipo C</li><li><strong>Tecnología:</strong> Core 5 (100% cobre)</li><li><strong>Material:</strong> Cubierta TPE doble inyección ignífuga</li><li><strong>Largo:</strong> 1 metro</li>",
         precio: 3042
     },
@@ -77,8 +64,8 @@ const catalogoCables = [
         nombre: "Cable Tipo C - Tipo C MODX-097 Athenea XAEA (Azul Metal)",
         categoria: "usb-c",
         color: "Azul Metal",
-        imagen: "assets/img/CABLE TIPO C – TIPO C MODX-097 – ATHENEA – XAEA.png",
-        imagenHover: "assets/img/CABLE TIPO C – TIPO C MODX-097 – ATHENEA – XAEA – AZUL METAL.png",
+        imagen: "assets/img/CABLE TIPO C – TIPO C MODX-097 – ATHENEA – XAEA.webp",
+        imagenHover: "assets/img/CABLE TIPO C – TIPO C MODX-097 – ATHENEA – XAEA – AZUL METAL.webp",
         specs: "<li><strong>Conexión:</strong> Tipo C a Tipo C</li><li><strong>Tecnología:</strong> Core 5 (100% cobre)</li><li><strong>Material:</strong> Cubierta TPE doble inyección ignífuga</li><li><strong>Largo:</strong> 1 metro</li>",
         precio: 3042
     },
@@ -87,8 +74,8 @@ const catalogoCables = [
         nombre: "Cable Tipo C - Tipo C MODX-097 Athenea XAEA (Celeste)",
         categoria: "usb-c",
         color: "Celeste",
-        imagen: "assets/img/CABLE TIPO C – TIPO C MODX-097 – ATHENEA – XAEA.png",
-        imagenHover: "assets/img/CABLE TIPO C – TIPO C MODX-097 – ATHENEA – XAEA - CELESTE.png",
+        imagen: "assets/img/CABLE TIPO C – TIPO C MODX-097 – ATHENEA – XAEA.webp",
+        imagenHover: "assets/img/CABLE TIPO C – TIPO C MODX-097 – ATHENEA – XAEA - CELESTE.webp",
         specs: "<li><strong>Conexión:</strong> Tipo C a Tipo C</li><li><strong>Tecnología:</strong> Core 5 (100% cobre)</li><li><strong>Material:</strong> Cubierta TPE doble inyección ignífuga</li><li><strong>Largo:</strong> 1 metro</li>",
         precio: 3042
     },
@@ -97,8 +84,8 @@ const catalogoCables = [
         nombre: "Cable Tipo C - Tipo C MODX-097 Athenea XAEA (Lila)",
         categoria: "usb-c",
         color: "Lila",
-        imagen: "assets/img/CABLE TIPO C – TIPO C MODX-097 – ATHENEA – XAEA.png",
-        imagenHover: "assets/img/CABLE TIPO C – TIPO C MODX-097 – ATHENEA – XAEA - LILA.png",
+        imagen: "assets/img/CABLE TIPO C – TIPO C MODX-097 – ATHENEA – XAEA.webp",
+        imagenHover: "assets/img/CABLE TIPO C – TIPO C MODX-097 – ATHENEA – XAEA - LILA.webp",
         specs: "<li><strong>Conexión:</strong> Tipo C a Tipo C</li><li><strong>Tecnología:</strong> Core 5 (100% cobre)</li><li><strong>Material:</strong> Cubierta TPE doble inyección ignífuga</li><li><strong>Largo:</strong> 1 metro</li>",
         precio: 3042
     },
@@ -107,8 +94,8 @@ const catalogoCables = [
         nombre: "Cable Tipo C - Tipo C MODX-105 Hera XAEA (Azul)",
         categoria: "usb-c",
         color: "Azul",
-        imagen: "assets/img/CABLE TIPO C TIPO C MODX-105 – HERA – XAEA – AZUL.png",
-        imagenHover: "assets/img/CABLE TIPO C TIPO C MODX-105 – HERA – XAEA – AZUL1.png",
+        imagen: "assets/img/CABLE TIPO C TIPO C MODX-105 – HERA – XAEA – AZUL.webp",
+        imagenHover: "assets/img/CABLE TIPO C TIPO C MODX-105 – HERA – XAEA – AZUL1.webp",
         specs: "<li><strong>Conexión:</strong> Tipo C a Tipo C</li><li><strong>Amperaje:</strong> 3A</li><li><strong>Material:</strong> 100% Cobre y TPE doble inyección ignífugo</li><li><strong>Largo:</strong> 1.5 metros</li>",
         precio: 2667
     },
@@ -117,8 +104,8 @@ const catalogoCables = [
         nombre: "Cable Tipo C - Tipo C MODX-105 Hera XAEA (Champagne)",
         categoria: "usb-c",
         color: "Champagne",
-        imagen: "assets/img/CABLE TIPO C TIPO C MODX-105 – HERA – XAEA – DORADO CHAMPAGNE.png",
-        imagenHover: "assets/img/CABLE TIPO C TIPO C MODX-105 – HERA – XAEA – DORADO CHAMPAGNE1.png",
+        imagen: "assets/img/CABLE TIPO C TIPO C MODX-105 – HERA – XAEA – DORADO CHAMPAGNE.webp",
+        imagenHover: "assets/img/CABLE TIPO C TIPO C MODX-105 – HERA – XAEA – DORADO CHAMPAGNE1.webp",
         specs: "<li><strong>Conexión:</strong> Tipo C a Tipo C</li><li><strong>Amperaje:</strong> 3A</li><li><strong>Material:</strong> 100% Cobre y TPE doble inyección ignífugo</li><li><strong>Largo:</strong> 1.5 metros</li>",
         precio: 2667
     },
@@ -127,8 +114,8 @@ const catalogoCables = [
         nombre: "Cable USB Lightning MODX-104 Zeus XAEA (Dorado)",
         categoria: "lightning",
         color: "Dorado",
-        imagen: "assets/img/CABLE USB LIGHTNING MODX-104 – ZEUS – XAEA – DORADO.png",
-        imagenHover: "assets/img/CABLE USB LIGHTNING MODX-104 – ZEUS – XAEA – DORADO1.png",
+        imagen: "assets/img/CABLE USB LIGHTNING MODX-104 – ZEUS – XAEA – DORADO.webp",
+        imagenHover: "assets/img/CABLE USB LIGHTNING MODX-104 – ZEUS – XAEA – DORADO1.webp",
         specs: "<li><strong>Conexión:</strong> USB a Lightning</li><li><strong>Construcción:</strong> 80 hilos de cobre puro</li><li><strong>Material:</strong> TPE resistente con doble inyección</li><li><strong>Largo:</strong> 1 metro</li>",
         precio: 2518
     },
@@ -137,8 +124,8 @@ const catalogoCables = [
         nombre: "Cable USB Lightning MODX-104 Zeus XAEA (Plata)",
         categoria: "lightning",
         color: "Plata",
-        imagen: "assets/img/CABLE USB LIGHTNING MODX-104 – ZEUS – XAEA – PLATEADO.png",
-        imagenHover: "assets/img/CABLE USB LIGHTNING MODX-104 – ZEUS – XAEA – PLATEADO1.png",
+        imagen: "assets/img/CABLE USB LIGHTNING MODX-104 – ZEUS – XAEA – PLATEADO.webp",
+        imagenHover: "assets/img/CABLE USB LIGHTNING MODX-104 – ZEUS – XAEA – PLATEADO1.webp",
         specs: "<li><strong>Conexión:</strong> USB a Lightning</li><li><strong>Construcción:</strong> 80 hilos de cobre puro</li><li><strong>Material:</strong> TPE resistente con doble inyección</li><li><strong>Largo:</strong> 1 metro</li>",
         precio: 2518
     },
@@ -147,8 +134,8 @@ const catalogoCables = [
         nombre: "Cable USB Lightning MODX-104 Zeus XAEA (Marrón)",
         categoria: "lightning",
         color: "Marrón",
-        imagen: "assets/img/CABLE USB LIGHTNING MODX-104 – ZEUS – XAEA – MARRON.png",
-        imagenHover: "assets/img/CABLE USB LIGHTNING MODX-104 – ZEUS – XAEA – MARRON1.png",
+        imagen: "assets/img/CABLE USB LIGHTNING MODX-104 – ZEUS – XAEA – MARRON.webp",
+        imagenHover: "assets/img/CABLE USB LIGHTNING MODX-104 – ZEUS – XAEA – MARRON1.webp",
         specs: "<li><strong>Conexión:</strong> USB a Lightning</li><li><strong>Construcción:</strong> 80 hilos de cobre puro</li><li><strong>Material:</strong> TPE resistente con doble inyección</li><li><strong>Largo:</strong> 1 metro</li>",
         precio: 2518
     },
@@ -157,8 +144,8 @@ const catalogoCables = [
         nombre: "Cable USB Lightning MODX-104 Zeus XAEA (Verde)",
         categoria: "lightning",
         color: "Verde",
-        imagen: "assets/img/CABLE USB LIGHTNING MODX-104 – ZEUS – XAEA – VERDE.png",
-        imagenHover: "assets/img/CABLE USB LIGHTNING MODX-104 – ZEUS – XAEA – VERDE1.png",
+        imagen: "assets/img/CABLE USB LIGHTNING MODX-104 – ZEUS – XAEA – VERDE.webp",
+        imagenHover: "assets/img/CABLE USB LIGHTNING MODX-104 – ZEUS – XAEA – VERDE1.webp",
         specs: "<li><strong>Conexión:</strong> USB a Lightning</li><li><strong>Construcción:</strong> 80 hilos de cobre puro</li><li><strong>Material:</strong> TPE resistente con doble inyección</li><li><strong>Largo:</strong> 1 metro</li>",
         precio: 2518
     },
@@ -167,8 +154,8 @@ const catalogoCables = [
         nombre: "Cable USB V8 MOD 73 Qualy 4.4 AMP XAEA (Blanco)",
         categoria: "micro-usb",
         color: "Blanco",
-        imagen: "assets/img/CABLE USB MOD 73 QUALY 4.4 AMP – XAEA – V8 – 1 MTS - BLANCO.png",
-        imagenHover: "assets/img/CABLE USB MOD 73 QUALY 4.4 AMP – XAEA – V8 – 1 MTS - BLANCO1.png",
+        imagen: "assets/img/CABLE USB MOD 73 QUALY 4.4 AMP – XAEA – V8 – 1 MTS - BLANCO.webp",
+        imagenHover: "assets/img/CABLE USB MOD 73 QUALY 4.4 AMP – XAEA – V8 – 1 MTS - BLANCO1.webp",
         specs: "<li><strong>Conexión:</strong> USB a V8 (Micro-USB)</li><li><strong>Amperaje:</strong> 4.4A</li><li><strong>Construcción:</strong> 120 hilos de cobre</li><li><strong>Material:</strong> TPE con puntas doble inyección</li><li><strong>Largo:</strong> 1 metro</li>",
         precio: 1363
     },
@@ -177,8 +164,8 @@ const catalogoCables = [
         nombre: "Cable USB Tipo C MOD 74 Qualy 4.4 AMP XAEA (Blanco)",
         categoria: "usb-c",
         color: "Blanco",
-        imagen: "assets/img/CABLE USB MOD 74 QUALY 4.4 AMP – XAEA – TIPO C – 1 MTS - BLANCO.png",
-        imagenHover: "assets/img/CABLE USB MOD 74 QUALY 4.4 AMP – XAEA – TIPO C – 1 MTS - BLANCO1.png",
+        imagen: "assets/img/CABLE USB MOD 74 QUALY 4.4 AMP – XAEA – TIPO C – 1 MTS - BLANCO.webp",
+        imagenHover: "assets/img/CABLE USB MOD 74 QUALY 4.4 AMP – XAEA – TIPO C – 1 MTS - BLANCO1.webp",
         specs: "<li><strong>Conexión:</strong> USB a Tipo C</li><li><strong>Amperaje:</strong> 4.4A</li><li><strong>Construcción:</strong> 120 hilos de cobre</li><li><strong>Material:</strong> TPE con puntas doble inyección</li><li><strong>Largo:</strong> 1 metro</li>",
         precio: 1363
     },
@@ -187,8 +174,8 @@ const catalogoCables = [
         nombre: "Cable USB Lightning MOD96 Wolverine XAEA (Negro)",
         categoria: "lightning",
         color: "Negro",
-        imagen: "assets/img/CABLE USB MOD96 WOLVERINE – XAEA – LIGHTNING – 4.4 AMP – NEGRO.png",
-        imagenHover: "assets/img/CABLE USB MOD96 WOLVERINE – XAEA – LIGHTNING – 4.4 AMP – NEGRO1.png",
+        imagen: "assets/img/CABLE USB MOD96 WOLVERINE – XAEA – LIGHTNING – 4.4 AMP – NEGRO.webp",
+        imagenHover: "assets/img/CABLE USB MOD96 WOLVERINE – XAEA – LIGHTNING – 4.4 AMP – NEGRO1.webp",
         specs: "<li><strong>Conexión:</strong> USB a Lightning</li><li><strong>Amperaje:</strong> 4.4A</li><li><strong>Construcción:</strong> 120 hilos de cobre (Grosor 4.5 mm)</li><li><strong>Material:</strong> Puntas reforzadas con doble inyección</li><li><strong>Largo:</strong> 1 metro</li>",
         precio: 2116
     },
@@ -197,8 +184,8 @@ const catalogoCables = [
         nombre: "Cable USB MODX-026 Thor Tipo C XAEA (Rojo)",
         categoria: "usb-c",
         color: "Rojo",
-        imagen: "assets/img/CABLE USB MODX-026 THOR TIPO C – XAEA – ROJO.png",
-        imagenHover: "assets/img/CABLE USB MODX-026 THOR TIPO C – XAEA – ROJO1.png",
+        imagen: "assets/img/CABLE USB MODX-026 THOR TIPO C – XAEA – ROJO.webp",
+        imagenHover: "assets/img/CABLE USB MODX-026 THOR TIPO C – XAEA – ROJO1.webp",
         specs: "<li><strong>Conexión:</strong> USB a Tipo C</li><li><strong>Construcción:</strong> 100 hilos de cobre puro</li><li><strong>Material:</strong> Malla metálica exterior y puntas de metal</li><li><strong>Largo:</strong> 1 metro (Grosor 4.5 mm)</li>",
         precio: 2237
     },
@@ -207,8 +194,8 @@ const catalogoCables = [
         nombre: "Cable USB MODX-026 Thor Tipo C XAEA (Negro)",
         categoria: "usb-c",
         color: "Negro",
-        imagen: "assets/img/CABLE USB MODX-026 THOR TIPO C – XAEA – NEGRO.png",
-        imagenHover: "assets/img/CABLE USB MODX-026 THOR TIPO C – XAEA – NEGRO1.png",
+        imagen: "assets/img/CABLE USB MODX-026 THOR TIPO C – XAEA – NEGRO.webp",
+        imagenHover: "assets/img/CABLE USB MODX-026 THOR TIPO C – XAEA – NEGRO1.webp",
         specs: "<li><strong>Conexión:</strong> USB a Tipo C</li><li><strong>Construcción:</strong> 100 hilos de cobre puro</li><li><strong>Material:</strong> Malla metálica exterior y puntas de metal</li><li><strong>Largo:</strong> 1 metro (Grosor 4.5 mm)</li>",
         precio: 2237
     }
@@ -472,7 +459,7 @@ if (btnPagar) {
             return;
         }
 
-        const numeroWhatsApp = "5492613132991"; 
+        const numeroWhatsApp = WHATSAPP; 
         let mensaje = "¡Hola Tech Marea! 🌊 Quiero realizar el siguiente pedido:\n\n";
         let totalPedido = 0;
 
@@ -492,13 +479,7 @@ if (btnPagar) {
 }
 
 if (btnMercadoPago) {
-    btnMercadoPago.addEventListener("click", () => {
-        if (carrito.length === 0) {
-            alert("El carrito está vacío.");
-            return;
-        }
-        alert("¡Excelente elección! Para que tus cobros con Mercado Pago sean 100% seguros y evitar que tu 'Token' quede expuesto, necesitamos conectar esta función a través de un servidor (Firebase Cloud Functions).");
-    });
+    btnMercadoPago.addEventListener("click", () => pagarConMercadoPago(carrito, btnMercadoPago));
 }
 
 // =========================================

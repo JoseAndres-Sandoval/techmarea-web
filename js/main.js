@@ -1,22 +1,9 @@
 // =========================================
 // INICIALIZACIÓN DE FIREBASE (MAIN)
 // =========================================
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
-
-const firebaseConfig = {
-    apiKey: "AIzaSyCHV9m2iYtx70sqT0C5AlSiRQIrP2AL6zI",
-    authDomain: "tech-marea-db.firebaseapp.com",
-    projectId: "tech-marea-db",
-    storageBucket: "tech-marea-db.firebasestorage.app",
-    messagingSenderId: "120154130587",
-    appId: "1:120154130587:web:390fd3c12fc7b3460cde3e"
-};
-
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-const auth = getAuth(app);
+import { doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged, updateProfile } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+import { db, auth, pagarConMercadoPago, WHATSAPP, escaparHTML } from "./config.js";
 
 // =========================================
 // 1. INYECCIÓN DEL CARRITO FLOTANTE EN EL DOM
@@ -160,7 +147,7 @@ function inicializarLogicaCarrito() {
 
             item.innerHTML = `
                 <div style="flex-grow: 1;">
-                    <h5 style="color: var(--color-cian, #00ffff); margin: 0; font-size: 0.95rem;">${producto.nombre}</h5>
+                    <h5 style="color: var(--color-cian, #00ffff); margin: 0; font-size: 0.95rem;">${escaparHTML(producto.nombre)}</h5>
                     <p style="margin: 5px 0; color: #fff; font-weight: bold;">$${precioItemFormateado}</p>
                     <div style="display: flex; align-items: center; gap: 10px; margin-top: 5px;">
                         <button class="btn-restar" data-id="${producto.id}" style="background: #333; color: white; border: none; padding: 2px 10px; cursor: pointer; border-radius: 4px; font-weight: bold;">-</button>
@@ -211,7 +198,7 @@ function inicializarLogicaCarrito() {
                 alert("¡Tu carrito está vacío!");
                 return;
             }
-            const numeroWhatsApp = "5492613132991";
+            const numeroWhatsApp = WHATSAPP;
             let mensaje = "¡Hola Tech Marea! 🌊 Quiero realizar el siguiente pedido:\n\n";
             let totalPedido = 0;
 
@@ -226,36 +213,10 @@ function inicializarLogicaCarrito() {
         });
     }
 
-    // Botón Mercado Pago conectado al EMULADOR LOCAL
+    // Botón Mercado Pago
     const btnMercadoPago = document.getElementById("btn-mercadopago");
     if (btnMercadoPago) {
-        btnMercadoPago.addEventListener("click", async () => {
-            if (carrito.length === 0) {
-                alert("El carrito está vacío.");
-                return;
-            }
-
-            try {
-                const respuesta = await fetch("http://127.0.0.1:5001/tech-marea-db/us-central1/crearPreferencia", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify({ items: carrito })
-                });
-
-                const datos = await respuesta.json();
-
-                if (datos.init_point) {
-                    window.location.href = datos.init_point;
-                } else {
-                    alert("Hubo un error al generar el pago.");
-                }
-            } catch (error) {
-                console.error("Error al conectar con el servidor de pago:", error);
-                alert("No se pudo conectar con el servidor local de pagos (verificá que el emulador esté corriendo).");
-            }
-        });
+        btnMercadoPago.addEventListener("click", () => pagarConMercadoPago(carrito, btnMercadoPago));
     }
 
     // Vaciar carrito
@@ -271,3 +232,139 @@ function inicializarLogicaCarrito() {
         });
     }
 }
+
+// =========================================
+// 3. REGISTRO, INGRESO Y SALIDA DE CLIENTES
+// =========================================
+function mensajeErrorAuth(error) {
+    const mensajes = {
+        "auth/email-already-in-use": "Ese correo ya tiene una cuenta. Probá iniciar sesión.",
+        "auth/invalid-email": "El correo no es válido.",
+        "auth/weak-password": "La contraseña debe tener al menos 6 caracteres.",
+        "auth/invalid-credential": "Correo o contraseña incorrectos.",
+        "auth/too-many-requests": "Demasiados intentos. Esperá unos minutos y probá de nuevo."
+    };
+    return mensajes[error.code] || "Ocurrió un error. Probá de nuevo.";
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const modalRegistro = document.getElementById("modal-registro");
+    const modalLogin = document.getElementById("modal-login");
+    if (!modalRegistro || !modalLogin) return;
+
+    const abrirRegistro = () => { modalLogin.style.display = "none"; modalRegistro.classList.add("modal-abierto"); };
+    const abrirLogin = () => { modalRegistro.classList.remove("modal-abierto"); modalLogin.style.display = "flex"; };
+    const cerrarTodo = () => { modalRegistro.classList.remove("modal-abierto"); modalLogin.style.display = "none"; };
+
+    document.getElementById("btn-abrir-registro")?.addEventListener("click", (e) => { e.preventDefault(); abrirRegistro(); });
+    document.getElementById("link-ir-login")?.addEventListener("click", (e) => { e.preventDefault(); abrirLogin(); });
+    document.getElementById("link-ir-registro")?.addEventListener("click", (e) => { e.preventDefault(); abrirRegistro(); });
+    document.getElementById("btn-cerrar-registro")?.addEventListener("click", cerrarTodo);
+    document.getElementById("btn-cerrar-login")?.addEventListener("click", cerrarTodo);
+    [modalRegistro, modalLogin].forEach(m => m.addEventListener("click", (e) => { if (e.target === m) cerrarTodo(); }));
+
+    document.getElementById("form-registro-auth")?.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const nombre = document.getElementById("reg-nombre").value.trim();
+        const email = document.getElementById("reg-email").value.trim();
+        const password = document.getElementById("reg-password").value;
+        try {
+            const cred = await createUserWithEmailAndPassword(auth, email, password);
+            await updateProfile(cred.user, { displayName: nombre });
+            await setDoc(doc(db, "usuarios", cred.user.uid), { nombre, email, creado: new Date().toISOString() });
+            mostrarUsuario(cred.user);
+            e.target.reset();
+            cerrarTodo();
+        } catch (error) {
+            console.error(error);
+            alert(mensajeErrorAuth(error));
+        }
+    });
+
+    document.getElementById("form-login-auth")?.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const email = document.getElementById("login-email").value.trim();
+        const password = document.getElementById("login-password").value;
+        try {
+            await signInWithEmailAndPassword(auth, email, password);
+            e.target.reset();
+            cerrarTodo();
+        } catch (error) {
+            console.error(error);
+            alert(mensajeErrorAuth(error));
+        }
+    });
+
+    document.getElementById("btn-cerrar-sesion")?.addEventListener("click", async (e) => {
+        e.preventDefault();
+        await signOut(auth);
+        localStorage.removeItem("carritoTechMarea");
+    });
+
+    onAuthStateChanged(auth, (user) => mostrarUsuario(user));
+});
+
+function mostrarUsuario(user) {
+    const menuRegistro = document.getElementById("menu-registro");
+    const menuUsuario = document.getElementById("menu-usuario");
+    const menuSalir = document.getElementById("menu-salir");
+    const btnPerfil = document.getElementById("btn-perfil");
+    if (!menuRegistro || !menuUsuario || !menuSalir) return;
+
+    if (user) {
+        const nombre = (user.displayName || user.email || "").split(" ")[0];
+        if (btnPerfil) btnPerfil.textContent = `¡Hola, ${nombre}!`;
+        menuRegistro.style.display = "none";
+        menuUsuario.style.display = "";
+        menuSalir.style.display = "";
+    } else {
+        menuRegistro.style.display = "";
+        menuUsuario.style.display = "none";
+        menuSalir.style.display = "none";
+    }
+}
+
+// =========================================
+// 4. SEGUIMIENTO DE REPARACIONES
+// =========================================
+document.addEventListener("DOMContentLoaded", () => {
+    const input = document.getElementById("input-orden");
+    const boton = document.getElementById("btn-consultar-orden");
+    const resultado = document.getElementById("resultado-reparacion");
+    const titulo = document.getElementById("estado-titulo");
+    const detalle = document.getElementById("estado-detalle");
+    if (!input || !boton || !resultado) return;
+
+    async function consultar() {
+        const orden = input.value.trim().replace(/^#/, "");
+        if (!/^[0-9]{1,10}$/.test(orden)) {
+            alert("Ingresá solo el número de orden (ej: 1001).");
+            return;
+        }
+
+        boton.disabled = true;
+        boton.textContent = "Buscando...";
+        try {
+            const snap = await getDoc(doc(db, "reparaciones", orden));
+            resultado.style.display = "block";
+            if (snap.exists()) {
+                const d = snap.data();
+                titulo.textContent = `Orden #${orden} · ${d.estado}`;
+                detalle.innerHTML = `<strong>Equipo:</strong> ${escaparHTML(d.equipo)}<br>${escaparHTML(d.detalle)}`;
+                resultado.style.borderLeftColor = d.estado === "Listo para retirar" ? "#25d366" : "var(--color-cian)";
+            } else {
+                titulo.textContent = "No encontramos esa orden";
+                detalle.textContent = "Revisá el número o escribinos por WhatsApp y te ayudamos.";
+                resultado.style.borderLeftColor = "#ff4757";
+            }
+        } catch (error) {
+            console.error(error);
+            alert("No se pudo consultar en este momento. Probá de nuevo.");
+        }
+        boton.disabled = false;
+        boton.textContent = "Consultar Estado";
+    }
+
+    boton.addEventListener("click", consultar);
+    input.addEventListener("keypress", (e) => { if (e.key === "Enter") consultar(); });
+});
