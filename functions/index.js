@@ -14,21 +14,25 @@ const MP_ACCESS_TOKEN = defineSecret("MP_ACCESS_TOKEN");
 
 const CANTIDAD_MAXIMA = 20;
 
-// Adónde vuelve el cliente después de pagar (la misma web/carpeta desde donde compró)
-function armarUrlsDeVuelta(origen) {
-    let base = new URL("https://techmarea.com.ar/");
+// Adónde vuelve el cliente después de pagar (la misma web/carpeta desde donde compró).
+// Mercado Pago solo acepta volver automáticamente a direcciones https.
+// Si la página se abrió desde la compu (http://127.0.0.1...), no ponemos vuelta
+// automática: el cliente paga y vuelve con el botón de Mercado Pago.
+function armarVuelta(origen) {
     try {
-        const url = new URL(origen);
-        if (url.protocol === "https:" || url.hostname === "localhost" || url.hostname === "127.0.0.1") {
-            base = url;
-        }
-    } catch (_) { /* origen inválido: usamos el dominio por defecto */ }
-
-    return {
-        success: new URL("exito.html", base).href,
-        failure: new URL("fallo.html", base).href,
-        pending: new URL("pendiente.html", base).href
-    };
+        const base = new URL(origen);
+        if (base.protocol !== "https:") return {};
+        return {
+            back_urls: {
+                success: new URL("exito.html", base).href,
+                failure: new URL("fallo.html", base).href,
+                pending: new URL("pendiente.html", base).href
+            },
+            auto_return: "approved"
+        };
+    } catch (_) {
+        return {};
+    }
 }
 
 exports.crearPreferencia = onRequest({ cors: true, secrets: [MP_ACCESS_TOKEN] }, async (req, res) => {
@@ -75,8 +79,7 @@ exports.crearPreferencia = onRequest({ cors: true, secrets: [MP_ACCESS_TOKEN] },
         const respuesta = await preference.create({
             body: {
                 items: itemsParaMP,
-                back_urls: armarUrlsDeVuelta(origen),
-                auto_return: "approved",
+                ...armarVuelta(origen),
                 statement_descriptor: "TECH MAREA"
             }
         });
@@ -84,7 +87,7 @@ exports.crearPreferencia = onRequest({ cors: true, secrets: [MP_ACCESS_TOKEN] },
         return res.status(200).json({ init_point: respuesta.init_point });
 
     } catch (error) {
-        console.error("Error al crear la preferencia de pago:", error);
+        console.error("Error al crear la preferencia de pago:", error?.message, JSON.stringify(error?.cause || error));
         return res.status(500).json({ error: "Error interno al procesar el pago." });
     }
 });
