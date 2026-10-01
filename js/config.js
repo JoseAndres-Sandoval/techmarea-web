@@ -21,10 +21,11 @@ export const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
 export const auth = getAuth(app);
 
-// Si la página se abre desde tu compu (localhost) usa el emulador;
-// si está publicada en internet usa la función real de Firebase.
-const esLocal = ["localhost", "127.0.0.1"].includes(window.location.hostname);
-export const URL_PAGO = esLocal
+// Siempre usa el servidor de pagos real publicado en Firebase.
+// Solo si abrís la página con "?emulador" al final de la dirección
+// (ej: 127.0.0.1:5500/parlantes.html?emulador) usa el emulador local.
+const usarEmulador = new URLSearchParams(window.location.search).has("emulador");
+export const URL_PAGO = usarEmulador
     ? "http://127.0.0.1:5001/tech-marea-db/us-central1/crearPreferencia"
     : "https://us-central1-tech-marea-db.cloudfunctions.net/crearPreferencia";
 
