@@ -2,7 +2,7 @@
 // Panel de administración: el acceso lo controla Firebase (cuenta + lista de admins),
 // no una contraseña escrita en el código.
 
-import { collection, getDocs, getDoc, setDoc, updateDoc, deleteDoc, doc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+import { collection, getDocs, getDoc, setDoc, updateDoc, deleteDoc, doc, writeBatch, query, orderBy, limit } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 import { signInWithEmailAndPassword, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
 import { db, auth, escaparHTML } from "./config.js";
 
@@ -50,6 +50,8 @@ document.addEventListener('DOMContentLoaded', () => {
         seccionLogin.style.display = 'none';
         seccionPanel.style.display = 'block';
         actualizarPanel();
+        cargarVentas();
+        cargarStock();
     });
 
     // ---------- LISTA DE ÓRDENES ----------
@@ -162,6 +164,116 @@ document.addEventListener('DOMContentLoaded', () => {
         } catch (error) {
             console.error("Error al guardar en Firebase: ", error);
             alert("Hubo un error al guardar la orden.");
+        }
+    });
+
+    // ---------- VENTAS POR LA PÁGINA ----------
+    const listaVentas = document.getElementById('lista-ventas-admin');
+    const fmt = n => "$" + Number(n || 0).toLocaleString("es-AR");
+
+    async function cargarVentas() {
+        try {
+            const snap = await getDocs(query(collection(db, "ventas"), orderBy("fecha", "desc"), limit(30)));
+            if (snap.empty) {
+                listaVentas.innerHTML = `<p style="color: #777; font-size: 0.9rem;">Todavía no hay ventas por la página.</p>`;
+                return;
+            }
+            listaVentas.innerHTML = snap.docs.map(d => {
+                const v = d.data();
+                const fecha = v.fecha?.toDate ? v.fecha.toDate().toLocaleString("es-AR", { dateStyle: "short", timeStyle: "short" }) : "";
+                const items = (v.items || []).map(i => `${escaparHTML(i.cantidad)} × ${escaparHTML(i.titulo)}`).join("<br>");
+                const estado = v.entregado
+                    ? `<span style="color: #4eff4e; font-weight: 600;">✔ Entregado</span>`
+                    : `<button class="btn-entregar" data-id="${escaparHTML(d.id)}" style="background: #25d366; color: #000; border: none; padding: 6px 10px; border-radius: 6px; cursor: pointer; font-weight: 700; font-family: inherit;">Marcar entregado</button>`;
+                return `
+                    <div style="background: #222; padding: 12px 15px; border-radius: 8px; border: 1px solid ${v.entregado ? '#333' : '#25d366'};">
+                        <div style="display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap;">
+                            <strong style="color: var(--color-cian);">${escaparHTML(fecha)} · ${fmt(v.total)}</strong>${estado}
+                        </div>
+                        <div style="color: #ddd; font-size: 0.9rem; margin-top: 6px;">${items}</div>
+                        <div style="color: #888; font-size: 0.8rem; margin-top: 4px;">${escaparHTML(v.comprador)} · Pago N° ${escaparHTML(d.id)}</div>
+                    </div>`;
+            }).join("");
+            listaVentas.querySelectorAll('.btn-entregar').forEach(b => b.addEventListener('click', async () => {
+                try {
+                    await updateDoc(doc(db, "ventas", b.dataset.id), { entregado: true });
+                    cargarVentas();
+                } catch (e) { console.error(e); alert("No se pudo marcar como entregado."); }
+            }));
+        } catch (error) {
+            console.error("Error al cargar ventas:", error);
+            listaVentas.innerHTML = `<p style="color: #ff6b6b;">No se pudieron cargar las ventas.</p>`;
+        }
+    }
+
+    // ---------- STOCK ----------
+    const listaStock = document.getElementById('lista-stock-admin');
+    const buscarStock = document.getElementById('buscar-stock');
+    const btnStockInicial = document.getElementById('btn-stock-inicial');
+    let productos = [];
+    let stock = {};
+
+    async function cargarStock() {
+        try {
+            productos = await (await fetch("datos/productos.json", { cache: "no-store" })).json();
+            const snap = await getDocs(collection(db, "stock"));
+            stock = {};
+            snap.forEach(d => { stock[d.id] = d.data().cantidad; });
+            btnStockInicial.style.display = snap.empty ? "block" : "none";
+            dibujarStock();
+        } catch (error) {
+            console.error("Error al cargar stock:", error);
+            listaStock.innerHTML = `<p style="color: #ff6b6b;">No se pudo cargar el stock.</p>`;
+        }
+    }
+
+    function dibujarStock() {
+        const palabras = buscarStock.value.toLowerCase().trim().split(/\s+/).filter(Boolean);
+        const filtrados = productos.filter(p => palabras.every(w => p.nombre.toLowerCase().includes(w)));
+        listaStock.innerHTML = filtrados.slice(0, 150).map(p => {
+            const cant = stock[p.id];
+            const color = cant === undefined ? "#777" : cant <= 0 ? "#ff6b6b" : cant <= 1 ? "#ffcc00" : "#4eff4e";
+            return `
+                <div style="display: flex; align-items: center; gap: 8px; background: #222; padding: 8px 10px; border-radius: 6px;">
+                    <div style="flex: 1; font-size: 0.85rem; color: #ddd;">${escaparHTML(p.nombre)} <span style="color: #777;">· ${fmt(p.precio)}</span></div>
+                    <button class="btn-stock" data-id="${escaparHTML(p.id)}" data-delta="-1" style="width: 32px; height: 32px; background: #333; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-size: 1.1rem;">−</button>
+                    <strong style="min-width: 28px; text-align: center; color: ${color};">${cant === undefined ? "–" : escaparHTML(cant)}</strong>
+                    <button class="btn-stock" data-id="${escaparHTML(p.id)}" data-delta="1" style="width: 32px; height: 32px; background: #333; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-size: 1.1rem;">+</button>
+                </div>`;
+        }).join("") || `<p style="color: #777; font-size: 0.9rem;">No hay productos con ese nombre.</p>`;
+
+        listaStock.querySelectorAll('.btn-stock').forEach(b => b.addEventListener('click', async () => {
+            const id = b.dataset.id;
+            const nueva = Math.max(0, (stock[id] ?? 0) + Number(b.dataset.delta));
+            b.disabled = true;
+            try {
+                await setDoc(doc(db, "stock", id), { cantidad: nueva });
+                stock[id] = nueva;
+                dibujarStock();
+            } catch (e) {
+                console.error(e);
+                alert("No se pudo guardar el stock.");
+                b.disabled = false;
+            }
+        }));
+    }
+
+    buscarStock.addEventListener('input', dibujarStock);
+
+    btnStockInicial.addEventListener('click', async () => {
+        if (!confirm("¿Cargar el stock de la planilla? Se hace una sola vez.")) return;
+        btnStockInicial.disabled = true;
+        try {
+            const inicial = await (await fetch("datos/stock-inicial.json", { cache: "no-store" })).json();
+            const batch = writeBatch(db);
+            Object.entries(inicial).forEach(([id, cantidad]) => batch.set(doc(db, "stock", id), { cantidad: Number(cantidad) || 0 }));
+            await batch.commit();
+            alert("¡Stock cargado!");
+            cargarStock();
+        } catch (e) {
+            console.error(e);
+            alert("No se pudo cargar el stock inicial.");
+            btnStockInicial.disabled = false;
         }
     });
 });

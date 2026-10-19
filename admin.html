@@ -70,6 +70,24 @@
                 <!-- Acá se cargan dinámicamente las órdenes -->
                 <p style="color: #777; font-size: 0.9rem;">Cargando órdenes...</p>
             </div>
+
+            <!-- VENTAS POR LA PÁGINA (MERCADO PAGO) -->
+            <hr style="border: 0; border-top: 1px solid #333; margin: 30px 0;">
+            <h3 style="color: white; margin-bottom: 5px; font-size: 1.2rem;">🧾 Ventas por la página</h3>
+            <p style="color: #888; font-size: 0.85rem; margin-bottom: 15px;">Se anotan solas cuando Mercado Pago aprueba un pago. Marcalas como entregadas cuando el cliente retira.</p>
+            <div id="lista-ventas-admin" style="display: flex; flex-direction: column; gap: 10px;">
+                <p style="color: #777; font-size: 0.9rem;">Cargando ventas...</p>
+            </div>
+
+            <!-- STOCK -->
+            <hr style="border: 0; border-top: 1px solid #333; margin: 30px 0;">
+            <h3 style="color: white; margin-bottom: 5px; font-size: 1.2rem;">📦 Stock</h3>
+            <p style="color: #888; font-size: 0.85rem; margin-bottom: 15px;">Las ventas por la página lo descuentan solas. Cuando vendas en el local, tocá <strong>−</strong>. Lo que llega a 0 desaparece de la página.</p>
+            <button id="btn-stock-inicial" style="display: none; width: 100%; padding: 12px; margin-bottom: 15px; background: #009ee3; color: #fff; border: none; border-radius: 8px; font-weight: 700; cursor: pointer; font-family: inherit;">Cargar stock inicial (de la planilla)</button>
+            <input type="text" id="buscar-stock" placeholder="Buscar producto... (ej: groove, iphone 16, A24)" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #444; background: #222; color: white; box-sizing: border-box; margin-bottom: 10px;">
+            <div id="lista-stock-admin" style="display: flex; flex-direction: column; gap: 6px; max-height: 500px; overflow-y: auto;">
+                <p style="color: #777; font-size: 0.9rem;">Cargando stock...</p>
+            </div>
         </div>
 
     </div>

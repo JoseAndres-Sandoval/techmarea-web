@@ -33,4 +33,9 @@ for (const nombre of archivos) {
 }
 
 fs.writeFileSync(path.join(raiz, "functions", "catalogo.json"), JSON.stringify(catalogo, null, 2));
+
+// Lista pública de productos (id, nombre y precio) para el panel de admin (stock)
+fs.mkdirSync(path.join(raiz, "datos"), { recursive: true });
+const lista = Object.entries(catalogo).map(([id, p]) => ({ id, nombre: p.nombre, precio: p.precio, categoria: p.archivo }));
+fs.writeFileSync(path.join(raiz, "datos", "productos.json"), JSON.stringify(lista));
 console.log(`Catálogo generado: ${Object.keys(catalogo).length} productos.`);

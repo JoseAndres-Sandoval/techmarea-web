@@ -3,7 +3,7 @@
 // Todas las páginas importan este archivo.
 // =========================================
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 import { getAuth } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
 
 // Estos datos de Firebase son públicos por diseño (no son una clave secreta).
@@ -100,3 +100,45 @@ if (document.readyState === "loading") {
 } else {
     iniciarMenu();
 }
+
+// =========================================
+// STOCK: oculta lo que está agotado
+// =========================================
+// El stock está en Firestore (colección "stock"). Si un producto tiene 0,
+// se saca de la página (tarjeta u opción de la lista). Si no tiene stock cargado, se muestra.
+export const stockPromise = getDocs(collection(db, "stock"))
+    .then(snap => {
+        const mapa = {};
+        snap.forEach(d => { mapa[d.id] = d.data().cantidad; });
+        return mapa;
+    })
+    .catch(() => ({}));
+
+function sinStock(mapa, id) {
+    return mapa[id] !== undefined && mapa[id] <= 0;
+}
+
+function aplicarStock(mapa) {
+    const cont = document.getElementById("contenedor-productos");
+    if (!cont) return;
+    cont.querySelectorAll(".btn-agregar[data-id]").forEach(b => {
+        if (sinStock(mapa, b.dataset.id)) b.closest(".tarjeta-articulo")?.remove();
+    });
+    cont.querySelectorAll(".select-modelo").forEach(sel => {
+        sel.querySelectorAll("option[value]").forEach(o => {
+            if (o.value && sinStock(mapa, o.value)) o.remove();
+        });
+        if (sel.querySelectorAll("option").length <= 1) sel.closest(".tarjeta-articulo")?.remove();
+    });
+}
+
+stockPromise.then(mapa => {
+    const iniciar = () => {
+        const cont = document.getElementById("contenedor-productos");
+        if (!cont) return;
+        aplicarStock(mapa);
+        new MutationObserver(() => aplicarStock(mapa)).observe(cont, { childList: true });
+    };
+    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", iniciar);
+    else iniciar();
+});
