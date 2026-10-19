@@ -188,6 +188,33 @@ const catalogoAuriculares = [
         imagenHover: "assets/img/MANOS LIBRES – MODX-045 THUNDER-C – XAEA - NEGRO1.webp",
         specs: "<li><strong>Conectividad:</strong> Cable con ficha Tipo C (1 metro)</li><li><strong>Audio:</strong> Cancelación de sonido y micrófono integrado</li><li><strong>Controles:</strong> Mando integrado para volumen, canciones y llamadas</li><li><strong>Material:</strong> Plástico ABS resistente</li>",
         precio: 7900
+    },
+    {
+        id: 118,
+        nombre: "Auricular Vincha ANC Radiance MODX-703 XAEA",
+        categoria: "vincha",
+        color: "Beige",
+        imagen: "assets/img/auricular-radiance-modx-703.webp",
+        specs: "<li><strong>Tipo:</strong> Over-ear (vincha)</li><li><strong>Cancelación de ruido:</strong> ANC</li><li><strong>Conexión:</strong> Bluetooth, alcance 10 m</li><li><strong>Carga:</strong> Tipo C, batería de alto rendimiento</li><li><strong>Incluye:</strong> Cable auxiliar</li><li><strong>Color:</strong> Beige</li>",
+        precio: 49900
+    },
+    {
+        id: 119,
+        nombre: "Auricular Vincha ANC Radiance MODX-703 XAEA",
+        categoria: "vincha",
+        color: "Negro",
+        imagen: "assets/img/auricular-radiance-modx-703.webp",
+        specs: "<li><strong>Tipo:</strong> Over-ear (vincha)</li><li><strong>Cancelación de ruido:</strong> ANC</li><li><strong>Conexión:</strong> Bluetooth, alcance 10 m</li><li><strong>Carga:</strong> Tipo C, batería de alto rendimiento</li><li><strong>Incluye:</strong> Cable auxiliar</li><li><strong>Color:</strong> Negro</li>",
+        precio: 49900
+    },
+    {
+        id: 120,
+        nombre: "Auricular Vincha ANC Zyfer MODX-704 XAEA",
+        categoria: "vincha",
+        color: "Negro",
+        imagen: "assets/img/auricular-zyfer-modx-704.webp",
+        specs: "<li><strong>Tipo:</strong> Over-ear (vincha)</li><li><strong>Cancelación de ruido:</strong> ANC</li><li><strong>Conexión:</strong> Bluetooth</li><li><strong>Carga:</strong> Tipo C</li><li><strong>Color:</strong> Negro</li>",
+        precio: 47100
     }
 ];
 

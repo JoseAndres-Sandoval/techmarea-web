@@ -234,6 +234,21 @@
     "precio": 7900,
     "archivo": "auriculares"
   },
+  "118": {
+    "nombre": "Auricular Vincha ANC Radiance MODX-703 XAEA - Beige",
+    "precio": 49900,
+    "archivo": "auriculares"
+  },
+  "119": {
+    "nombre": "Auricular Vincha ANC Radiance MODX-703 XAEA - Negro",
+    "precio": 49900,
+    "archivo": "auriculares"
+  },
+  "120": {
+    "nombre": "Auricular Vincha ANC Zyfer MODX-704 XAEA - Negro",
+    "precio": 47100,
+    "archivo": "auriculares"
+  },
   "200": {
     "nombre": "Cable Sync-C Plus MODX-008S XAEA (Blanco) - Blanco",
     "precio": 6000,
@@ -364,6 +379,11 @@
     "precio": 7125,
     "archivo": "cargador"
   },
+  "307": {
+    "nombre": "Cargador Universal de Notebook BossCharge 96W XAEA",
+    "precio": 20000,
+    "archivo": "cargador"
+  },
   "400": {
     "nombre": "Power Bank Inalámbrico Nuvia G1 MODX-000K XAEA (Negro) - Negro",
     "precio": 23297,
@@ -378,5 +398,90 @@
     "nombre": "Power Bank Inalámbrico Nuvia G1 MODX-000K XAEA (Verde) - Verde",
     "precio": 23297,
     "archivo": "powerbank"
+  },
+  "403": {
+    "nombre": "Power Bank Inalámbrico Tars 20000 mAh MODX-00CE XAEA - Blanco",
+    "precio": 39200,
+    "archivo": "powerbank"
+  },
+  "404": {
+    "nombre": "Power Bank Inalámbrico Tars 20000 mAh MODX-00CE XAEA - Negro",
+    "precio": 39200,
+    "archivo": "powerbank"
+  },
+  "500": {
+    "nombre": "Smart Band X1 MODX-0015 XAEA - Azul",
+    "precio": 45000,
+    "archivo": "relojes"
+  },
+  "501": {
+    "nombre": "Smart Band X1 MODX-0015 XAEA - Gris",
+    "precio": 45000,
+    "archivo": "relojes"
+  },
+  "502": {
+    "nombre": "Smart Band X1 MODX-0015 XAEA - Negro",
+    "precio": 45000,
+    "archivo": "relojes"
+  },
+  "503": {
+    "nombre": "Smart Band X1 MODX-0015 XAEA - Rosa",
+    "precio": 45000,
+    "archivo": "relojes"
+  },
+  "510": {
+    "nombre": "Smart Watch X1+ MODX-0016 XAEA - Azul",
+    "precio": 50200,
+    "archivo": "relojes"
+  },
+  "511": {
+    "nombre": "Smart Watch X1+ MODX-0016 XAEA - Gris",
+    "precio": 50200,
+    "archivo": "relojes"
+  },
+  "512": {
+    "nombre": "Smart Watch X1+ MODX-0016 XAEA - Rosa",
+    "precio": 50200,
+    "archivo": "relojes"
+  },
+  "600": {
+    "nombre": "Combo Gamer Teclado + Mouse Lumenx MODX-054 XAEA - Blanco",
+    "precio": 25000,
+    "archivo": "computacion"
+  },
+  "601": {
+    "nombre": "Combo Gamer Teclado + Mouse Lumenx MODX-054 XAEA - Transparente",
+    "precio": 25000,
+    "archivo": "computacion"
+  },
+  "610": {
+    "nombre": "Combo Teclado + Mouse Inalámbrico MODO-004F XAEA - Negro",
+    "precio": 20000,
+    "archivo": "computacion"
+  },
+  "620": {
+    "nombre": "Mouse Gamer Y-Wing MODX-052 XAEA - Negro",
+    "precio": 10000,
+    "archivo": "computacion"
+  },
+  "630": {
+    "nombre": "Mouse Ergonómico Inalámbrico Recargable MODX-00DW XAEA - Blanco",
+    "precio": 20000,
+    "archivo": "computacion"
+  },
+  "640": {
+    "nombre": "Teclado Plegable Ultrafino MODX-00DZ XAEA - Blanco",
+    "precio": 30100,
+    "archivo": "computacion"
+  },
+  "641": {
+    "nombre": "Teclado Plegable Ultrafino MODX-00DZ XAEA - Gris",
+    "precio": 30100,
+    "archivo": "computacion"
+  },
+  "642": {
+    "nombre": "Teclado Plegable Ultrafino MODX-00DZ XAEA - Negro",
+    "precio": 30100,
+    "archivo": "computacion"
   }
 }

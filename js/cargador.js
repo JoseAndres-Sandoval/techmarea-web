@@ -79,6 +79,14 @@ const catalogoCargadores = [
         imagenHover: "assets/img/ADAPTADOR-CARGADOR 12V VOLTAIR MODX-517 – 3A – 1USB + 1TC – XAEA – VERDE1.webp",
         specs: "<li><strong>Potencia:</strong> 45W (Carga rápida Power Delivery)</li><li><strong>Conexión:</strong> 1 Puerto USB-A + 1 Puerto Tipo C</li><li><strong>Entrada:</strong> 12-24V (Ideal para autos)</li><li><strong>Material:</strong> Aleación de aluminio (Verde militar)</li>",
         precio: 7125
+    },
+    {
+        id: 307,
+        nombre: "Cargador Universal de Notebook BossCharge 96W XAEA",
+        categoria: "notebook",
+        imagen: "assets/img/cargador-notebook-bosscharge.webp",
+        specs: "<li><strong>Potencia:</strong> 96 W</li><li><strong>Voltajes:</strong> 12 / 15 / 16 / 18 / 19 / 20 / 24 V (con selector)</li><li><strong>Fichas:</strong> 9 intercambiables (incluye Tipo C)</li><li><strong>Entrada:</strong> 100-240 V</li>",
+        precio: 20000
     }
 ];
 
