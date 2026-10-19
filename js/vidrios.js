@@ -79,7 +79,7 @@ function cargarProductos(productosAMostrar = catalogoVidrios) {
         const opciones = modelos.map(p => `<option value="${p.id}">${p.modelo}</option>`).join("");
         htmlGenerado += `
             <article class="tarjeta-articulo">
-                <img src="assets/img/vidrio-templado.webp" alt="${info.titulo}" class="imagen-articulo img-producto">
+                <img src="assets/img/vidrios-templados-local.webp" alt="${info.titulo}" class="imagen-articulo img-producto">
                 <div class="info-articulo">
                     <h3>${info.titulo}</h3>
                     <ul class="lista-specs">${info.specs}</ul>
