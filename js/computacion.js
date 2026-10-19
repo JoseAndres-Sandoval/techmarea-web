@@ -80,6 +80,15 @@ const catalogoComputacion = [
         imagen: "assets/img/teclado-plegable-modx-00dz.webp",
         specs: "<li><strong>Diseño:</strong> Plegable y ultrafino</li><li><strong>Conexión:</strong> Inalámbrica (alcance 10 m)</li><li><strong>Batería:</strong> Recargable por Tipo C</li><li><strong>Teclas:</strong> Multifunción de acceso rápido</li><li><strong>Color:</strong> Negro</li>",
         precio: 30100
+    },
+    {
+        id: 650,
+        nombre: "Mouse Inalámbrico Recargable MODX-00DV XAEA",
+        categoria: "mouse",
+        color: "Blanco",
+        imagen: "assets/img/mouse-inalambrico-modx-00dv.webp",
+        specs: "<li><strong>Conexión:</strong> Dual: Bluetooth 5.1 + 2.4 GHz</li><li><strong>Batería:</strong> Recargable 500 mAh por Tipo C (hasta 8 h de uso)</li><li><strong>DPI:</strong> 1000 / 1200 / 1800</li><li><strong>Botones:</strong> 4 comandos configurables</li><li><strong>Ahorro:</strong> Suspensión automática a los 60 s</li><li><strong>Color:</strong> Blanco</li>",
+        precio: 16000
     }
 ];
 
