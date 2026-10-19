@@ -688,5 +688,495 @@
     "nombre": "Vidrio Templado Premium - iPhone 16 Plus",
     "precio": 7000,
     "archivo": "vidrios"
+  },
+  "800": {
+    "nombre": "Funda iPhone 13 Pro - 2 Colores (Lila / Rosa)",
+    "precio": 9000,
+    "archivo": "fundas"
+  },
+  "801": {
+    "nombre": "Funda iPhone 14 - Cuadrado MagSafe (Dorado)",
+    "precio": 17000,
+    "archivo": "fundas"
+  },
+  "802": {
+    "nombre": "Funda iPhone 15 - Cuadrado MagSafe (Blanco)",
+    "precio": 17000,
+    "archivo": "fundas"
+  },
+  "803": {
+    "nombre": "Funda iPhone 15 - Cuadrado MagSafe (Dorado)",
+    "precio": 17000,
+    "archivo": "fundas"
+  },
+  "804": {
+    "nombre": "Funda iPhone 15 - MagSafe Urban Play (Blanco)",
+    "precio": 15000,
+    "archivo": "fundas"
+  },
+  "805": {
+    "nombre": "Funda iPhone 15 - MagSafe Urban Play (Violeta)",
+    "precio": 15000,
+    "archivo": "fundas"
+  },
+  "806": {
+    "nombre": "Funda iPhone 15 - Ondulado Transparente (Negro)",
+    "precio": 11000,
+    "archivo": "fundas"
+  },
+  "807": {
+    "nombre": "Funda iPhone 15 - Ondulado Transparente (Violeta)",
+    "precio": 11000,
+    "archivo": "fundas"
+  },
+  "808": {
+    "nombre": "Funda iPhone 15 Pro - Brilloso (Transparente)",
+    "precio": 10000,
+    "archivo": "fundas"
+  },
+  "809": {
+    "nombre": "Funda iPhone 15 Pro - Silicon Pro (Rosa)",
+    "precio": 9000,
+    "archivo": "fundas"
+  },
+  "810": {
+    "nombre": "Funda iPhone 15 Pro Max - Cuadrado MagSafe (Blanco)",
+    "precio": 17000,
+    "archivo": "fundas"
+  },
+  "811": {
+    "nombre": "Funda iPhone 15 Pro Max - Cuadrado MagSafe (Negro)",
+    "precio": 17000,
+    "archivo": "fundas"
+  },
+  "812": {
+    "nombre": "Funda iPhone 16 - Cristal X",
+    "precio": 9000,
+    "archivo": "fundas"
+  },
+  "813": {
+    "nombre": "Funda iPhone 16 - Cuadrado MagSafe (Blanco)",
+    "precio": 17000,
+    "archivo": "fundas"
+  },
+  "814": {
+    "nombre": "Funda iPhone 16 - Cuadrado MagSafe (Dorado)",
+    "precio": 17000,
+    "archivo": "fundas"
+  },
+  "815": {
+    "nombre": "Funda iPhone 16 - Cuadrado MagSafe (Negro)",
+    "precio": 17000,
+    "archivo": "fundas"
+  },
+  "816": {
+    "nombre": "Funda iPhone 16 - MagSafe Cosmic (Azul)",
+    "precio": 15000,
+    "archivo": "fundas"
+  },
+  "817": {
+    "nombre": "Funda iPhone 16 - MagSafe Urban Play (Azul)",
+    "precio": 15000,
+    "archivo": "fundas"
+  },
+  "818": {
+    "nombre": "Funda iPhone 16 - MagSafe Urban Play (Negro)",
+    "precio": 15000,
+    "archivo": "fundas"
+  },
+  "819": {
+    "nombre": "Funda iPhone 16 - MagSafe Urban Play (Violeta)",
+    "precio": 15000,
+    "archivo": "fundas"
+  },
+  "820": {
+    "nombre": "Funda iPhone 16 - Ondulado Transparente (Rosa)",
+    "precio": 11000,
+    "archivo": "fundas"
+  },
+  "821": {
+    "nombre": "Funda iPhone 16 - Silicona Lens (Rosa)",
+    "precio": 11000,
+    "archivo": "fundas"
+  },
+  "822": {
+    "nombre": "Funda iPhone 16 Pro - Cuadrado MagSafe (Dorado)",
+    "precio": 17000,
+    "archivo": "fundas"
+  },
+  "823": {
+    "nombre": "Funda iPhone 16 Pro - Espacio MagSafe (Gris)",
+    "precio": 15000,
+    "archivo": "fundas"
+  },
+  "824": {
+    "nombre": "Funda iPhone 16 Pro - MagSafe Cosmic (Negro)",
+    "precio": 15000,
+    "archivo": "fundas"
+  },
+  "825": {
+    "nombre": "Funda iPhone 16 Pro - MagSafe Urban Play (Blanco)",
+    "precio": 15000,
+    "archivo": "fundas"
+  },
+  "826": {
+    "nombre": "Funda iPhone 16 Pro - Silicona Lens (Lila)",
+    "precio": 11000,
+    "archivo": "fundas"
+  },
+  "827": {
+    "nombre": "Funda iPhone 16 Pro - Silicona Lens (Negro)",
+    "precio": 11000,
+    "archivo": "fundas"
+  },
+  "828": {
+    "nombre": "Funda iPhone 16 Pro - Silicona Lens (Verde)",
+    "precio": 11000,
+    "archivo": "fundas"
+  },
+  "829": {
+    "nombre": "Funda iPhone 16 Pro Max - Cuadrado MagSafe (Dorado)",
+    "precio": 17000,
+    "archivo": "fundas"
+  },
+  "830": {
+    "nombre": "Funda iPhone 16 Pro Max - Cuadrado MagSafe (Negro)",
+    "precio": 17000,
+    "archivo": "fundas"
+  },
+  "831": {
+    "nombre": "Funda iPhone 16 Pro Max - Shade (Marrón)",
+    "precio": 11000,
+    "archivo": "fundas"
+  },
+  "832": {
+    "nombre": "Funda iPhone 16 Pro Max - Silicona Lens (Negro)",
+    "precio": 11000,
+    "archivo": "fundas"
+  },
+  "833": {
+    "nombre": "Funda iPhone 16 Pro Max - Silicone Valley (Azul)",
+    "precio": 9000,
+    "archivo": "fundas"
+  },
+  "834": {
+    "nombre": "Funda iPhone 17 - Espacio MagSafe (Negro)",
+    "precio": 15000,
+    "archivo": "fundas"
+  },
+  "835": {
+    "nombre": "Funda iPhone 17 - MagSafe Cosmic (Blanco)",
+    "precio": 15000,
+    "archivo": "fundas"
+  },
+  "836": {
+    "nombre": "Funda iPhone 17 - MagSafe Cosmic (Negro)",
+    "precio": 15000,
+    "archivo": "fundas"
+  },
+  "837": {
+    "nombre": "Funda iPhone 17 - MagSafe Urban Play (Blanco)",
+    "precio": 15000,
+    "archivo": "fundas"
+  },
+  "838": {
+    "nombre": "Funda iPhone 17 - MagSafe Urban Play (Negro)",
+    "precio": 15000,
+    "archivo": "fundas"
+  },
+  "839": {
+    "nombre": "Funda iPhone 17 Air - Espacio MagSafe (Gris)",
+    "precio": 15000,
+    "archivo": "fundas"
+  },
+  "840": {
+    "nombre": "Funda iPhone 17 Air - MagSafe Cosmic (Negro)",
+    "precio": 15000,
+    "archivo": "fundas"
+  },
+  "841": {
+    "nombre": "Funda iPhone 17 Air - MagSafe Urban Play (Negro)",
+    "precio": 15000,
+    "archivo": "fundas"
+  },
+  "842": {
+    "nombre": "Funda iPhone 17 Pro - Espacio MagSafe (Azul)",
+    "precio": 15000,
+    "archivo": "fundas"
+  },
+  "843": {
+    "nombre": "Funda iPhone 17 Pro - Espacio MagSafe (Rosa)",
+    "precio": 15000,
+    "archivo": "fundas"
+  },
+  "844": {
+    "nombre": "Funda iPhone 17 Pro - MagSafe Cosmic (Azul)",
+    "precio": 15000,
+    "archivo": "fundas"
+  },
+  "845": {
+    "nombre": "Funda iPhone 17 Pro - Silicona Lens (Lila)",
+    "precio": 11000,
+    "archivo": "fundas"
+  },
+  "846": {
+    "nombre": "Funda iPhone 17 Pro - Silicona Lens (Rosa)",
+    "precio": 11000,
+    "archivo": "fundas"
+  },
+  "847": {
+    "nombre": "Funda iPhone 17 Pro Max - Shade (Azul)",
+    "precio": 11000,
+    "archivo": "fundas"
+  },
+  "848": {
+    "nombre": "Funda iPhone 17 Pro Max - Shade (Marrón)",
+    "precio": 11000,
+    "archivo": "fundas"
+  },
+  "849": {
+    "nombre": "Funda Samsung A05 - Espacio (Gris)",
+    "precio": 9000,
+    "archivo": "fundas"
+  },
+  "850": {
+    "nombre": "Funda Samsung A05 - Silicona Color (Azul)",
+    "precio": 9000,
+    "archivo": "fundas"
+  },
+  "851": {
+    "nombre": "Funda Samsung A07 - Brilloso (Marrón)",
+    "precio": 9000,
+    "archivo": "fundas"
+  },
+  "852": {
+    "nombre": "Funda Samsung A07 - Clear",
+    "precio": 9000,
+    "archivo": "fundas"
+  },
+  "853": {
+    "nombre": "Funda Samsung A07 - Silicona Color (Azul)",
+    "precio": 9000,
+    "archivo": "fundas"
+  },
+  "854": {
+    "nombre": "Funda Samsung A17 - Brilloso (Gris)",
+    "precio": 9000,
+    "archivo": "fundas"
+  },
+  "855": {
+    "nombre": "Funda Samsung A17 - Silicona Wavy (Negro)",
+    "precio": 6000,
+    "archivo": "fundas"
+  },
+  "856": {
+    "nombre": "Funda Samsung A24 - Classic Color (Negro)",
+    "precio": 9000,
+    "archivo": "fundas"
+  },
+  "857": {
+    "nombre": "Funda Samsung A24 - Espacio (Negro mate)",
+    "precio": 9000,
+    "archivo": "fundas"
+  },
+  "858": {
+    "nombre": "Funda Samsung A24 - Espacio (Rosa)",
+    "precio": 9000,
+    "archivo": "fundas"
+  },
+  "859": {
+    "nombre": "Funda Samsung A24 - Simil Silicone (Negro)",
+    "precio": 9000,
+    "archivo": "fundas"
+  },
+  "860": {
+    "nombre": "Funda Samsung A24 - Simil Silicone (Rosa)",
+    "precio": 9000,
+    "archivo": "fundas"
+  },
+  "861": {
+    "nombre": "Funda Samsung A34 - Cristal X",
+    "precio": 9000,
+    "archivo": "fundas"
+  },
+  "862": {
+    "nombre": "Funda Samsung A34 - Espacio (Azul)",
+    "precio": 9000,
+    "archivo": "fundas"
+  },
+  "863": {
+    "nombre": "Funda Samsung A34 - Espacio (Negro mate)",
+    "precio": 9000,
+    "archivo": "fundas"
+  },
+  "864": {
+    "nombre": "Funda Samsung A34 - Flat Mate (Rojo)",
+    "precio": 9000,
+    "archivo": "fundas"
+  },
+  "865": {
+    "nombre": "Funda Samsung A35 5G - Antishock",
+    "precio": 9000,
+    "archivo": "fundas"
+  },
+  "866": {
+    "nombre": "Funda Samsung A55 - Silicona Color (Fucsia)",
+    "precio": 9000,
+    "archivo": "fundas"
+  },
+  "867": {
+    "nombre": "Funda Samsung A55 - Silicona Color (Rosa)",
+    "precio": 9000,
+    "archivo": "fundas"
+  },
+  "868": {
+    "nombre": "Funda Samsung S23 Plus - Cristal X",
+    "precio": 9000,
+    "archivo": "fundas"
+  },
+  "869": {
+    "nombre": "Funda Samsung S25 - Cristal X",
+    "precio": 9000,
+    "archivo": "fundas"
+  },
+  "870": {
+    "nombre": "Funda Samsung S25 - Espacio MagSafe (Gris)",
+    "precio": 11000,
+    "archivo": "fundas"
+  },
+  "871": {
+    "nombre": "Funda Samsung S25 - Espacio MagSafe (Negro)",
+    "precio": 11000,
+    "archivo": "fundas"
+  },
+  "872": {
+    "nombre": "Funda Samsung S25 - Ondulado Transparente (Negro)",
+    "precio": 11000,
+    "archivo": "fundas"
+  },
+  "873": {
+    "nombre": "Funda Samsung S25 Edge - MagSafe Cristal (Transparente)",
+    "precio": 11000,
+    "archivo": "fundas"
+  },
+  "874": {
+    "nombre": "Funda Samsung S25 FE - Ondulado Transparente (Negro)",
+    "precio": 11000,
+    "archivo": "fundas"
+  },
+  "875": {
+    "nombre": "Funda Samsung S25 Plus - Ondulado Transparente (Negro)",
+    "precio": 11000,
+    "archivo": "fundas"
+  },
+  "876": {
+    "nombre": "Funda Samsung S26 - Shade (Marrón)",
+    "precio": 11000,
+    "archivo": "fundas"
+  },
+  "877": {
+    "nombre": "Funda Samsung S26 Edge - MagSafe Cristal (Transparente)",
+    "precio": 11000,
+    "archivo": "fundas"
+  },
+  "878": {
+    "nombre": "Funda Motorola Edge 50 Pro - Silicona Color (Fucsia)",
+    "precio": 9000,
+    "archivo": "fundas"
+  },
+  "879": {
+    "nombre": "Funda Motorola G14 - Cristal X",
+    "precio": 9000,
+    "archivo": "fundas"
+  },
+  "880": {
+    "nombre": "Funda Motorola G35 / G35 5G - Silicona Color (Blanco)",
+    "precio": 9000,
+    "archivo": "fundas"
+  },
+  "881": {
+    "nombre": "Funda Motorola G42 - Espacio (Celeste)",
+    "precio": 9000,
+    "archivo": "fundas"
+  },
+  "882": {
+    "nombre": "Funda Motorola G42 - Espacio (Negro mate)",
+    "precio": 9000,
+    "archivo": "fundas"
+  },
+  "883": {
+    "nombre": "Funda Motorola G72 - Cristal X",
+    "precio": 9000,
+    "archivo": "fundas"
+  },
+  "884": {
+    "nombre": "Funda Motorola G72 - Espacio (Negro mate)",
+    "precio": 9000,
+    "archivo": "fundas"
+  },
+  "885": {
+    "nombre": "Funda Motorola G72 - Silicon Pro (Gris)",
+    "precio": 9000,
+    "archivo": "fundas"
+  },
+  "886": {
+    "nombre": "Funda Motorola G84 - Antishock",
+    "precio": 9000,
+    "archivo": "fundas"
+  },
+  "887": {
+    "nombre": "Funda Motorola G85 - Silicona Color (Rosa)",
+    "precio": 9000,
+    "archivo": "fundas"
+  },
+  "888": {
+    "nombre": "Funda Motorola G86 - Brilloso (Gris)",
+    "precio": 9000,
+    "archivo": "fundas"
+  },
+  "889": {
+    "nombre": "Funda Xiaomi Redmi Note 14 - Espacio (Negro)",
+    "precio": 9000,
+    "archivo": "fundas"
+  },
+  "890": {
+    "nombre": "Funda Xiaomi Redmi Note 14 Pro - Brilloso (Gris)",
+    "precio": 9000,
+    "archivo": "fundas"
+  },
+  "891": {
+    "nombre": "Funda Xiaomi Redmi Note 14 Pro - Espacio (Negro)",
+    "precio": 9000,
+    "archivo": "fundas"
+  },
+  "892": {
+    "nombre": "Funda Xiaomi Redmi Note 14 Pro - Textura Rombo (Transparente)",
+    "precio": 9000,
+    "archivo": "fundas"
+  },
+  "893": {
+    "nombre": "Funda Xiaomi Redmi 15C - Brilloso (Gris)",
+    "precio": 9000,
+    "archivo": "fundas"
+  },
+  "894": {
+    "nombre": "Funda Xiaomi Redmi 15C - Shade (Marrón)",
+    "precio": 9000,
+    "archivo": "fundas"
+  },
+  "895": {
+    "nombre": "Funda Xiaomi Redmi Note 15 - Shade (Azul)",
+    "precio": 9000,
+    "archivo": "fundas"
+  },
+  "896": {
+    "nombre": "Funda Xiaomi Redmi Note 15 Pro - Shade (Marrón)",
+    "precio": 9000,
+    "archivo": "fundas"
+  },
+  "897": {
+    "nombre": "Funda Xiaomi Redmi Note 15 Pro - Silicona Color (Negro)",
+    "precio": 9000,
+    "archivo": "fundas"
   }
 }

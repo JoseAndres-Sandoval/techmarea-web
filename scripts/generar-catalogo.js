@@ -7,7 +7,7 @@ const path = require("path");
 const vm = require("vm");
 
 const raiz = path.join(__dirname, "..");
-const archivos = ["parlantes", "auriculares", "cables", "cargador", "powerbank", "relojes", "computacion", "vidrios"];
+const archivos = ["parlantes", "auriculares", "cables", "cargador", "powerbank", "relojes", "computacion", "vidrios", "fundas"];
 const catalogo = {};
 
 for (const nombre of archivos) {
