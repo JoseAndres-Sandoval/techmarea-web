@@ -87,7 +87,17 @@ const catalogoComputacion = [
         categoria: "mouse",
         color: "Blanco",
         imagen: "assets/img/mouse-inalambrico-modx-00dv.webp",
+        imagenHover: "assets/img/mouse-00dv-blanco-real.webp",
         specs: "<li><strong>Conexión:</strong> Dual: Bluetooth 5.1 + 2.4 GHz</li><li><strong>Batería:</strong> Recargable 500 mAh por Tipo C (hasta 8 h de uso)</li><li><strong>DPI:</strong> 1000 / 1200 / 1800</li><li><strong>Botones:</strong> 4 comandos configurables</li><li><strong>Ahorro:</strong> Suspensión automática a los 60 s</li><li><strong>Color:</strong> Blanco</li>",
+        precio: 16000
+    },
+    {
+        id: 651,
+        nombre: "Mouse Inalámbrico Recargable MODX-00DV XAEA",
+        categoria: "mouse",
+        color: "Celeste",
+        imagen: "assets/img/mouse-00dv-celeste-real.webp",
+        specs: "<li><strong>Conexión:</strong> Dual: Bluetooth 5.1 + 2.4 GHz</li><li><strong>Batería:</strong> Recargable 500 mAh por Tipo C (hasta 8 h de uso)</li><li><strong>DPI:</strong> 1000 / 1200 / 1800</li><li><strong>Botones:</strong> 4 comandos configurables</li><li><strong>Ahorro:</strong> Suspensión automática a los 60 s</li><li><strong>Color:</strong> Celeste</li>",
         precio: 16000
     }
 ];

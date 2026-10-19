@@ -107,6 +107,16 @@ const catalogoParlantesTodos = [
         precio: 33000
     },
     {
+        id: 30,
+        nombre: "Xaea Dot Mini 3\"",
+        categoria: "portatil", 
+        color: "Azul",
+        imagen: "assets/img/PARLANTE 3” DOT MINI – MODX-004X – XAEA.webp", 
+        imagenHover: "assets/img/PARLANTE 3” DOT MINI – MODX-004X – XAEA - AZUL.webp", 
+        specs: "<li><strong>Potencia:</strong> 10W (Altavoz de 3 pulgadas)</li><li><strong>Conectividad:</strong> Bluetooth, FM, USB, MicroSD (TF) y TWS</li><li><strong>Color:</strong> Azul</li><li><strong>Batería:</strong> 1800mAh (Hasta 6hs de autonomía) vía Tipo-C</li><li><strong>Medidas:</strong> 13 x 8.7 x 10.5 cm</li><li><strong>Extras:</strong> Iluminación LED y diseño ultra compacto</li>",
+        precio: 33000
+    },
+    {
         id: 12,
         nombre: "Xaea Dot Mini 3\"",
         categoria: "portatil", 

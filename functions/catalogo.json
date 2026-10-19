@@ -139,6 +139,11 @@
     "precio": 20000,
     "archivo": "parlantes"
   },
+  "30": {
+    "nombre": "Xaea Dot Mini 3\" - Azul",
+    "precio": 33000,
+    "archivo": "parlantes"
+  },
   "100": {
     "nombre": "Auricular BT MODX-707 Kids XAEA - Verde",
     "precio": 15000,
@@ -326,6 +331,11 @@
   },
   "650": {
     "nombre": "Mouse Inalámbrico Recargable MODX-00DV XAEA - Blanco",
+    "precio": 16000,
+    "archivo": "computacion"
+  },
+  "651": {
+    "nombre": "Mouse Inalámbrico Recargable MODX-00DV XAEA - Celeste",
     "precio": 16000,
     "archivo": "computacion"
   },
