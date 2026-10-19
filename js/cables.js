@@ -8,7 +8,7 @@ import { db, auth, pagarConMercadoPago, WHATSAPP } from "./config.js";
 // =========================================
 // 1. BASE DE DATOS DE PRODUCTOS (CABLES: 200 - 299)
 // =========================================
-const catalogoCables = [
+const catalogoCablesTodos = [
     {
         id: 200,
         nombre: "Cable Sync-C Plus MODX-008S XAEA (Blanco)",
@@ -21,6 +21,7 @@ const catalogoCables = [
     },
     {
         id: 201,
+        agotado: true, // sin stock: no se muestra ni se cobra
         nombre: "Cable TC-TC AX MODX-002B XAEA (Violeta)",
         categoria: "usb-c",
         color: "Violeta",
@@ -31,6 +32,7 @@ const catalogoCables = [
     },
         {
         id: 202,
+        agotado: true, // sin stock: no se muestra ni se cobra
         nombre: "Cable Tipo C - Lightning MODX-098 Athenea XAEA (Celeste)",
         categoria: "lightning",
         color: "Celeste",
@@ -41,6 +43,7 @@ const catalogoCables = [
     },
     {
         id: 203,
+        agotado: true, // sin stock: no se muestra ni se cobra
         nombre: "Cable Tipo C - Tipo C MODX-097 Athenea XAEA (Beige)",
         categoria: "usb-c",
         color: "Beige",
@@ -51,6 +54,7 @@ const catalogoCables = [
     },
     {
         id: 204,
+        agotado: true, // sin stock: no se muestra ni se cobra
         nombre: "Cable Tipo C - Tipo C MODX-097 Athenea XAEA (Negro)",
         categoria: "usb-c",
         color: "Negro",
@@ -61,6 +65,7 @@ const catalogoCables = [
     },
     {
         id: 205,
+        agotado: true, // sin stock: no se muestra ni se cobra
         nombre: "Cable Tipo C - Tipo C MODX-097 Athenea XAEA (Azul Metal)",
         categoria: "usb-c",
         color: "Azul Metal",
@@ -71,6 +76,7 @@ const catalogoCables = [
     },
     {
         id: 206,
+        agotado: true, // sin stock: no se muestra ni se cobra
         nombre: "Cable Tipo C - Tipo C MODX-097 Athenea XAEA (Celeste)",
         categoria: "usb-c",
         color: "Celeste",
@@ -81,6 +87,7 @@ const catalogoCables = [
     },
     {
         id: 207,
+        agotado: true, // sin stock: no se muestra ni se cobra
         nombre: "Cable Tipo C - Tipo C MODX-097 Athenea XAEA (Lila)",
         categoria: "usb-c",
         color: "Lila",
@@ -91,6 +98,7 @@ const catalogoCables = [
     },
     {
         id: 208,
+        agotado: true, // sin stock: no se muestra ni se cobra
         nombre: "Cable Tipo C - Tipo C MODX-105 Hera XAEA (Azul)",
         categoria: "usb-c",
         color: "Azul",
@@ -111,6 +119,7 @@ const catalogoCables = [
     },
     {
         id: 210,
+        agotado: true, // sin stock: no se muestra ni se cobra
         nombre: "Cable USB Lightning MODX-104 Zeus XAEA (Dorado)",
         categoria: "lightning",
         color: "Dorado",
@@ -121,6 +130,7 @@ const catalogoCables = [
     },
     {
         id: 211,
+        agotado: true, // sin stock: no se muestra ni se cobra
         nombre: "Cable USB Lightning MODX-104 Zeus XAEA (Plata)",
         categoria: "lightning",
         color: "Plata",
@@ -131,6 +141,7 @@ const catalogoCables = [
     },
     {
         id: 212,
+        agotado: true, // sin stock: no se muestra ni se cobra
         nombre: "Cable USB Lightning MODX-104 Zeus XAEA (Marrón)",
         categoria: "lightning",
         color: "Marrón",
@@ -141,6 +152,7 @@ const catalogoCables = [
     },
     {
         id: 213,
+        agotado: true, // sin stock: no se muestra ni se cobra
         nombre: "Cable USB Lightning MODX-104 Zeus XAEA (Verde)",
         categoria: "lightning",
         color: "Verde",
@@ -151,6 +163,7 @@ const catalogoCables = [
     },
     {
         id: 214,
+        agotado: true, // sin stock: no se muestra ni se cobra
         nombre: "Cable USB V8 MOD 73 Qualy 4.4 AMP XAEA (Blanco)",
         categoria: "micro-usb",
         color: "Blanco",
@@ -161,6 +174,7 @@ const catalogoCables = [
     },
     {
         id: 215,
+        agotado: true, // sin stock: no se muestra ni se cobra
         nombre: "Cable USB Tipo C MOD 74 Qualy 4.4 AMP XAEA (Blanco)",
         categoria: "usb-c",
         color: "Blanco",
@@ -171,6 +185,7 @@ const catalogoCables = [
     },
     {
         id: 216,
+        agotado: true, // sin stock: no se muestra ni se cobra
         nombre: "Cable USB Lightning MOD96 Wolverine XAEA (Negro)",
         categoria: "lightning",
         color: "Negro",
@@ -181,6 +196,7 @@ const catalogoCables = [
     },
     {
         id: 217,
+        agotado: true, // sin stock: no se muestra ni se cobra
         nombre: "Cable USB MODX-026 Thor Tipo C XAEA (Rojo)",
         categoria: "usb-c",
         color: "Rojo",
@@ -191,6 +207,7 @@ const catalogoCables = [
     },
     {
         id: 218,
+        agotado: true, // sin stock: no se muestra ni se cobra
         nombre: "Cable USB MODX-026 Thor Tipo C XAEA (Negro)",
         categoria: "usb-c",
         color: "Negro",
@@ -200,6 +217,9 @@ const catalogoCables = [
         precio: 2237
     }
 ];
+
+// Solo se muestran los productos con stock (los "agotado: true" quedan guardados para cuando repongas)
+const catalogoCables = catalogoCablesTodos.filter(p => !p.agotado);
 
 // =========================================
 // 2. INYECTAR PRODUCTOS EN EL HTML

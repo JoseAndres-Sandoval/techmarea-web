@@ -8,10 +8,10 @@ import { db, auth, pagarConMercadoPago, WHATSAPP } from "./config.js";
 // =========================================
 // 1. BASE DE DATOS DE PRODUCTOS (AURICULARES: 100 - 199)
 // =========================================
-const catalogoAuriculares = [
+const catalogoAuricularesTodos = [
     {
         id: 100,
-        nombre: "Auricular Xaea MODX-701 M103",
+        nombre: "Auricular BT MODX-707 Kids XAEA",
         categoria: "auricular", 
         color: "Verde",
         imagen: "assets/img/AURICULAR BT MODX-707 KIDS - VERDE.webp", 
@@ -21,7 +21,8 @@ const catalogoAuriculares = [
     },
     {
         id: 101,
-        nombre: "Auricular Xaea MODX-701 M103",
+        agotado: true, // sin stock: no se muestra ni se cobra
+        nombre: "Auricular BT MODX-707 Kids XAEA",
         categoria: "auricular", 
         color: "Celeste",
         imagen: "assets/img/AURICULAR BT MODX-707 KIDS - CELESTE.webp", 
@@ -81,6 +82,7 @@ const catalogoAuriculares = [
     },
     {
         id: 107,
+        agotado: true, // sin stock: no se muestra ni se cobra
         nombre: "Auricular TWS MODX-056 Runbeat XAEA (Naranja)",
         categoria: "in-ear",
         color: "Naranja",
@@ -91,6 +93,7 @@ const catalogoAuriculares = [
     },
     {
         id: 108,
+        agotado: true, // sin stock: no se muestra ni se cobra
         nombre: "Auricular TWS MODX-056 Runbeat XAEA (Negro)",
         categoria: "in-ear",
         color: "Negro",
@@ -101,6 +104,7 @@ const catalogoAuriculares = [
     },
     {
         id: 109,
+        agotado: true, // sin stock: no se muestra ni se cobra
         nombre: "Auricular TWS MODX-056 Runbeat XAEA (Azul)",
         categoria: "in-ear",
         color: "Azul",
@@ -111,6 +115,7 @@ const catalogoAuriculares = [
     },
     {
         id: 110,
+        agotado: true, // sin stock: no se muestra ni se cobra
         nombre: "Auricular TWS MODX-056 Runbeat XAEA (Verde)",
         categoria: "in-ear",
         color: "Verde",
@@ -121,6 +126,7 @@ const catalogoAuriculares = [
     },
     {
         id: 111,
+        agotado: true, // sin stock: no se muestra ni se cobra
         nombre: "Auricular TWS MODX-056 Runbeat XAEA (Lila)",
         categoria: "in-ear",
         color: "Lila",
@@ -141,6 +147,7 @@ const catalogoAuriculares = [
     },
     {
         id: 113,
+        agotado: true, // sin stock: no se muestra ni se cobra
         nombre: "Auricular TWS ANC MODX-0023 XAEA (Negro)",
         categoria: "in-ear",
         color: "Negro",
@@ -217,6 +224,9 @@ const catalogoAuriculares = [
         precio: 47100
     }
 ];
+
+// Solo se muestran los productos con stock (los "agotado: true" quedan guardados para cuando repongas)
+const catalogoAuriculares = catalogoAuricularesTodos.filter(p => !p.agotado);
 
 // =========================================
 // 2. INYECTAR PRODUCTOS EN EL HTML

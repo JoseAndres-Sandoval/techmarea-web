@@ -8,9 +8,10 @@ import { db, auth, pagarConMercadoPago, WHATSAPP } from "./config.js";
 // =========================================
 // 1. BASE DE DATOS DE PRODUCTOS (POWERBANKS: 400 - 499)
 // =========================================
-const catalogoPowerBanks = [
+const catalogoPowerBanksTodos = [
     {
         id: 400,
+        agotado: true, // sin stock: no se muestra ni se cobra
         nombre: "Power Bank Inalámbrico Nuvia G1 MODX-000K XAEA (Negro)",
         categoria: "inalambrico",
         color: "Negro",
@@ -21,6 +22,7 @@ const catalogoPowerBanks = [
     },
     {
         id: 401,
+        agotado: true, // sin stock: no se muestra ni se cobra
         nombre: "Power Bank Inalámbrico Nuvia G1 MODX-000K XAEA (Blanco)",
         categoria: "inalambrico",
         color: "Blanco",
@@ -31,6 +33,7 @@ const catalogoPowerBanks = [
     },
     {
         id: 402,
+        agotado: true, // sin stock: no se muestra ni se cobra
         nombre: "Power Bank Inalámbrico Nuvia G1 MODX-000K XAEA (Verde)",
         categoria: "inalambrico",
         color: "Verde",
@@ -58,6 +61,9 @@ const catalogoPowerBanks = [
         precio: 39200
     }
 ];
+
+// Solo se muestran los productos con stock (los "agotado: true" quedan guardados para cuando repongas)
+const catalogoPowerBanks = catalogoPowerBanksTodos.filter(p => !p.agotado);
 
 // =========================================
 // 2. INYECTAR PRODUCTOS EN EL HTML

@@ -66,42 +66,42 @@
   },
   "14": {
     "nombre": "Xaea Exo Mini 3\" - Azul",
-    "precio": 17307,
+    "precio": 20000,
     "archivo": "parlantes"
   },
   "15": {
     "nombre": "Xaea Exo Mini 3\" - Camuflado",
-    "precio": 17307,
+    "precio": 20000,
     "archivo": "parlantes"
   },
   "16": {
     "nombre": "Xaea Exo Mini 3\" - Negro",
-    "precio": 17307,
+    "precio": 20000,
     "archivo": "parlantes"
   },
   "17": {
     "nombre": "Xaea Exo Mini 3\" - Rojo",
-    "precio": 17307,
+    "precio": 20000,
     "archivo": "parlantes"
   },
   "18": {
     "nombre": "Xaea Groove 3\" - Negro",
-    "precio": 33000,
+    "precio": 14500,
     "archivo": "parlantes"
   },
   "19": {
     "nombre": "Xaea Groove 3\" - Azul",
-    "precio": 33000,
+    "precio": 14500,
     "archivo": "parlantes"
   },
   "20": {
     "nombre": "Xaea Groove 3\" - Rojo",
-    "precio": 33000,
+    "precio": 14500,
     "archivo": "parlantes"
   },
   "21": {
     "nombre": "Xaea Groove 3\" - Verde",
-    "precio": 33000,
+    "precio": 14500,
     "archivo": "parlantes"
   },
   "22": {
@@ -116,11 +116,6 @@
   },
   "24": {
     "nombre": "Xaea MODX-004J 3\" - Rosado",
-    "precio": 18000,
-    "archivo": "parlantes"
-  },
-  "25": {
-    "nombre": "Xaea MODX-004J 3\" - Verde",
     "precio": 18000,
     "archivo": "parlantes"
   },
@@ -145,12 +140,7 @@
     "archivo": "parlantes"
   },
   "100": {
-    "nombre": "Auricular Xaea MODX-701 M103 - Verde",
-    "precio": 15000,
-    "archivo": "auriculares"
-  },
-  "101": {
-    "nombre": "Auricular Xaea MODX-701 M103 - Celeste",
+    "nombre": "Auricular BT MODX-707 Kids XAEA - Verde",
     "precio": 15000,
     "archivo": "auriculares"
   },
@@ -179,39 +169,9 @@
     "precio": 29900,
     "archivo": "auriculares"
   },
-  "107": {
-    "nombre": "Auricular TWS MODX-056 Runbeat XAEA (Naranja) - Naranja",
-    "precio": 25174,
-    "archivo": "auriculares"
-  },
-  "108": {
-    "nombre": "Auricular TWS MODX-056 Runbeat XAEA (Negro) - Negro",
-    "precio": 25174,
-    "archivo": "auriculares"
-  },
-  "109": {
-    "nombre": "Auricular TWS MODX-056 Runbeat XAEA (Azul) - Azul",
-    "precio": 25174,
-    "archivo": "auriculares"
-  },
-  "110": {
-    "nombre": "Auricular TWS MODX-056 Runbeat XAEA (Verde) - Verde",
-    "precio": 25174,
-    "archivo": "auriculares"
-  },
-  "111": {
-    "nombre": "Auricular TWS MODX-056 Runbeat XAEA (Lila) - Lila",
-    "precio": 25174,
-    "archivo": "auriculares"
-  },
   "112": {
     "nombre": "Auricular TWS ANC MODX-0024 XAEA (Negro) - Negro",
     "precio": 24000,
-    "archivo": "auriculares"
-  },
-  "113": {
-    "nombre": "Auricular TWS ANC MODX-0023 XAEA (Negro) - Negro",
-    "precio": 22000,
     "archivo": "auriculares"
   },
   "114": {
@@ -254,114 +214,14 @@
     "precio": 6000,
     "archivo": "cables"
   },
-  "201": {
-    "nombre": "Cable TC-TC AX MODX-002B XAEA (Violeta) - Violeta",
-    "precio": 1751,
-    "archivo": "cables"
-  },
-  "202": {
-    "nombre": "Cable Tipo C - Lightning MODX-098 Athenea XAEA (Celeste) - Celeste",
-    "precio": 3865,
-    "archivo": "cables"
-  },
-  "203": {
-    "nombre": "Cable Tipo C - Tipo C MODX-097 Athenea XAEA (Beige) - Beige",
-    "precio": 3042,
-    "archivo": "cables"
-  },
-  "204": {
-    "nombre": "Cable Tipo C - Tipo C MODX-097 Athenea XAEA (Negro) - Negro",
-    "precio": 3042,
-    "archivo": "cables"
-  },
-  "205": {
-    "nombre": "Cable Tipo C - Tipo C MODX-097 Athenea XAEA (Azul Metal) - Azul Metal",
-    "precio": 3042,
-    "archivo": "cables"
-  },
-  "206": {
-    "nombre": "Cable Tipo C - Tipo C MODX-097 Athenea XAEA (Celeste) - Celeste",
-    "precio": 3042,
-    "archivo": "cables"
-  },
-  "207": {
-    "nombre": "Cable Tipo C - Tipo C MODX-097 Athenea XAEA (Lila) - Lila",
-    "precio": 3042,
-    "archivo": "cables"
-  },
-  "208": {
-    "nombre": "Cable Tipo C - Tipo C MODX-105 Hera XAEA (Azul) - Azul",
-    "precio": 2667,
-    "archivo": "cables"
-  },
   "209": {
     "nombre": "Cable Tipo C - Tipo C MODX-105 Hera XAEA (Champagne) - Champagne",
     "precio": 6000,
     "archivo": "cables"
   },
-  "210": {
-    "nombre": "Cable USB Lightning MODX-104 Zeus XAEA (Dorado) - Dorado",
-    "precio": 2518,
-    "archivo": "cables"
-  },
-  "211": {
-    "nombre": "Cable USB Lightning MODX-104 Zeus XAEA (Plata) - Plata",
-    "precio": 2518,
-    "archivo": "cables"
-  },
-  "212": {
-    "nombre": "Cable USB Lightning MODX-104 Zeus XAEA (Marrón) - Marrón",
-    "precio": 2518,
-    "archivo": "cables"
-  },
-  "213": {
-    "nombre": "Cable USB Lightning MODX-104 Zeus XAEA (Verde) - Verde",
-    "precio": 2518,
-    "archivo": "cables"
-  },
-  "214": {
-    "nombre": "Cable USB V8 MOD 73 Qualy 4.4 AMP XAEA (Blanco) - Blanco",
-    "precio": 1363,
-    "archivo": "cables"
-  },
-  "215": {
-    "nombre": "Cable USB Tipo C MOD 74 Qualy 4.4 AMP XAEA (Blanco) - Blanco",
-    "precio": 1363,
-    "archivo": "cables"
-  },
-  "216": {
-    "nombre": "Cable USB Lightning MOD96 Wolverine XAEA (Negro) - Negro",
-    "precio": 2116,
-    "archivo": "cables"
-  },
-  "217": {
-    "nombre": "Cable USB MODX-026 Thor Tipo C XAEA (Rojo) - Rojo",
-    "precio": 2237,
-    "archivo": "cables"
-  },
-  "218": {
-    "nombre": "Cable USB MODX-026 Thor Tipo C XAEA (Negro) - Negro",
-    "precio": 2237,
-    "archivo": "cables"
-  },
   "300": {
     "nombre": "Adaptador Cargador 220V MODX-507 Raptor 45W XAEA (Blanco) - Blanco",
     "precio": 11000,
-    "archivo": "cargador"
-  },
-  "301": {
-    "nombre": "Adaptador Cargador 220V MODX-516 Hyper 55W XAEA (Blanco) - Blanco",
-    "precio": 10518,
-    "archivo": "cargador"
-  },
-  "302": {
-    "nombre": "Adaptador Cargador 220V MODX-616 Extreme 65W XAEA (Blanco) - Blanco",
-    "precio": 13655,
-    "archivo": "cargador"
-  },
-  "303": {
-    "nombre": "Adaptador Cargador 220V MODX-A016 Optimum 45W XAEA (Blanco) - Blanco",
-    "precio": 5289,
     "archivo": "cargador"
   },
   "304": {
@@ -371,33 +231,13 @@
   },
   "305": {
     "nombre": "Adaptador Cargador Auto 12V Voltair MODX-00C4 45W 2 Tipo C XAEA - Negro",
-    "precio": 9268,
-    "archivo": "cargador"
-  },
-  "306": {
-    "nombre": "Adaptador Cargador Auto 12V Voltair MODX-517 3A 1USB + 1TC XAEA (Verde) - Verde",
-    "precio": 7125,
+    "precio": 20000,
     "archivo": "cargador"
   },
   "307": {
     "nombre": "Cargador Universal de Notebook BossCharge 96W XAEA",
     "precio": 20000,
     "archivo": "cargador"
-  },
-  "400": {
-    "nombre": "Power Bank Inalámbrico Nuvia G1 MODX-000K XAEA (Negro) - Negro",
-    "precio": 23297,
-    "archivo": "powerbank"
-  },
-  "401": {
-    "nombre": "Power Bank Inalámbrico Nuvia G1 MODX-000K XAEA (Blanco) - Blanco",
-    "precio": 23297,
-    "archivo": "powerbank"
-  },
-  "402": {
-    "nombre": "Power Bank Inalámbrico Nuvia G1 MODX-000K XAEA (Verde) - Verde",
-    "precio": 23297,
-    "archivo": "powerbank"
   },
   "403": {
     "nombre": "Power Bank Inalámbrico Tars 20000 mAh MODX-00CE XAEA - Blanco",
@@ -711,6 +551,131 @@
   },
   "744": {
     "nombre": "Vidrio Templado Premium - iPhone 17 Pro Max",
+    "precio": 7000,
+    "archivo": "vidrios"
+  },
+  "745": {
+    "nombre": "Vidrio Templado Común - Samsung A72",
+    "precio": 7000,
+    "archivo": "vidrios"
+  },
+  "746": {
+    "nombre": "Vidrio Templado Común - Motorola G15",
+    "precio": 7000,
+    "archivo": "vidrios"
+  },
+  "747": {
+    "nombre": "Vidrio Templado Común - Motorola G22 / E32",
+    "precio": 7000,
+    "archivo": "vidrios"
+  },
+  "748": {
+    "nombre": "Vidrio Templado Común - Motorola G31 / G41 / G42",
+    "precio": 7000,
+    "archivo": "vidrios"
+  },
+  "749": {
+    "nombre": "Vidrio Templado Común - Motorola G32",
+    "precio": 7000,
+    "archivo": "vidrios"
+  },
+  "750": {
+    "nombre": "Vidrio Templado Común - Motorola G60S",
+    "precio": 7000,
+    "archivo": "vidrios"
+  },
+  "751": {
+    "nombre": "Vidrio Templado Común - Samsung A02 / A02S",
+    "precio": 7000,
+    "archivo": "vidrios"
+  },
+  "752": {
+    "nombre": "Vidrio Templado Común - Samsung A03 / A03S",
+    "precio": 7000,
+    "archivo": "vidrios"
+  },
+  "753": {
+    "nombre": "Vidrio Templado Común - Samsung A03 Core",
+    "precio": 7000,
+    "archivo": "vidrios"
+  },
+  "754": {
+    "nombre": "Vidrio Templado Común - Samsung A04 / A04E / A04S",
+    "precio": 7000,
+    "archivo": "vidrios"
+  },
+  "755": {
+    "nombre": "Vidrio Templado Común - Samsung A10 / A10S / M10",
+    "precio": 7000,
+    "archivo": "vidrios"
+  },
+  "756": {
+    "nombre": "Vidrio Templado Común - Samsung A12 / M12",
+    "precio": 7000,
+    "archivo": "vidrios"
+  },
+  "757": {
+    "nombre": "Vidrio Templado Común - Samsung A13 4G",
+    "precio": 7000,
+    "archivo": "vidrios"
+  },
+  "758": {
+    "nombre": "Vidrio Templado Común - Samsung A20 / A30 / A50 / A50S",
+    "precio": 7000,
+    "archivo": "vidrios"
+  },
+  "759": {
+    "nombre": "Vidrio Templado Común - Samsung A22 5G",
+    "precio": 7000,
+    "archivo": "vidrios"
+  },
+  "760": {
+    "nombre": "Vidrio Templado Común - Samsung A24",
+    "precio": 7000,
+    "archivo": "vidrios"
+  },
+  "761": {
+    "nombre": "Vidrio Templado Común - Samsung A26",
+    "precio": 7000,
+    "archivo": "vidrios"
+  },
+  "762": {
+    "nombre": "Vidrio Templado Común - Samsung A32 4G",
+    "precio": 7000,
+    "archivo": "vidrios"
+  },
+  "763": {
+    "nombre": "Vidrio Templado Común - Samsung A36",
+    "precio": 7000,
+    "archivo": "vidrios"
+  },
+  "764": {
+    "nombre": "Vidrio Templado Común - Xiaomi Redmi 12C",
+    "precio": 7000,
+    "archivo": "vidrios"
+  },
+  "765": {
+    "nombre": "Vidrio Templado Común - Xiaomi Redmi 13C",
+    "precio": 7000,
+    "archivo": "vidrios"
+  },
+  "766": {
+    "nombre": "Vidrio Templado Común - iPhone 14",
+    "precio": 7000,
+    "archivo": "vidrios"
+  },
+  "767": {
+    "nombre": "Vidrio Templado Premium - Motorola G56",
+    "precio": 7000,
+    "archivo": "vidrios"
+  },
+  "768": {
+    "nombre": "Vidrio Templado Premium - Samsung A06",
+    "precio": 7000,
+    "archivo": "vidrios"
+  },
+  "769": {
+    "nombre": "Vidrio Templado Premium - iPhone 16 Plus",
     "precio": 7000,
     "archivo": "vidrios"
   }

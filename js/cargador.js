@@ -9,7 +9,7 @@ import { db, auth, pagarConMercadoPago, WHATSAPP } from "./config.js";
 // =========================================
 // 1. BASE DE DATOS DE PRODUCTOS (CARGADORES: 300 - 399)
 // =========================================
-const catalogoCargadores = [
+const catalogoCargadoresTodos = [
     {
         id: 300,
         nombre: "Adaptador Cargador 220V MODX-507 Raptor 45W XAEA (Blanco)",
@@ -22,6 +22,7 @@ const catalogoCargadores = [
     },
     {
         id: 301,
+        agotado: true, // sin stock: no se muestra ni se cobra
         nombre: "Adaptador Cargador 220V MODX-516 Hyper 55W XAEA (Blanco)",
         categoria: "cargador-pared",
         color: "Blanco",
@@ -32,6 +33,7 @@ const catalogoCargadores = [
     },
     {
         id: 302,
+        agotado: true, // sin stock: no se muestra ni se cobra
         nombre: "Adaptador Cargador 220V MODX-616 Extreme 65W XAEA (Blanco)",
         categoria: "cargador-pared",
         color: "Blanco",
@@ -42,6 +44,7 @@ const catalogoCargadores = [
     },
     {
         id: 303,
+        agotado: true, // sin stock: no se muestra ni se cobra
         nombre: "Adaptador Cargador 220V MODX-A016 Optimum 45W XAEA (Blanco)",
         categoria: "cargador-pared",
         color: "Blanco",
@@ -68,10 +71,11 @@ const catalogoCargadores = [
         imagen: "assets/img/ADAPTADOR CARGADOR 12V VOLTAIR 2 TIPO C MODX-00C4 – XAEA – NEGRO.webp",
         imagenHover: "assets/img/ADAPTADOR CARGADOR 12V VOLTAIR 2 TIPO C MODX-00C4 – XAEA – NEGRO1.webp",
         specs: "<li><strong>Potencia:</strong> 45W (Carga rápida Power Delivery)</li><li><strong>Conexión:</strong> 2 Puertos Tipo C</li><li><strong>Entrada:</strong> 12-24V (Ideal para autos)</li><li><strong>Material:</strong> Aleación de aluminio resistente</li>",
-        precio: 9268
+        precio: 20000
     },
     {
         id: 306,
+        agotado: true, // sin stock: no se muestra ni se cobra
         nombre: "Adaptador Cargador Auto 12V Voltair MODX-517 3A 1USB + 1TC XAEA (Verde)",
         categoria: "cargador-auto",
         color: "Verde",
@@ -89,6 +93,9 @@ const catalogoCargadores = [
         precio: 20000
     }
 ];
+
+// Solo se muestran los productos con stock (los "agotado: true" quedan guardados para cuando repongas)
+const catalogoCargadores = catalogoCargadoresTodos.filter(p => !p.agotado);
 
 // =========================================
 // 2. INYECTAR PRODUCTOS EN EL HTML

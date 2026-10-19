@@ -17,6 +17,7 @@ for (const nombre of archivos) {
 
     const productos = vm.runInNewContext(match[2]);
     for (const p of productos) {
+        if (p.agotado) continue; // sin stock: no se puede cobrar
         if (catalogo[p.id]) {
             throw new Error(`ID repetido: ${p.id} (en ${nombre} y ${catalogo[p.id].archivo})`);
         }
