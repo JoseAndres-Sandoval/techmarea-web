@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /admin.html
+Disallow: /exito.html
+Disallow: /fallo.html
+Disallow: /pendiente.html
+
+Sitemap: https://tech-marea-db.web.app/sitemap.xml
