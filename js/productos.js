@@ -490,7 +490,7 @@ btnPagar.addEventListener("click", () => {
         return;
     }
 
-    const numeroWhatsApp = "5492613132991"; 
+    const numeroWhatsApp = "5492617634150"; 
     let mensaje = "¡Hola Tech Marea! 🌊 Quiero realizar el siguiente pedido:\n\n";
     let totalPedido = 0;
 

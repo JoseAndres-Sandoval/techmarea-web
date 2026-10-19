@@ -29,7 +29,7 @@ export const URL_PAGO = usarEmulador
     ? "http://127.0.0.1:5001/tech-marea-db/us-central1/crearPreferencia"
     : "https://us-central1-tech-marea-db.cloudfunctions.net/crearPreferencia";
 
-export const WHATSAPP = "5492613132991";
+export const WHATSAPP = "5492617634150";
 
 // Escapa texto antes de meterlo en HTML (evita que alguien inyecte código).
 export function escaparHTML(texto) {
