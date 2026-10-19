@@ -317,7 +317,7 @@ if (btnPagar) {
         }
 
         const numeroWhatsApp = WHATSAPP; 
-        let mensaje = "¡Hola Tech Marea! 🌊 Quiero realizar el siguiente pedido:\n\n";
+        let mensaje = "¡Hola TechMarea! 🌊 Quiero realizar el siguiente pedido:\n\n";
         let totalPedido = 0;
 
         carrito.forEach((producto) => {

@@ -1,5 +1,5 @@
 // =========================================
-// CONFIGURACIÓN COMPARTIDA DE TECH MAREA
+// CONFIGURACIÓN COMPARTIDA DE TECHMAREA
 // Todas las páginas importan este archivo.
 // =========================================
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
