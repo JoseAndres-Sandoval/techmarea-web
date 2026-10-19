@@ -167,7 +167,7 @@ const catalogoParlantes = [
         imagen: "assets/img/PARLANTE 3” GROOVE – MODX-101 – XAEA.webp", /* Recuerda renombrar tu imagen a esto */
         imagenHover: "assets/img/PARLANTE 3” GROOVE – MODX-101 – XAEA - NEGRO.webp", /* Reemplaza si tienes una foto de la caja, sino bórralo */
         specs: "<li><strong>Potencia:</strong> 800W (Altavoz 3\" BT LED)</li><li><strong>Conectividad:</strong> USB, AUX 3.5mm, Radio FM, MicroSD y TWS</li><li><strong>Color:</strong> Negro</li><li><strong>Batería:</strong> 800mAh 3.7V (Carga Tipo-C)</li><li><strong>Medidas:</strong> 11.5 x 8.5 x 8.5 cm</li><li><strong>Extras:</strong> Guía para celular, cable de carga y manual</li>",
-        precio: 26600
+        precio: 33000
     },
     {
         id: 19,
@@ -177,7 +177,7 @@ const catalogoParlantes = [
         imagen: "assets/img/PARLANTE 3” GROOVE – MODX-101 – XAEA.webp", 
         imagenHover: "assets/img/PARLANTE 3” GROOVE – MODX-101 – XAEA - AZUL.webp", 
         specs: "<li><strong>Potencia:</strong> 800W (Altavoz 3\" BT LED)</li><li><strong>Conectividad:</strong> USB, AUX 3.5mm, Radio FM, MicroSD y TWS</li><li><strong>Color:</strong> Azul</li><li><strong>Batería:</strong> 800mAh 3.7V (Carga Tipo-C)</li><li><strong>Medidas:</strong> 11.5 x 8.5 x 8.5 cm</li><li><strong>Extras:</strong> Guía para celular, cable de carga y manual</li>",
-        precio: 14500
+        precio: 33000
     },
     {
         id: 20,
@@ -187,7 +187,7 @@ const catalogoParlantes = [
         imagen: "assets/img/PARLANTE 3” GROOVE – MODX-101 – XAEA.webp", 
         imagenHover: "assets/img/PARLANTE 3” GROOVE – MODX-101 – XAEA - ROJO.webp", 
         specs: "<li><strong>Potencia:</strong> 800W (Altavoz 3\" BT LED)</li><li><strong>Conectividad:</strong> USB, AUX 3.5mm, Radio FM, MicroSD y TWS</li><li><strong>Color:</strong> Rojo</li><li><strong>Batería:</strong> 800mAh 3.7V (Carga Tipo-C)</li><li><strong>Medidas:</strong> 11.5 x 8.5 x 8.5 cm</li><li><strong>Extras:</strong> Guía para celular, cable de carga y manual</li>",
-        precio: 14500
+        precio: 33000
     },
     {
         id: 21,
@@ -197,7 +197,7 @@ const catalogoParlantes = [
         imagen: "assets/img/PARLANTE 3” GROOVE – MODX-101 – XAEA.webp", 
         imagenHover: "assets/img/PARLANTE 3” GROOVE – MODX-101 – XAEA - VERDE.webp", 
         specs: "<li><strong>Potencia:</strong> 800W (Altavoz 3\" BT LED)</li><li><strong>Conectividad:</strong> USB, AUX 3.5mm, Radio FM, MicroSD y TWS</li><li><strong>Color:</strong> Verde</li><li><strong>Batería:</strong> 800mAh 3.7V (Carga Tipo-C)</li><li><strong>Medidas:</strong> 11.5 x 8.5 x 8.5 cm</li><li><strong>Extras:</strong> Guía para celular, cable de carga y manual</li>",
-        precio: 14500
+        precio: 33000
     }
     ,{
         id: 22,
