@@ -17,7 +17,7 @@ const catalogoCables = [
         imagen: "assets/img/cable-sync-c-008s.webp",
         imagenHover: "assets/img/cable-sync-c-008s-blanco.webp",
         specs: "<li><strong>Conexión:</strong> USB-C a USB-C</li><li><strong>Carga:</strong> Rápida hasta 3A</li><li><strong>Construcción:</strong> Tecnología 5 Core (Cobre 100% puro)</li><li><strong>Protección:</strong> Doble mallado premium resistente</li><li><strong>Largo:</strong> 0.95 m (Grosor: 3.5 mm)</li>",
-        precio: 2475
+        precio: 6000
     },
     {
         id: 201,
@@ -107,7 +107,7 @@ const catalogoCables = [
         imagen: "assets/img/CABLE TIPO C TIPO C MODX-105 – HERA – XAEA – DORADO CHAMPAGNE.webp",
         imagenHover: "assets/img/CABLE TIPO C TIPO C MODX-105 – HERA – XAEA – DORADO CHAMPAGNE1.webp",
         specs: "<li><strong>Conexión:</strong> Tipo C a Tipo C</li><li><strong>Amperaje:</strong> 3A</li><li><strong>Material:</strong> 100% Cobre y TPE doble inyección ignífugo</li><li><strong>Largo:</strong> 1.5 metros</li>",
-        precio: 2667
+        precio: 6000
     },
     {
         id: 210,

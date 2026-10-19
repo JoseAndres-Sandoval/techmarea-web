@@ -18,7 +18,7 @@ const catalogoCargadores = [
         imagen: "assets/img/ADAPTADOR-CARGADOR 220V MODX-507 RAPTOR – 5,1A – 45W – 1TC + PD – XAEA – BLANCO.webp",
         imagenHover: "assets/img/ADAPTADOR-CARGADOR 220V MODX-507 RAPTOR – 5,1A – 45W – 1TC + PD – XAEA – BLANCO1.webp",
         specs: "<li><strong>Potencia:</strong> 45W de salida máxima</li><li><strong>Amperaje y Voltaje:</strong> 5.1A / 9VCC</li><li><strong>Conexión:</strong> 1 Puerto Tipo C (Power Delivery)</li><li><strong>Material:</strong> Plástico ABS resistente</li>",
-        precio: 4479
+        precio: 11000
     },
     {
         id: 301,
@@ -58,7 +58,7 @@ const catalogoCargadores = [
         imagen: "assets/img/CARGADOR 220V MODX-C015 – INTENSIFY – 1USB 1TC + CABLE USB A TIPO C – XAEA – BLANCO.webp",
         imagenHover: "assets/img/CARGADOR 220V MODX-C015 – INTENSIFY – 1USB 1TC + CABLE USB A TIPO C – XAEA – BLANCO1.webp",
         specs: "<li><strong>Potencia:</strong> 30W</li><li><strong>Conexión:</strong> 1 Puerto Tipo C + 1 Puerto USB-A</li><li><strong>Tensión y Salida:</strong> AC 100-220V / 5VCC</li><li><strong>Extras:</strong> Incluye cable USB a Tipo C (1 metro, 2A)</li>",
-        precio: 5303
+        precio: 9000
     },
     {
         id: 305,

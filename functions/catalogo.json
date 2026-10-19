@@ -1,12 +1,12 @@
 {
   "1": {
     "nombre": "Xaea Vibe Box 30W",
-    "precio": 45000,
+    "precio": 74900,
     "archivo": "parlantes"
   },
   "2": {
     "nombre": "Xaea Dual Storm",
-    "precio": 68500,
+    "precio": 34900,
     "archivo": "parlantes"
   },
   "3": {
@@ -26,42 +26,42 @@
   },
   "6": {
     "nombre": "Parlante Torre Xaea",
-    "precio": 46531,
+    "precio": 50000,
     "archivo": "parlantes"
   },
   "7": {
     "nombre": "Parlante Halo 3\"",
-    "precio": 28000,
+    "precio": 40000,
     "archivo": "parlantes"
   },
   "8": {
     "nombre": "Parlante BT 3\"x2 MODV-003U",
-    "precio": 22321,
+    "precio": 39900,
     "archivo": "parlantes"
   },
   "9": {
     "nombre": "Parlante Xaea MODX0050 5W GRIS",
-    "precio": 33000,
+    "precio": 20000,
     "archivo": "parlantes"
   },
   "10": {
     "nombre": "Parlante Xaea MODX0050 5W ROJO",
-    "precio": 33000,
+    "precio": 20000,
     "archivo": "parlantes"
   },
   "11": {
     "nombre": "Xaea Dot Mini 3\" - Negro",
-    "precio": 17291,
+    "precio": 33000,
     "archivo": "parlantes"
   },
   "12": {
     "nombre": "Xaea Dot Mini 3\" - Rojo",
-    "precio": 17291,
+    "precio": 33000,
     "archivo": "parlantes"
   },
   "13": {
     "nombre": "Xaea Dot Mini 3\" - Verde",
-    "precio": 17291,
+    "precio": 33000,
     "archivo": "parlantes"
   },
   "14": {
@@ -86,62 +86,62 @@
   },
   "18": {
     "nombre": "Xaea Groove 3\" - Negro",
-    "precio": 12673,
+    "precio": 26600,
     "archivo": "parlantes"
   },
   "19": {
     "nombre": "Xaea Groove 3\" - Azul",
-    "precio": 12673,
+    "precio": 14500,
     "archivo": "parlantes"
   },
   "20": {
     "nombre": "Xaea Groove 3\" - Rojo",
-    "precio": 12673,
+    "precio": 14500,
     "archivo": "parlantes"
   },
   "21": {
     "nombre": "Xaea Groove 3\" - Verde",
-    "precio": 12673,
+    "precio": 14500,
     "archivo": "parlantes"
   },
   "22": {
     "nombre": "Xaea MODX-004J 3\" - Celeste",
-    "precio": 15000,
+    "precio": 18000,
     "archivo": "parlantes"
   },
   "23": {
     "nombre": "Xaea MODX-004J 3\" - Negro",
-    "precio": 15000,
+    "precio": 18000,
     "archivo": "parlantes"
   },
   "24": {
     "nombre": "Xaea MODX-004J 3\" - Rosado",
-    "precio": 15000,
+    "precio": 18000,
     "archivo": "parlantes"
   },
   "25": {
     "nombre": "Xaea MODX-004J 3\" - Verde",
-    "precio": 15000,
+    "precio": 18000,
     "archivo": "parlantes"
   },
   "26": {
     "nombre": "Xaea Blade MODX-106 3\" - Azul",
-    "precio": 11441,
+    "precio": 20000,
     "archivo": "parlantes"
   },
   "27": {
     "nombre": "Xaea Blade MODX-106 3\" - Camuflado",
-    "precio": 11441,
+    "precio": 20000,
     "archivo": "parlantes"
   },
   "28": {
     "nombre": "Xaea Blade MODX-106 3\" - Negro",
-    "precio": 11441,
+    "precio": 20000,
     "archivo": "parlantes"
   },
   "29": {
     "nombre": "Xaea Blade MODX-106 3\" - Rojo",
-    "precio": 11441,
+    "precio": 20000,
     "archivo": "parlantes"
   },
   "100": {
@@ -156,27 +156,27 @@
   },
   "102": {
     "nombre": "Auricular BT MODX-708 Orejas de Gato - Rosa",
-    "precio": 7124,
+    "precio": 16000,
     "archivo": "auriculares"
   },
   "103": {
     "nombre": "Auricular BT MODX-708 Orejas de Gato - Violeta",
-    "precio": 7124,
+    "precio": 16000,
     "archivo": "auriculares"
   },
   "104": {
     "nombre": "Auricular TWS ANC MODX-00AI XAEA (Beige) - Beige",
-    "precio": 17423,
+    "precio": 29900,
     "archivo": "auriculares"
   },
   "105": {
     "nombre": "Auricular TWS ANC MODX-00AI XAEA (Negro) - Negro",
-    "precio": 17423,
+    "precio": 29900,
     "archivo": "auriculares"
   },
   "106": {
     "nombre": "Auricular TWS ANC MODX-00AI XAEA (Blanco) - Blanco",
-    "precio": 17423,
+    "precio": 29900,
     "archivo": "auriculares"
   },
   "107": {
@@ -206,37 +206,37 @@
   },
   "112": {
     "nombre": "Auricular TWS ANC MODX-0024 XAEA (Negro) - Negro",
-    "precio": 14966,
+    "precio": 24000,
     "archivo": "auriculares"
   },
   "113": {
     "nombre": "Auricular TWS ANC MODX-0023 XAEA (Negro) - Negro",
-    "precio": 13301,
+    "precio": 22000,
     "archivo": "auriculares"
   },
   "114": {
     "nombre": "Auricular TWS ANC MODX-0023 XAEA (Blanco) - Blanco",
-    "precio": 13301,
+    "precio": 22000,
     "archivo": "auriculares"
   },
   "115": {
     "nombre": "Auricular TWS NOX MODX-051 XAEA (Negro) - Negro",
-    "precio": 21156,
+    "precio": 30000,
     "archivo": "auriculares"
   },
   "116": {
     "nombre": "Auricular TWS NOX MODX-051 XAEA (Blanco) - Blanco",
-    "precio": 21156,
+    "precio": 30000,
     "archivo": "auriculares"
   },
   "117": {
     "nombre": "Auricular Manos Libres MODX-045 Thunder-C XAEA (Negro) - Negro",
-    "precio": 4441,
+    "precio": 7900,
     "archivo": "auriculares"
   },
   "200": {
     "nombre": "Cable Sync-C Plus MODX-008S XAEA (Blanco) - Blanco",
-    "precio": 2475,
+    "precio": 6000,
     "archivo": "cables"
   },
   "201": {
@@ -281,7 +281,7 @@
   },
   "209": {
     "nombre": "Cable Tipo C - Tipo C MODX-105 Hera XAEA (Champagne) - Champagne",
-    "precio": 2667,
+    "precio": 6000,
     "archivo": "cables"
   },
   "210": {
@@ -331,7 +331,7 @@
   },
   "300": {
     "nombre": "Adaptador Cargador 220V MODX-507 Raptor 45W XAEA (Blanco) - Blanco",
-    "precio": 4479,
+    "precio": 11000,
     "archivo": "cargador"
   },
   "301": {
@@ -351,7 +351,7 @@
   },
   "304": {
     "nombre": "Cargador Intensify 30W 1USB 1TC + Cable USB a Tipo C XAEA (Blanco) - Blanco",
-    "precio": 5303,
+    "precio": 9000,
     "archivo": "cargador"
   },
   "305": {

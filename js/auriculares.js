@@ -37,7 +37,7 @@ const catalogoAuriculares = [
         imagen: "assets/img/AURICULAR BT MODX-708-ROSA.webp", 
         imagenHover: "assets/img/AURICULAR BT MODX-708-ROSA2.webp", 
         specs: "<li><strong>Diseño:</strong> Infantil con orejitas de gato</li><li><strong>Conectividad:</strong> Bluetooth (10m)</li><li><strong>Funciones:</strong> TF, Auxiliar, Radio FM</li><li><strong>Batería:</strong> 150mAh (3hs de uso) - Puerto V8</li><li><strong>Micrófono y Controles:</strong> Sí</li><li><strong>Extras:</strong> Cable de carga y cable auxiliar (0,80m)</li>",
-        precio: 7124
+        precio: 16000
     },
     {
         id: 103,
@@ -47,7 +47,7 @@ const catalogoAuriculares = [
         imagen: "assets/img/AURICULAR BT MODX-708-VIOLETA.webp", 
         imagenHover: "assets/img/AURICULAR BT MODX-708-VIOLETA2.webp", 
         specs: "<li><strong>Diseño:</strong> Infantil con orejitas de gato</li><li><strong>Conectividad:</strong> Bluetooth (10m)</li><li><strong>Funciones:</strong> TF, Auxiliar, Radio FM</li><li><strong>Batería:</strong> 150mAh (3hs de uso) - Puerto V8</li><li><strong>Micrófono y Controles:</strong> Sí</li><li><strong>Extras:</strong> Cable de carga y cable auxiliar (0,80m)</li>",
-        precio: 7124
+        precio: 16000
     },
     {
         id: 104,
@@ -57,7 +57,7 @@ const catalogoAuriculares = [
         imagen: "assets/img/MANOS LIBRES TWS ANC SIMIL CUERO MODX-00AI – XAEA – BEIGE.webp",
         imagenHover: "assets/img/MANOS LIBRES TWS ANC SIMIL CUERO MODX-00AI – XAEA – BEIGE1.webp",
         specs: "<li><strong>Conectividad:</strong> Bluetooth V5.4 (Rango 10m)</li><li><strong>Tecnología:</strong> ANC y ENC con 4 micrófonos integrados</li><li><strong>Batería:</strong> 8 horas (Estuche de carga 400mAh)</li><li><strong>Material:</strong> Diseño premium con textura símil cuero</li>",
-        precio: 17423
+        precio: 29900
     },
     {
         id: 105,
@@ -67,7 +67,7 @@ const catalogoAuriculares = [
         imagen: "assets/img/MANOS LIBRES TWS ANC SIMIL CUERO MODX-00AI – XAEA – NEGRO.webp",
         imagenHover: "assets/img/MANOS LIBRES TWS ANC SIMIL CUERO MODX-00AI – XAEA – NEGRO1.webp",
         specs: "<li><strong>Conectividad:</strong> Bluetooth V5.4 (Rango 10m)</li><li><strong>Tecnología:</strong> ANC y ENC con 4 micrófonos integrados</li><li><strong>Batería:</strong> 8 horas (Estuche de carga 400mAh)</li><li><strong>Material:</strong> Diseño premium con textura símil cuero</li>",
-        precio: 17423
+        precio: 29900
     },
     {
         id: 106,
@@ -77,7 +77,7 @@ const catalogoAuriculares = [
         imagen: "assets/img/MANOS LIBRES TWS ANC SIMIL CUERO MODX-00AI – XAEA – BLANCO.webp",
         imagenHover: "assets/img/MANOS LIBRES TWS ANC SIMIL CUERO MODX-00AI – XAEA – BLANCO1.webp",
         specs: "<li><strong>Conectividad:</strong> Bluetooth V5.4 (Rango 10m)</li><li><strong>Tecnología:</strong> ANC y ENC con 4 micrófonos integrados</li><li><strong>Batería:</strong> 8 horas (Estuche de carga 400mAh)</li><li><strong>Material:</strong> Diseño premium con textura símil cuero</li>",
-        precio: 17423
+        precio: 29900
     },
     {
         id: 107,
@@ -137,7 +137,7 @@ const catalogoAuriculares = [
         imagen: "assets/img/MANOS LIBRES TWS ANC MODX-0024 – XAEA – NEGRO.webp",
         imagenHover: "assets/img/MANOS LIBRES TWS ANC MODX-0024 – XAEA – NEGRO1.webp",
         specs: "<li><strong>Conectividad:</strong> Bluetooth 5.4 con control táctil</li><li><strong>Audio:</strong> Cancelación Activa de Ruido (ANC) y altavoces de 10mm</li><li><strong>Batería:</strong> Hasta 8 horas de reproducción (Estuche 380mAh, Auricular 40mAh)</li><li><strong>Extras:</strong> Pantalla indicadora LED y carga rápida (1 hora)</li>",
-        precio: 14966
+        precio: 24000
     },
     {
         id: 113,
@@ -147,7 +147,7 @@ const catalogoAuriculares = [
         imagen: "assets/img/MANOS LIBRES TWS ANC MODX-0023 – XAEA – NEGRO.webp",
         imagenHover: "assets/img/MANOS LIBRES TWS ANC MODX-0023 – XAEA – NEGRO1.webp",
         specs: "<li><strong>Conectividad:</strong> Bluetooth 5.4 con control táctil</li><li><strong>Audio:</strong> Cancelación Activa de Ruido (ANC) y parlantes dinámicos de 10mm</li><li><strong>Batería:</strong> 8 horas de autonomía (Estuche 380mAh, Auricular 40mAh)</li><li><strong>Extras:</strong> Luces LED y carga rápida Tipo C (1 hora)</li>",
-        precio: 13301
+        precio: 22000
     },
     {
         id: 114,
@@ -157,7 +157,7 @@ const catalogoAuriculares = [
         imagen: "assets/img/MANOS LIBRES TWS ANC MODX-0023 – XAEA – NEGRO.webp",
         imagenHover: "assets/img/MANOS LIBRES TWS ANC MODX-0023 – XAEA – BLANCO.webp",
         specs: "<li><strong>Conectividad:</strong> Bluetooth 5.4 con control táctil</li><li><strong>Audio:</strong> Cancelación Activa de Ruido (ANC) y parlantes dinámicos de 10mm</li><li><strong>Batería:</strong> 8 horas de autonomía (Estuche 380mAh, Auricular 40mAh)</li><li><strong>Extras:</strong> Luces LED y carga rápida Tipo C (1 hora)</li>",
-        precio: 13301
+        precio: 22000
     },
     {
         id: 115,
@@ -167,7 +167,7 @@ const catalogoAuriculares = [
         imagen: "assets/img/MANOS LIBRES TWS – NOX – MODX-051 – XAEA – NEGRO.webp",
         imagenHover: "assets/img/MANOS LIBRES TWS – NOX – MODX-051 – XAEA – NEGRO1.webp",
         specs: "<li><strong>Conectividad:</strong> Bluetooth 5.4 con pantalla táctil multifunción</li><li><strong>Audio:</strong> Doble cancelación de ruido (ANC + ENC + EQ) y parlantes de 13mm</li><li><strong>Batería:</strong> 8 horas de reproducción (Estuche 400mAh, Auricular 40mAh)</li><li><strong>Carga:</strong> Rápida en 1 hora (Puerto Tipo C)</li>",
-        precio: 21156
+        precio: 30000
     },
     {
         id: 116,
@@ -177,7 +177,7 @@ const catalogoAuriculares = [
         imagen: "assets/img/MANOS LIBRES TWS – NOX – MODX-051 – XAEA – BLANCO.webp",
         imagenHover: "assets/img/MANOS LIBRES TWS – NOX – MODX-051 – XAEA – BLANCO1.webp",
         specs: "<li><strong>Conectividad:</strong> Bluetooth 5.4 con pantalla táctil multifunción</li><li><strong>Audio:</strong> Doble cancelación de ruido (ANC + ENC + EQ) y parlantes de 13mm</li><li><strong>Batería:</strong> 8 horas de reproducción (Estuche 400mAh, Auricular 40mAh)</li><li><strong>Carga:</strong> Rápida en 1 hora (Puerto Tipo C)</li>",
-        precio: 21156
+        precio: 30000
     },
     {
         id: 117,
@@ -187,7 +187,7 @@ const catalogoAuriculares = [
         imagen: "assets/img/MANOS LIBRES – MODX-045 THUNDER-C – XAEA - NEGRO.webp",
         imagenHover: "assets/img/MANOS LIBRES – MODX-045 THUNDER-C – XAEA - NEGRO1.webp",
         specs: "<li><strong>Conectividad:</strong> Cable con ficha Tipo C (1 metro)</li><li><strong>Audio:</strong> Cancelación de sonido y micrófono integrado</li><li><strong>Controles:</strong> Mando integrado para volumen, canciones y llamadas</li><li><strong>Material:</strong> Plástico ABS resistente</li>",
-        precio: 4441
+        precio: 7900
     }
 ];
 
