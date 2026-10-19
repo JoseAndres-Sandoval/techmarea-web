@@ -856,8 +856,8 @@ body {
     position: fixed;
     width: 60px;
     height: 60px;
-    bottom: 30px;
-    right: 30px;
+    bottom: 90px; /* arriba del botón Carrito */
+    right: 25px;
     background-color: #25d366;
     color: #FFF;
     border-radius: 50%;
@@ -885,7 +885,7 @@ body {
     .whatsapp-flotante {
         width: 50px;
         height: 50px;
-        bottom: 20px;
+        bottom: 80px; /* arriba del botón Carrito */
         right: 20px;
     }
     .whatsapp-flotante img {
