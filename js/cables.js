@@ -215,6 +215,48 @@ const catalogoCablesTodos = [
         imagenHover: "assets/img/CABLE USB MODX-026 THOR TIPO C – XAEA – NEGRO1.webp",
         specs: "<li><strong>Conexión:</strong> USB a Tipo C</li><li><strong>Construcción:</strong> 100 hilos de cobre puro</li><li><strong>Material:</strong> Malla metálica exterior y puntas de metal</li><li><strong>Largo:</strong> 1 metro (Grosor 4.5 mm)</li>",
         precio: 2237
+    },
+    {
+        id: 219,
+        nombre: "Cable HDMI Mallado Reforzado 1.5 m XAEA",
+        categoria: "hdmi",
+        imagen: "assets/img/real-cable-hdmi-mallado.webp",
+        specs: "<li><strong>Resolución:</strong> Full HD</li><li><strong>Largo:</strong> 1.5 m</li><li><strong>Cable:</strong> Mallado reforzado con filtros</li><li><strong>Compatible:</strong> 3D, TV, monitores, consolas y notebooks</li>",
+        precio: 8000
+    },
+    {
+        id: 220,
+        nombre: "Cable HDMI 1.5 m XAEA",
+        categoria: "hdmi",
+        imagen: "assets/img/real-cable-hdmi-goma.webp",
+        specs: "<li><strong>Resolución:</strong> Full HD</li><li><strong>Largo:</strong> 1.5 m</li><li><strong>Cable:</strong> PVC flexible y resistente</li>",
+        precio: 7000
+    },
+    {
+        id: 221,
+        nombre: "Adaptador HDMI a 2 HDMI",
+        categoria: "hdmi",
+        imagen: "assets/img/real-adaptador-hdmi-2.webp",
+        specs: "<li><strong>Uso:</strong> 1 entrada HDMI a 2 salidas HDMI</li><li><strong>Ideal para:</strong> Conectar dos pantallas a la misma fuente</li>",
+        precio: 7000
+    },
+    {
+        id: 222,
+        nombre: "Cable Auxiliar Spiral 3.5 mm 1.8 m XAEA",
+        categoria: "auxiliar",
+        color: "Blanco",
+        imagen: "assets/img/real-aux-spiral-blanco.webp",
+        specs: "<li><strong>Conexión:</strong> Ficha 3.5 mm a 3.5 mm (una en L)</li><li><strong>Largo:</strong> 1.8 m, cable espiral</li><li><strong>Conectores:</strong> Metálicos dorados</li><li><strong>Color:</strong> Blanco</li>",
+        precio: 6000
+    },
+    {
+        id: 223,
+        nombre: "Cable Auxiliar Spiral 3.5 mm 1.8 m XAEA",
+        categoria: "auxiliar",
+        color: "Negro",
+        imagen: "assets/img/real-aux-spiral-negro.webp",
+        specs: "<li><strong>Conexión:</strong> Ficha 3.5 mm a 3.5 mm (una en L)</li><li><strong>Largo:</strong> 1.8 m, cable espiral</li><li><strong>Conectores:</strong> Metálicos dorados</li><li><strong>Color:</strong> Negro</li>",
+        precio: 6000
     }
 ];
 

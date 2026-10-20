@@ -144,6 +144,36 @@
     "precio": 33000,
     "archivo": "parlantes"
   },
+  "31": {
+    "nombre": "Parlante Esfera MODX-004I XAEA - Azul",
+    "precio": 15000,
+    "archivo": "parlantes"
+  },
+  "32": {
+    "nombre": "Parlante Esfera MODX-004I XAEA - Gris",
+    "precio": 15000,
+    "archivo": "parlantes"
+  },
+  "33": {
+    "nombre": "Parlante Esfera MODX-004I XAEA - Negro",
+    "precio": 15000,
+    "archivo": "parlantes"
+  },
+  "34": {
+    "nombre": "Parlante Esfera MODX-004I XAEA - Rojo",
+    "precio": 15000,
+    "archivo": "parlantes"
+  },
+  "35": {
+    "nombre": "Parlante MODX-004Y 8W XAEA - Negro",
+    "precio": 24000,
+    "archivo": "parlantes"
+  },
+  "36": {
+    "nombre": "Parlante MODX-004Y 8W XAEA - Rojo",
+    "precio": 24000,
+    "archivo": "parlantes"
+  },
   "100": {
     "nombre": "Auricular BT MODX-707 Kids XAEA - Verde",
     "precio": 15000,
@@ -214,6 +244,26 @@
     "precio": 47100,
     "archivo": "auriculares"
   },
+  "121": {
+    "nombre": "Auricular con cable Explosion MODO-654 XAEA - Blanco",
+    "precio": 6000,
+    "archivo": "auriculares"
+  },
+  "122": {
+    "nombre": "Auricular con cable Explosion MODO-654 XAEA - Celeste",
+    "precio": 6000,
+    "archivo": "auriculares"
+  },
+  "123": {
+    "nombre": "Auricular con cable Explosion MODO-654 XAEA - Negro",
+    "precio": 6000,
+    "archivo": "auriculares"
+  },
+  "124": {
+    "nombre": "Auricular con cable Explosion MODO-654 XAEA - Rosa",
+    "precio": 6000,
+    "archivo": "auriculares"
+  },
   "200": {
     "nombre": "Cable Sync-C Plus MODX-008S XAEA (Blanco) - Blanco",
     "precio": 6000,
@@ -221,6 +271,31 @@
   },
   "209": {
     "nombre": "Cable Tipo C - Tipo C MODX-105 Hera XAEA (Champagne) - Champagne",
+    "precio": 6000,
+    "archivo": "cables"
+  },
+  "219": {
+    "nombre": "Cable HDMI Mallado Reforzado 1.5 m XAEA",
+    "precio": 8000,
+    "archivo": "cables"
+  },
+  "220": {
+    "nombre": "Cable HDMI 1.5 m XAEA",
+    "precio": 7000,
+    "archivo": "cables"
+  },
+  "221": {
+    "nombre": "Adaptador HDMI a 2 HDMI",
+    "precio": 7000,
+    "archivo": "cables"
+  },
+  "222": {
+    "nombre": "Cable Auxiliar Spiral 3.5 mm 1.8 m XAEA - Blanco",
+    "precio": 6000,
+    "archivo": "cables"
+  },
+  "223": {
+    "nombre": "Cable Auxiliar Spiral 3.5 mm 1.8 m XAEA - Negro",
     "precio": 6000,
     "archivo": "cables"
   },
@@ -1178,5 +1253,25 @@
     "nombre": "Funda Xiaomi Redmi Note 15 Pro - Silicona Color (Negro)",
     "precio": 9000,
     "archivo": "fundas"
+  },
+  "900": {
+    "nombre": "Micrófono Inalámbrico K8 (Tipo C + iPhone)",
+    "precio": 12000,
+    "archivo": "accesorios"
+  },
+  "901": {
+    "nombre": "Micrófono Doble Inalámbrico SX21",
+    "precio": 35000,
+    "archivo": "accesorios"
+  },
+  "902": {
+    "nombre": "Aro de Luz LED RGB 30 cm MJ30",
+    "precio": 20000,
+    "archivo": "accesorios"
+  },
+  "903": {
+    "nombre": "Humidificador Flama 260 ml - Negro",
+    "precio": 35000,
+    "archivo": "accesorios"
   }
 }

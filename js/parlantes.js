@@ -142,7 +142,7 @@ const catalogoParlantesTodos = [
         categoria: "portatil", 
         color: "Azul",
         imagen: "assets/img/PARLANTE 3” EXO MINI – MODX-004W – XAEA.webp", 
-        imagenHover: "assets/img/PARLANTE 3” EXO MINI – MODX-004W – XAEA - AZUL.webp", 
+        imagenHover: "assets/img/real-exo-mini.webp", 
         specs: "<li><strong>Potencia:</strong> 8W (Altavoz de 3 pulgadas)</li><li><strong>Conectividad:</strong> Bluetooth, FM, USB, MicroSD (TF) y TWS</li><li><strong>Color:</strong> Azul</li><li><strong>Batería:</strong> 1200mAh (Hasta 5hs de autonomía) vía Tipo-C</li><li><strong>Medidas:</strong> 17 x 10 x 7 cm</li><li><strong>Extras:</strong> Luces LED y cable de carga incluido</li>",
         precio: 20000
     },
@@ -152,7 +152,7 @@ const catalogoParlantesTodos = [
         categoria: "portatil", 
         color: "Camuflado",
         imagen: "assets/img/PARLANTE 3” DOT MINI – MODX-004X – XAEA.webp", 
-        imagenHover: "assets/img/PARLANTE 3” EXO MINI – MODX-004W – XAEA - CAMUFLADO.webp", 
+        imagenHover: "assets/img/real-exo-mini.webp", 
         specs: "<li><strong>Potencia:</strong> 8W (Altavoz de 3 pulgadas)</li><li><strong>Conectividad:</strong> Bluetooth, FM, USB, MicroSD (TF) y TWS</li><li><strong>Color:</strong> Camuflado</li><li><strong>Batería:</strong> 1200mAh (Hasta 5hs de autonomía) vía Tipo-C</li><li><strong>Medidas:</strong> 17 x 10 x 7 cm</li><li><strong>Extras:</strong> Luces LED y cable de carga incluido</li>",
         precio: 20000
     },
@@ -162,7 +162,7 @@ const catalogoParlantesTodos = [
         categoria: "portatil", 
         color: "Negro",
         imagen: "assets/img/PARLANTE 3” DOT MINI – MODX-004X – XAEA.webp", 
-        imagenHover: "assets/img/PARLANTE 3” EXO MINI – MODX-004W – XAEA - NEGRO.webp", 
+        imagenHover: "assets/img/real-exo-mini.webp", 
         specs: "<li><strong>Potencia:</strong> 8W (Altavoz de 3 pulgadas)</li><li><strong>Conectividad:</strong> Bluetooth, FM, USB, MicroSD (TF) y TWS</li><li><strong>Color:</strong> Negro</li><li><strong>Batería:</strong> 1200mAh (Hasta 5hs de autonomía) vía Tipo-C</li><li><strong>Medidas:</strong> 17 x 10 x 7 cm</li><li><strong>Extras:</strong> Luces LED y cable de carga incluido</li>",
         precio: 20000
     },
@@ -172,7 +172,7 @@ const catalogoParlantesTodos = [
         categoria: "portatil", 
         color: "Rojo",
         imagen: "assets/img/PARLANTE 3” DOT MINI – MODX-004X – XAEA.webp", 
-        imagenHover: "assets/img/PARLANTE 3” EXO MINI – MODX-004W – XAEA - ROJO.webp", 
+        imagenHover: "assets/img/real-exo-mini.webp", 
         specs: "<li><strong>Potencia:</strong> 8W (Altavoz de 3 pulgadas)</li><li><strong>Conectividad:</strong> Bluetooth, FM, USB, MicroSD (TF) y TWS</li><li><strong>Color:</strong> Rojo</li><li><strong>Batería:</strong> 1200mAh (Hasta 5hs de autonomía) vía Tipo-C</li><li><strong>Medidas:</strong> 17 x 10 x 7 cm</li><li><strong>Extras:</strong> Luces LED y cable de carga incluido</li>",
         precio: 20000
     },
@@ -296,6 +296,60 @@ const catalogoParlantesTodos = [
         imagenHover: "assets/img/PARLANTE 3” MODX-106 BLADE – XAEA - ROJO.webp", 
         specs: "<li><strong>Potencia:</strong> 500W (Altavoz 3\" BT LED)</li><li><strong>Conectividad:</strong> USB, AUX 3.5mm, Radio FM, MicroSD y TWS</li><li><strong>Color:</strong> Rojo</li><li><strong>Batería:</strong> 1200mAh 3.7V (Carga Tipo-C)</li><li><strong>Medidas:</strong> 12.8 x 9 x 9 cm</li><li><strong>Extras:</strong> Cable de carga y manual incluidos</li>",
         precio: 20000 
+    },
+    {
+        id: 31,
+        nombre: "Parlante Esfera MODX-004I XAEA",
+        categoria: "portatil",
+        color: "Azul",
+        imagen: "assets/img/real-parlante-esfera.webp",
+        specs: "<li><strong>Potencia:</strong> 5W, parlante de 3\"</li><li><strong>Batería:</strong> 800 mAh, hasta 3 h</li><li><strong>Conexión:</strong> Bluetooth, FM, USB, MicroSD y TWS</li><li><strong>Carga:</strong> Tipo C</li><li><strong>Extras:</strong> Luces LED RGB, incluye cable</li><li><strong>Color:</strong> Azul</li>",
+        precio: 15000
+    },
+    {
+        id: 32,
+        nombre: "Parlante Esfera MODX-004I XAEA",
+        categoria: "portatil",
+        color: "Gris",
+        imagen: "assets/img/real-parlante-esfera.webp",
+        specs: "<li><strong>Potencia:</strong> 5W, parlante de 3\"</li><li><strong>Batería:</strong> 800 mAh, hasta 3 h</li><li><strong>Conexión:</strong> Bluetooth, FM, USB, MicroSD y TWS</li><li><strong>Carga:</strong> Tipo C</li><li><strong>Extras:</strong> Luces LED RGB, incluye cable</li><li><strong>Color:</strong> Gris</li>",
+        precio: 15000
+    },
+    {
+        id: 33,
+        nombre: "Parlante Esfera MODX-004I XAEA",
+        categoria: "portatil",
+        color: "Negro",
+        imagen: "assets/img/real-parlante-esfera.webp",
+        specs: "<li><strong>Potencia:</strong> 5W, parlante de 3\"</li><li><strong>Batería:</strong> 800 mAh, hasta 3 h</li><li><strong>Conexión:</strong> Bluetooth, FM, USB, MicroSD y TWS</li><li><strong>Carga:</strong> Tipo C</li><li><strong>Extras:</strong> Luces LED RGB, incluye cable</li><li><strong>Color:</strong> Negro</li>",
+        precio: 15000
+    },
+    {
+        id: 34,
+        nombre: "Parlante Esfera MODX-004I XAEA",
+        categoria: "portatil",
+        color: "Rojo",
+        imagen: "assets/img/real-parlante-esfera.webp",
+        specs: "<li><strong>Potencia:</strong> 5W, parlante de 3\"</li><li><strong>Batería:</strong> 800 mAh, hasta 3 h</li><li><strong>Conexión:</strong> Bluetooth, FM, USB, MicroSD y TWS</li><li><strong>Carga:</strong> Tipo C</li><li><strong>Extras:</strong> Luces LED RGB, incluye cable</li><li><strong>Color:</strong> Rojo</li>",
+        precio: 15000
+    },
+    {
+        id: 35,
+        nombre: "Parlante MODX-004Y 8W XAEA",
+        categoria: "portatil",
+        color: "Negro",
+        imagen: "assets/img/real-parlante-004y.webp",
+        specs: "<li><strong>Potencia:</strong> 8W reales, parlante de 3\"</li><li><strong>Batería:</strong> 1200 mAh, hasta 4 h</li><li><strong>Conexión:</strong> Bluetooth, FM, USB, MicroSD y TWS</li><li><strong>Carga:</strong> Rápida por Tipo C</li><li><strong>Extras:</strong> Incluye cable de carga</li><li><strong>Color:</strong> Negro</li>",
+        precio: 24000
+    },
+    {
+        id: 36,
+        nombre: "Parlante MODX-004Y 8W XAEA",
+        categoria: "portatil",
+        color: "Rojo",
+        imagen: "assets/img/real-parlante-004y.webp",
+        specs: "<li><strong>Potencia:</strong> 8W reales, parlante de 3\"</li><li><strong>Batería:</strong> 1200 mAh, hasta 4 h</li><li><strong>Conexión:</strong> Bluetooth, FM, USB, MicroSD y TWS</li><li><strong>Carga:</strong> Rápida por Tipo C</li><li><strong>Extras:</strong> Incluye cable de carga</li><li><strong>Color:</strong> Rojo</li>",
+        precio: 24000
     }
 ];
 

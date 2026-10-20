@@ -56,7 +56,7 @@ const catalogoAuricularesTodos = [
         categoria: "in-ear",
         color: "Beige",
         imagen: "assets/img/MANOS LIBRES TWS ANC SIMIL CUERO MODX-00AI – XAEA – BEIGE.webp",
-        imagenHover: "assets/img/MANOS LIBRES TWS ANC SIMIL CUERO MODX-00AI – XAEA – BEIGE1.webp",
+        imagenHover: "assets/img/real-tws-00ai.webp",
         specs: "<li><strong>Conectividad:</strong> Bluetooth V5.4 (Rango 10m)</li><li><strong>Tecnología:</strong> ANC y ENC con 4 micrófonos integrados</li><li><strong>Batería:</strong> 8 horas (Estuche de carga 400mAh)</li><li><strong>Material:</strong> Diseño premium con textura símil cuero</li>",
         precio: 29900
     },
@@ -66,7 +66,7 @@ const catalogoAuricularesTodos = [
         categoria: "in-ear",
         color: "Negro",
         imagen: "assets/img/MANOS LIBRES TWS ANC SIMIL CUERO MODX-00AI – XAEA – NEGRO.webp",
-        imagenHover: "assets/img/MANOS LIBRES TWS ANC SIMIL CUERO MODX-00AI – XAEA – NEGRO1.webp",
+        imagenHover: "assets/img/real-tws-00ai.webp",
         specs: "<li><strong>Conectividad:</strong> Bluetooth V5.4 (Rango 10m)</li><li><strong>Tecnología:</strong> ANC y ENC con 4 micrófonos integrados</li><li><strong>Batería:</strong> 8 horas (Estuche de carga 400mAh)</li><li><strong>Material:</strong> Diseño premium con textura símil cuero</li>",
         precio: 29900
     },
@@ -76,7 +76,7 @@ const catalogoAuricularesTodos = [
         categoria: "in-ear",
         color: "Blanco",
         imagen: "assets/img/MANOS LIBRES TWS ANC SIMIL CUERO MODX-00AI – XAEA – BLANCO.webp",
-        imagenHover: "assets/img/MANOS LIBRES TWS ANC SIMIL CUERO MODX-00AI – XAEA – BLANCO1.webp",
+        imagenHover: "assets/img/real-tws-00ai.webp",
         specs: "<li><strong>Conectividad:</strong> Bluetooth V5.4 (Rango 10m)</li><li><strong>Tecnología:</strong> ANC y ENC con 4 micrófonos integrados</li><li><strong>Batería:</strong> 8 horas (Estuche de carga 400mAh)</li><li><strong>Material:</strong> Diseño premium con textura símil cuero</li>",
         precio: 29900
     },
@@ -141,7 +141,7 @@ const catalogoAuricularesTodos = [
         categoria: "in-ear",
         color: "Negro",
         imagen: "assets/img/MANOS LIBRES TWS ANC MODX-0024 – XAEA – NEGRO.webp",
-        imagenHover: "assets/img/MANOS LIBRES TWS ANC MODX-0024 – XAEA – NEGRO1.webp",
+        imagenHover: "assets/img/real-tws-0024.webp",
         specs: "<li><strong>Conectividad:</strong> Bluetooth 5.4 con control táctil</li><li><strong>Audio:</strong> Cancelación Activa de Ruido (ANC) y altavoces de 10mm</li><li><strong>Batería:</strong> Hasta 8 horas de reproducción (Estuche 380mAh, Auricular 40mAh)</li><li><strong>Extras:</strong> Pantalla indicadora LED y carga rápida (1 hora)</li>",
         precio: 24000
     },
@@ -162,7 +162,7 @@ const catalogoAuricularesTodos = [
         categoria: "in-ear",
         color: "Blanco",
         imagen: "assets/img/MANOS LIBRES TWS ANC MODX-0023 – XAEA – NEGRO.webp",
-        imagenHover: "assets/img/MANOS LIBRES TWS ANC MODX-0023 – XAEA – BLANCO.webp",
+        imagenHover: "assets/img/real-tws-0023.webp",
         specs: "<li><strong>Conectividad:</strong> Bluetooth 5.4 con control táctil</li><li><strong>Audio:</strong> Cancelación Activa de Ruido (ANC) y parlantes dinámicos de 10mm</li><li><strong>Batería:</strong> 8 horas de autonomía (Estuche 380mAh, Auricular 40mAh)</li><li><strong>Extras:</strong> Luces LED y carga rápida Tipo C (1 hora)</li>",
         precio: 22000
     },
@@ -172,7 +172,7 @@ const catalogoAuricularesTodos = [
         categoria: "in-ear",
         color: "Negro",
         imagen: "assets/img/MANOS LIBRES TWS – NOX – MODX-051 – XAEA – NEGRO.webp",
-        imagenHover: "assets/img/MANOS LIBRES TWS – NOX – MODX-051 – XAEA – NEGRO1.webp",
+        imagenHover: "assets/img/real-tws-nox.webp",
         specs: "<li><strong>Conectividad:</strong> Bluetooth 5.4 con pantalla táctil multifunción</li><li><strong>Audio:</strong> Doble cancelación de ruido (ANC + ENC + EQ) y parlantes de 13mm</li><li><strong>Batería:</strong> 8 horas de reproducción (Estuche 400mAh, Auricular 40mAh)</li><li><strong>Carga:</strong> Rápida en 1 hora (Puerto Tipo C)</li>",
         precio: 30000
     },
@@ -182,7 +182,7 @@ const catalogoAuricularesTodos = [
         categoria: "in-ear",
         color: "Blanco",
         imagen: "assets/img/MANOS LIBRES TWS – NOX – MODX-051 – XAEA – BLANCO.webp",
-        imagenHover: "assets/img/MANOS LIBRES TWS – NOX – MODX-051 – XAEA – BLANCO1.webp",
+        imagenHover: "assets/img/real-tws-nox.webp",
         specs: "<li><strong>Conectividad:</strong> Bluetooth 5.4 con pantalla táctil multifunción</li><li><strong>Audio:</strong> Doble cancelación de ruido (ANC + ENC + EQ) y parlantes de 13mm</li><li><strong>Batería:</strong> 8 horas de reproducción (Estuche 400mAh, Auricular 40mAh)</li><li><strong>Carga:</strong> Rápida en 1 hora (Puerto Tipo C)</li>",
         precio: 30000
     },
@@ -192,7 +192,7 @@ const catalogoAuricularesTodos = [
         categoria: "cableado",
         color: "Negro",
         imagen: "assets/img/MANOS LIBRES – MODX-045 THUNDER-C – XAEA - NEGRO.webp",
-        imagenHover: "assets/img/MANOS LIBRES – MODX-045 THUNDER-C – XAEA - NEGRO1.webp",
+        imagenHover: "assets/img/real-thunder-c.webp",
         specs: "<li><strong>Conectividad:</strong> Cable con ficha Tipo C (1 metro)</li><li><strong>Audio:</strong> Cancelación de sonido y micrófono integrado</li><li><strong>Controles:</strong> Mando integrado para volumen, canciones y llamadas</li><li><strong>Material:</strong> Plástico ABS resistente</li>",
         precio: 7900
     },
@@ -222,6 +222,42 @@ const catalogoAuricularesTodos = [
         imagen: "assets/img/auricular-zyfer-modx-704.webp",
         specs: "<li><strong>Tipo:</strong> Over-ear (vincha)</li><li><strong>Cancelación de ruido:</strong> ANC</li><li><strong>Conexión:</strong> Bluetooth</li><li><strong>Carga:</strong> Tipo C</li><li><strong>Color:</strong> Negro</li>",
         precio: 47100
+    },
+    {
+        id: 121,
+        nombre: "Auricular con cable Explosion MODO-654 XAEA",
+        categoria: "auricular",
+        color: "Blanco",
+        imagen: "assets/img/real-explosion-blanco.webp",
+        specs: "<li><strong>Conexión:</strong> Ficha 3.5 mm</li><li><strong>Micrófono:</strong> Integrado, función manos libres</li><li><strong>Largo:</strong> 1 m</li><li><strong>Color:</strong> Blanco</li>",
+        precio: 6000
+    },
+    {
+        id: 122,
+        nombre: "Auricular con cable Explosion MODO-654 XAEA",
+        categoria: "auricular",
+        color: "Celeste",
+        imagen: "assets/img/real-explosion-blanco.webp",
+        specs: "<li><strong>Conexión:</strong> Ficha 3.5 mm</li><li><strong>Micrófono:</strong> Integrado, función manos libres</li><li><strong>Largo:</strong> 1 m</li><li><strong>Color:</strong> Celeste</li>",
+        precio: 6000
+    },
+    {
+        id: 123,
+        nombre: "Auricular con cable Explosion MODO-654 XAEA",
+        categoria: "auricular",
+        color: "Negro",
+        imagen: "assets/img/real-explosion-negro.webp",
+        specs: "<li><strong>Conexión:</strong> Ficha 3.5 mm</li><li><strong>Micrófono:</strong> Integrado, función manos libres</li><li><strong>Largo:</strong> 1 m</li><li><strong>Color:</strong> Negro</li>",
+        precio: 6000
+    },
+    {
+        id: 124,
+        nombre: "Auricular con cable Explosion MODO-654 XAEA",
+        categoria: "auricular",
+        color: "Rosa",
+        imagen: "assets/img/real-explosion-blanco.webp",
+        specs: "<li><strong>Conexión:</strong> Ficha 3.5 mm</li><li><strong>Micrófono:</strong> Integrado, función manos libres</li><li><strong>Largo:</strong> 1 m</li><li><strong>Color:</strong> Rosa</li>",
+        precio: 6000
     }
 ];
 

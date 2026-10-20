@@ -212,6 +212,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnStockInicial = document.getElementById('btn-stock-inicial');
     let productos = [];
     let stock = {};
+    let stockInicial = {};
+    let faltantes = [];
 
     async function cargarStock() {
         try {
@@ -219,7 +221,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const snap = await getDocs(collection(db, "stock"));
             stock = {};
             snap.forEach(d => { stock[d.id] = d.data().cantidad; });
-            btnStockInicial.style.display = snap.empty ? "block" : "none";
+            // Si hay productos de la planilla que todavía no tienen stock cargado, se ofrece cargarlos
+            stockInicial = await (await fetch("datos/stock-inicial.json", { cache: "no-store" })).json();
+            faltantes = Object.keys(stockInicial).filter(id => stock[id] === undefined);
+            btnStockInicial.textContent = snap.empty ? "Cargar stock inicial (de la planilla)" : `Cargar stock de productos nuevos (${faltantes.length})`;
+            btnStockInicial.style.display = faltantes.length ? "block" : "none";
+            btnStockInicial.disabled = false;
             dibujarStock();
         } catch (error) {
             console.error("Error al cargar stock:", error);
@@ -261,12 +268,11 @@ document.addEventListener('DOMContentLoaded', () => {
     buscarStock.addEventListener('input', dibujarStock);
 
     btnStockInicial.addEventListener('click', async () => {
-        if (!confirm("¿Cargar el stock de la planilla? Se hace una sola vez.")) return;
+        if (!confirm(`¿Cargar el stock de ${faltantes.length} productos? Solo se cargan los que todavía no tienen stock.`)) return;
         btnStockInicial.disabled = true;
         try {
-            const inicial = await (await fetch("datos/stock-inicial.json", { cache: "no-store" })).json();
             const batch = writeBatch(db);
-            Object.entries(inicial).forEach(([id, cantidad]) => batch.set(doc(db, "stock", id), { cantidad: Number(cantidad) || 0 }));
+            faltantes.forEach(id => batch.set(doc(db, "stock", id), { cantidad: Number(stockInicial[id]) || 0 }));
             await batch.commit();
             alert("¡Stock cargado!");
             cargarStock();
