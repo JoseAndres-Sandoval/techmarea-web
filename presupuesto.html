@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presupuesto de reparación | TechMarea</title>
+    <link rel="icon" href="assets/img/logo-olas.svg" type="image/svg+xml">
+    <meta name="description" content="Pedí presupuesto para reparar tu celular o tablet en TechMarea, Maipú, Mendoza: pantallas, baterías, pin de carga, cámaras, equipos mojados y más.">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="header">
+        <div class="logo">
+            <img src="assets/img/logo-olas.svg" alt="" class="logo-olas" width="44" height="31">
+            <h1>TECH<span>MAREA</span></h1>
+        </div>
+
+        <div class="menu-hamburguesa" id="btn-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav class="navegacion" id="enlaces-menu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#categorias">Categorías</a></li>
+                <li><a href="index.html#servicio">Servicio Técnico</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="presupuesto">
+        <h2 class="titulo-seccion">Pedí tu <span>presupuesto</span></h2>
+        <p class="pres-intro">Contanos qué le pasa a tu equipo y te respondemos por WhatsApp con el precio y el tiempo de reparación.</p>
+
+        <form id="form-presupuesto" class="pres-form" novalidate>
+            <label>Tipo de equipo
+                <select id="p-equipo">
+                    <option>Celular</option>
+                    <option>Tablet</option>
+                    <option>Parlante</option>
+                    <option>Auriculares</option>
+                    <option>Otro</option>
+                </select>
+            </label>
+
+            <label>Marca
+                <select id="p-marca">
+                    <option value="">Elegí la marca</option>
+                    <option>Samsung</option><option>Motorola</option><option>iPhone</option><option>Xiaomi / Redmi</option>
+                    <option>TCL</option><option>Alcatel</option><option>LG</option><option>Huawei</option><option>Otra</option>
+                </select>
+            </label>
+
+            <label>Modelo <small>(ej: A15, G24, iPhone 13)</small>
+                <input type="text" id="p-modelo" maxlength="60" placeholder="Si no lo sabés, fijate en Ajustes → Acerca del teléfono">
+            </label>
+
+            <fieldset>
+                <legend>¿Qué le pasa? <small>(podés marcar varias)</small></legend>
+                <div class="pres-fallas">
+                    <label><input type="checkbox" value="Pantalla rota / no da imagen"> Pantalla rota / no da imagen</label>
+                    <label><input type="checkbox" value="Batería (dura poco / se hincha)"> Batería</label>
+                    <label><input type="checkbox" value="No carga (pin de carga)"> No carga</label>
+                    <label><input type="checkbox" value="Cámara"> Cámara</label>
+                    <label><input type="checkbox" value="No se escucha / parlante"> Parlante / no se escucha</label>
+                    <label><input type="checkbox" value="Micrófono"> Micrófono</label>
+                    <label><input type="checkbox" value="Botones"> Botones</label>
+                    <label><input type="checkbox" value="Tapa trasera"> Tapa trasera</label>
+                    <label><input type="checkbox" value="Se mojó"> Se mojó</label>
+                    <label><input type="checkbox" value="Software (se traba / se reinicia / desbloqueo)"> Software</label>
+                    <label><input type="checkbox" value="No prende"> No prende</label>
+                    <label><input type="checkbox" value="Otro"> Otro</label>
+                </div>
+            </fieldset>
+
+            <label>Contanos un poco más <small>(opcional)</small>
+                <textarea id="p-detalle" rows="3" maxlength="400" placeholder="Ej: se me cayó y la pantalla quedó negra, pero vibra."></textarea>
+            </label>
+
+            <label>Tu nombre
+                <input type="text" id="p-nombre" maxlength="40" placeholder="Para saber a quién le respondemos">
+            </label>
+
+            <p id="p-error" class="pres-error"></p>
+            <button type="submit" class="btn-neon pres-btn">Enviar por WhatsApp 📲</button>
+            <p class="pres-nota">Después de enviar, podés mandarnos una foto del equipo en el mismo chat. El presupuesto no tiene costo ni compromiso.</p>
+        </form>
+
+        <div class="pres-info">
+            <div><strong>📍 Dónde</strong><span>Sarmiento 15, Maipú (al lado del Banco Nación)</span></div>
+            <div><strong>🕘 Horario</strong><span>Lun a sáb 9 a 14 y 16 a 21:30</span></div>
+            <div><strong>🔎 Seguimiento</strong><span><a href="index.html#seguimiento">Consultá el estado de tu reparación</a></span></div>
+        </div>
+    </main>
+
+    <footer class="footer" id="contacto">
+        <div class="footer-copyright">
+            <p>&copy; 2026 TechMarea. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="js/config.js"></script>
+    <script type="module" src="js/presupuesto.js"></script>
+</body>
+</html>

@@ -992,3 +992,32 @@ body {
 .flecha-modal.der {
   right: 20px;
 }
+
+/* =========================================
+   PRESUPUESTO DE REPARACIÓN
+   ========================================= */
+.presupuesto { max-width: 760px; margin: 0 auto; padding: 50px 20px 70px; }
+.presupuesto .titulo-seccion { text-align: center; margin-bottom: 15px; }
+.presupuesto .titulo-seccion span { color: var(--color-cian); }
+.pres-intro { text-align: center; color: #ccc; line-height: 1.6; margin-bottom: 30px; }
+.pres-form { background: var(--color-fondo-tarjeta); border: 1px solid #2a3340; border-radius: 12px; padding: 28px; display: flex; flex-direction: column; gap: 18px; }
+.pres-form label { display: flex; flex-direction: column; gap: 8px; color: #fff; font-weight: 600; font-size: 0.95rem; }
+.pres-form small { color: #8a94a3; font-weight: 400; }
+.pres-form input[type="text"], .pres-form select, .pres-form textarea {
+    padding: 12px; border-radius: 8px; border: 1px solid #3a4452; background: #0f1319; color: #fff; font-family: inherit; font-size: 1rem;
+}
+.pres-form input:focus, .pres-form select:focus, .pres-form textarea:focus { outline: none; border-color: var(--color-cian); }
+.pres-form fieldset { border: none; }
+.pres-form legend { color: #fff; font-weight: 600; margin-bottom: 10px; }
+.pres-fallas { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 8px; }
+.pres-fallas label { flex-direction: row; align-items: center; gap: 10px; font-weight: 500; background: #0f1319; border: 1px solid #3a4452; border-radius: 8px; padding: 10px 12px; cursor: pointer; }
+.pres-fallas label:has(input:checked) { border-color: var(--color-cian); background: rgba(0, 210, 255, 0.08); }
+.pres-fallas input { accent-color: var(--color-cian); width: 18px; height: 18px; }
+.pres-error { color: #ff6b6b; min-height: 1em; margin: 0; }
+.pres-btn { width: 100%; text-align: center; cursor: pointer; background: var(--color-cian); color: #0b0c10 !important; font-family: inherit; font-size: 1rem; border-radius: 8px; }
+.pres-btn:hover { box-shadow: 0 0 18px rgba(0, 210, 255, 0.5); }
+.pres-nota { color: #8a94a3; font-size: 0.85rem; text-align: center; margin: 0; }
+.pres-info { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 24px; }
+.pres-info div { background: var(--color-fondo-tarjeta); border-radius: 10px; padding: 14px; display: flex; flex-direction: column; gap: 4px; }
+.pres-info strong { color: var(--color-cian); }
+.pres-info span, .pres-info a { color: #ccc; font-size: 0.9rem; }
