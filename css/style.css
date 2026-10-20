@@ -1040,3 +1040,17 @@ body {
 .btn-destacado { margin-top: auto; padding: 10px; border: none; border-radius: 8px; background: var(--color-cian); color: #0b0c10; font-weight: 700; cursor: pointer; font-family: inherit; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.85rem; }
 .btn-destacado:hover { box-shadow: 0 0 14px rgba(0, 210, 255, 0.5); }
 .destacados-mas { margin-top: 30px; }
+
+
+/* =========================================
+   RESEÑAS EN GOOGLE
+   ========================================= */
+.seccion-resenas { padding: 50px 20px; }
+.resenas-caja { max-width: 760px; margin: 0 auto; text-align: center; padding: 36px 24px; border-radius: 16px;
+    background: linear-gradient(135deg, rgba(0, 210, 255, 0.12), rgba(177, 77, 255, 0.12)); border: 1px solid rgba(0, 210, 255, 0.35); }
+.resenas-estrellas { color: #ffc83d; font-size: 1.8rem; letter-spacing: 4px; margin-bottom: 8px; }
+.resenas-caja h2 { color: #fff; font-size: 1.7rem; margin-bottom: 8px; }
+.resenas-caja p { color: #c5c6c7; margin-bottom: 22px; line-height: 1.5; }
+.btn-resena { display: inline-block; padding: 12px 26px; border-radius: 30px; background: #fff; color: #1a1a1a !important; font-weight: 700; text-decoration: none; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.btn-resena::before { content: "G "; color: #4285f4; font-weight: 800; }
+.btn-resena:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(255, 255, 255, 0.2); }
