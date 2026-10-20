@@ -3,7 +3,7 @@
 // =========================================
 import { doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged, updateProfile } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
-import { db, auth, pagarConMercadoPago, WHATSAPP, escaparHTML } from "./config.js";
+import { db, auth, pagarConMercadoPago, WHATSAPP, escaparHTML, stockPromise } from "./config.js";
 
 // =========================================
 // 1. INYECCIÓN DEL CARRITO FLOTANTE EN EL DOM
@@ -171,6 +171,17 @@ function inicializarLogicaCarrito() {
         document.querySelectorAll('.btn-restar').forEach(btn => btn.addEventListener('click', (e) => cambiarCantidad(parseInt(e.target.dataset.id), -1)));
         document.querySelectorAll('.btn-eliminar-item').forEach(btn => btn.addEventListener('click', (e) => eliminarItem(parseInt(e.target.dataset.id))));
     }
+
+    // Agregar desde "Productos destacados" del inicio
+    function agregarAlCarrito(producto) {
+        const enCarrito = carrito.find(item => item.id === producto.id);
+        if (enCarrito) enCarrito.cantidad++;
+        else carrito.push({ id: producto.id, nombre: producto.nombre, precio: producto.precio, cantidad: 1 });
+        guardarEnMemoria();
+        renderizarCarrito();
+        if (ventanaCarrito) ventanaCarrito.classList.add("carrito-abierto");
+    }
+    document.addEventListener("agregar-destacado", (e) => agregarAlCarrito(e.detail));
 
     function cambiarCantidad(idProducto, delta) {
         const producto = carrito.find(item => item.id === idProducto);
@@ -368,3 +379,55 @@ document.addEventListener("DOMContentLoaded", () => {
     boton.addEventListener("click", consultar);
     input.addEventListener("keypress", (e) => { if (e.key === "Enter") consultar(); });
 });
+
+
+// =========================================
+// PRODUCTOS DESTACADOS (inicio)
+// =========================================
+// Para cambiar los destacados, editá esta lista (id del catálogo, foto y frase corta).
+// El nombre y el precio salen siempre del catálogo, y si se agotan no se muestran.
+const DESTACADOS = [
+    { id: 1,   foto: "assets/img/parlante-30W.webp", frase: "30W de sonido con luces RGB" },
+    { id: 118, foto: "assets/img/auricular-radiance-modx-703.webp", frase: "Cancelación de ruido ANC" },
+    { id: 510, foto: "assets/img/smart-watch-x1plus-modx-0016.webp", frase: "Llamadas y +100 deportes" },
+    { id: 115, foto: "assets/img/real-tws-nox.webp", frase: "Estuche con pantalla táctil" },
+    { id: 404, foto: "assets/img/powerbank-tars-modx-00ce.webp", frase: "20.000 mAh y carga inalámbrica" },
+    { id: 600, foto: "assets/img/combo-gamer-lumenx-modx-054.webp", frase: "Teclado + mouse con luces" }
+];
+
+async function cargarDestacados() {
+    const grilla = document.getElementById("grilla-destacados");
+    if (!grilla) return;
+    try {
+        const [lista, stock] = await Promise.all([
+            fetch("datos/productos.json", { cache: "no-cache" }).then(r => r.json()),
+            stockPromise
+        ]);
+        const porId = Object.fromEntries(lista.map(p => [String(p.id), p]));
+        const items = DESTACADOS
+            .map(d => ({ ...d, datos: porId[String(d.id)] }))
+            .filter(d => d.datos && !(stock[d.id] !== undefined && stock[d.id] <= 0));
+        if (items.length === 0) {
+            grilla.closest("section").style.display = "none";
+            return;
+        }
+        grilla.innerHTML = items.map(d => `
+            <article class="tarjeta-destacado">
+                <div class="destacado-foto"><img src="${escaparHTML(d.foto)}" alt="${escaparHTML(d.datos.nombre)}" loading="lazy"></div>
+                <div class="destacado-info">
+                    <h3>${escaparHTML(d.datos.nombre)}</h3>
+                    <p>${escaparHTML(d.frase)}</p>
+                    <span class="precio">$${Number(d.datos.precio).toLocaleString("es-AR")}</span>
+                    <button class="btn-destacado" data-id="${d.id}">Agregar al carrito</button>
+                </div>
+            </article>`).join("");
+        grilla.querySelectorAll(".btn-destacado").forEach(b => b.addEventListener("click", () => {
+            const p = porId[b.dataset.id];
+            document.dispatchEvent(new CustomEvent("agregar-destacado", { detail: { id: Number(p.id), nombre: p.nombre, precio: p.precio } }));
+        }));
+    } catch (error) {
+        console.error("No se pudieron cargar los destacados:", error);
+        grilla.closest("section").style.display = "none";
+    }
+}
+cargarDestacados();

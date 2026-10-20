@@ -1021,3 +1021,22 @@ body {
 .pres-info div { background: var(--color-fondo-tarjeta); border-radius: 10px; padding: 14px; display: flex; flex-direction: column; gap: 4px; }
 .pres-info strong { color: var(--color-cian); }
 .pres-info span, .pres-info a { color: #ccc; font-size: 0.9rem; }
+
+
+/* =========================================
+   PRODUCTOS DESTACADOS (inicio)
+   ========================================= */
+.seccion-destacados { padding: 70px 20px 30px; text-align: center; }
+.seccion-destacados .titulo-seccion span { color: var(--color-cian); }
+.grilla-destacados { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 22px; max-width: 1200px; margin: 0 auto; }
+.tarjeta-destacado { background: var(--color-fondo-tarjeta); border-radius: 12px; overflow: hidden; border: 1px solid #2a3340; display: flex; flex-direction: column; transition: transform 0.25s ease, border-color 0.25s ease; }
+.tarjeta-destacado:hover { transform: translateY(-4px); border-color: var(--color-cian); }
+.destacado-foto { background: #fff; aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; }
+.destacado-foto img { width: 85%; height: 85%; object-fit: contain; }
+.destacado-info { padding: 16px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+.destacado-info h3 { font-size: 1rem; color: #fff; line-height: 1.3; }
+.destacado-info p { color: #9aa4b2; font-size: 0.85rem; margin: 0; }
+.destacado-info .precio { font-size: 1.5rem; color: var(--color-cian); margin: 6px 0; }
+.btn-destacado { margin-top: auto; padding: 10px; border: none; border-radius: 8px; background: var(--color-cian); color: #0b0c10; font-weight: 700; cursor: pointer; font-family: inherit; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.85rem; }
+.btn-destacado:hover { box-shadow: 0 0 14px rgba(0, 210, 255, 0.5); }
+.destacados-mas { margin-top: 30px; }
