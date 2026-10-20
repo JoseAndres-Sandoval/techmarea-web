@@ -3,7 +3,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: inherit;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+}
+/* Títulos, logo y precios con Exo 2 (estilo tecnológico) */
+h1, h2, h3, h4, h5, .titulo-seccion, .precio {
+    font-family: 'Exo 2', sans-serif;
 }
 html {
     scroll-behavior: smooth;
@@ -344,7 +351,7 @@ body {
     border-top: 3px solid var(--color-cian);
     padding: 70px 20px 20px;
     color: #c5c6c7;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .footer-grid {
