@@ -21,6 +21,22 @@ service cloud.firestore {
       allow write: if false;
     }
 
+    // Técnicos (ej: tu colega): pueden usar el cotizador, nada más. Se cargan a mano desde la consola
+    function esTecnico() {
+      return estaLogueado()
+        && exists(/databases/$(database)/documents/tecnicos/$(request.auth.uid));
+    }
+    match /tecnicos/{uid} {
+      allow read: if estaLogueado() && request.auth.uid == uid;
+      allow write: if false;
+    }
+
+    // Ajustes del cotizador (ganancia y mano de obra): los ve el equipo, los cambia solo el admin
+    match /config/{id} {
+      allow read: if esAdmin() || esTecnico();
+      allow write: if esAdmin();
+    }
+
     // Reparaciones: cualquiera puede consultar UNA orden si conoce el número,
     // pero solo el admin puede ver la lista completa, crear, editar o borrar.
     match /reparaciones/{orden} {
