@@ -1054,3 +1054,21 @@ body {
 .btn-resena { display: inline-block; padding: 12px 26px; border-radius: 30px; background: #fff; color: #1a1a1a !important; font-weight: 700; text-decoration: none; transition: transform 0.2s ease, box-shadow 0.2s ease; }
 .btn-resena::before { content: "G "; color: #4285f4; font-weight: 800; }
 .btn-resena:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(255, 255, 255, 0.2); }
+
+
+/* =========================================
+   ENVÍOS Y RETIRO
+   ========================================= */
+.envios { max-width: 1000px; }
+.env-opciones { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+.env-tarjeta { background: var(--color-fondo-tarjeta); border: 1px solid #2a3340; border-radius: 12px; padding: 22px; display: flex; flex-direction: column; gap: 8px; }
+.env-icono { font-size: 2.2rem; }
+.env-tarjeta h3 { font-size: 1.15rem; }
+.env-precio { color: var(--color-cian); font-family: 'Exo 2', sans-serif; font-weight: 700; font-size: 1.2rem; }
+.env-tarjeta ul { list-style: none; padding: 0; margin: 4px 0 0; display: flex; flex-direction: column; gap: 6px; }
+.env-tarjeta li { color: #ccc; font-size: 0.9rem; padding-left: 18px; position: relative; }
+.env-tarjeta li::before { content: "✓"; color: var(--color-cian); position: absolute; left: 0; }
+.env-link { margin-top: auto; padding-top: 8px; color: var(--color-cian); font-size: 0.9rem; }
+.env-subtitulo { text-align: center; margin: 40px 0 16px; font-size: 1.3rem; }
+.env-pasos { max-width: 560px; margin: 0 auto; padding-left: 22px; display: flex; flex-direction: column; gap: 10px; color: #ccc; }
+.env-pasos strong { color: #fff; }
