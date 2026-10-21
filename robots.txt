@@ -4,4 +4,4 @@ Disallow: /exito.html
 Disallow: /fallo.html
 Disallow: /pendiente.html
 
-Sitemap: https://tech-marea-db.web.app/sitemap.xml
+Sitemap: https://techmarea.com.ar/sitemap.xml
