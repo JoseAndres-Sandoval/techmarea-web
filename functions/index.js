@@ -169,3 +169,57 @@ exports.webhookMercadoPago = onRequest({ secrets: [MP_ACCESS_TOKEN] }, async (re
         return res.status(500).send("error");
     }
 });
+
+// ---------------------------------------------------------------------------
+// Lista de productos para Google Shopping (Google Merchant Center).
+// Google la lee sola cada día desde https://techmarea.com.ar/feed-google.xml
+// El stock sale de Firestore, así lo agotado figura como "sin stock".
+// ---------------------------------------------------------------------------
+const SITIO = "https://techmarea.com.ar";
+const xml = s => String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+const urlArchivo = ruta => SITIO + "/" + ruta.split("/").map(encodeURIComponent).join("/");
+
+exports.feedGoogle = onRequest({ cors: false }, async (req, res) => {
+    try {
+        const snap = await db.collection("stock").get();
+        const stock = {};
+        snap.forEach(d => { stock[d.id] = Number(d.data().cantidad) || 0; });
+
+        // Productos con varios colores: Google los agrupa como variantes
+        const grupos = {};
+        for (const p of Object.values(catalogo)) grupos[p.base] = (grupos[p.base] || 0) + 1;
+
+        const items = Object.entries(catalogo).map(([id, p]) => {
+            const hay = (stock[id] ?? 0) > 0;
+            const marca = /xaea/i.test(p.nombre) ? "XAEA" : "";
+            const desc = (p.descripcion ? p.descripcion + " " : "") + "Retiro en el local en Maipú, Mendoza, o envío a todo el país.";
+            return `<item>
+<g:id>${xml(id)}</g:id>
+<g:title>${xml(p.nombre.slice(0, 150))}</g:title>
+<g:description>${xml(desc.slice(0, 5000))}</g:description>
+<g:link>${xml(SITIO + "/" + p.archivo + ".html")}</g:link>
+<g:image_link>${xml(urlArchivo(p.imagen))}</g:image_link>
+<g:availability>${hay ? "in_stock" : "out_of_stock"}</g:availability>
+<g:price>${p.precio.toFixed(2)} ARS</g:price>
+<g:condition>new</g:condition>
+${marca ? `<g:brand>${marca}</g:brand>\n` : ""}<g:identifier_exists>no</g:identifier_exists>
+${grupos[p.base] > 1 ? `<g:item_group_id>${xml((p.archivo + "-" + p.base).slice(0, 50))}</g:item_group_id>\n` : ""}${p.color ? `<g:color>${xml(p.color)}</g:color>\n` : ""}</item>`;
+        });
+
+        const cuerpo = `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:g="http://base.google.com/ns/1.0">
+<channel>
+<title>TechMarea</title>
+<link>${SITIO}</link>
+<description>Accesorios para celular, audio y computación en Maipú, Mendoza</description>
+${items.join("\n")}
+</channel>
+</rss>`;
+        res.set("Content-Type", "application/xml; charset=utf-8");
+        res.set("Cache-Control", "public, max-age=3600");
+        res.status(200).send(cuerpo);
+    } catch (e) {
+        console.error("feedGoogle", e);
+        res.status(500).send("error");
+    }
+});

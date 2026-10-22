@@ -44,6 +44,15 @@
       "**/*.log",
       "**/*.md"
     ],
-    "cleanUrls": false
+    "cleanUrls": false,
+    "rewrites": [
+      {
+        "source": "/feed-google.xml",
+        "function": {
+          "functionId": "feedGoogle",
+          "region": "us-central1"
+        }
+      }
+    ]
   }
 }

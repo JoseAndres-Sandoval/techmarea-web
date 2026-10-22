@@ -10,6 +10,11 @@ const raiz = path.join(__dirname, "..");
 const archivos = ["parlantes", "auriculares", "cables", "cargador", "powerbank", "relojes", "computacion", "vidrios", "fundas", "accesorios"];
 const catalogo = {};
 
+// Fotos de las páginas que muestran una sola imagen para todos los modelos
+const IMAGEN_GENERICA = { vidrios: "assets/img/vidrios-templados-local.webp", fundas: "assets/img/fundas-local.webp" };
+// "<li><strong>Potencia:</strong> 30W</li>..." -> "Potencia: 30W. ..."
+const textoPlano = html => (html || "").replace(/<\/li>/g, ". ").replace(/<[^>]+>/g, "").replace(/&quot;/g, '"').replace(/&amp;/g, "&").replace(/\s+/g, " ").replace(/\.\s*\./g, ".").trim();
+
 for (const nombre of archivos) {
     const codigo = fs.readFileSync(path.join(raiz, "js", `${nombre}.js`), "utf8");
     const match = codigo.match(/const\s+(catalogo\w+)\s*=\s*(\[[\s\S]*?\n\]);/);
@@ -27,7 +32,12 @@ for (const nombre of archivos) {
         catalogo[p.id] = {
             nombre: p.color ? `${p.nombre} - ${p.color}` : p.nombre,
             precio: p.precio,
-            archivo: nombre
+            archivo: nombre,
+            // Datos extra para la lista de Google Shopping (functions: feedGoogle)
+            base: p.nombre,
+            color: p.color || "",
+            imagen: p.imagen || IMAGEN_GENERICA[nombre] || "",
+            descripcion: textoPlano(p.specs) || [p.modelo && `Modelo: ${p.modelo}`, p.detalle].filter(Boolean).join(". ")
         };
     }
 }
