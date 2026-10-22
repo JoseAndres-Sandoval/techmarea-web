@@ -363,6 +363,17 @@ document.addEventListener("DOMContentLoaded", () => {
                 titulo.textContent = `Orden #${orden} · ${d.estado}`;
                 detalle.innerHTML = `<strong>Equipo:</strong> ${escaparHTML(d.equipo)}<br>${escaparHTML(d.detalle)}`;
                 resultado.style.borderLeftColor = d.estado === "Listo para retirar" ? "#25d366" : "var(--color-cian)";
+                // Reparación entregada: mostrar hasta cuándo tiene garantía
+                if (d.estado === "Entregado" && /^\d{4}-\d{2}-\d{2}$/.test(d.fechaEntrega || "")) {
+                    const entrega = new Date(d.fechaEntrega + "T12:00:00");
+                    const fin = new Date(entrega); fin.setDate(fin.getDate() + (Number(d.garantiaDias) || 30));
+                    const f = x => x.toLocaleDateString("es-AR", { day: "2-digit", month: "2-digit", year: "numeric" });
+                    const vigente = fin >= new Date();
+                    detalle.innerHTML += `<div style="margin-top: 12px; padding: 10px 12px; border-radius: 8px; background: ${vigente ? "#123d22" : "#2a2a2a"}; color: ${vigente ? "#7dffa8" : "#aaa"};">
+                        🛡️ ${vigente ? `Garantía vigente hasta el <strong>${f(fin)}</strong>` : `La garantía venció el ${f(fin)}`}<br>
+                        <small style="color: #bbb;">Entregado el ${f(entrega)} · <a href="devoluciones.html" style="color: inherit;">Ver condiciones</a></small></div>`;
+                    resultado.style.borderLeftColor = vigente ? "#25d366" : "#666";
+                }
             } else {
                 titulo.textContent = "No encontramos esa orden";
                 detalle.textContent = "Revisá el número o escribinos por WhatsApp y te ayudamos.";

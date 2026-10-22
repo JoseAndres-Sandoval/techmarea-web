@@ -6,7 +6,11 @@ import { collection, getDocs, getDoc, setDoc, updateDoc, deleteDoc, doc, writeBa
 import { signInWithEmailAndPassword, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
 import { db, auth, escaparHTML } from "./config.js";
 
-const ESTADOS = ["En revisión", "Esperando repuesto", "Listo para retirar"];
+const ESTADOS = ["En revisión", "Esperando repuesto", "Listo para retirar", "Entregado"];
+const GARANTIA_DIAS = 30; // garantía de las reparaciones (mínimo legal)
+const hoyISO = () => { const d = new Date(); return new Date(d.getTime() - d.getTimezoneOffset() * 60000).toISOString().slice(0, 10); };
+const sumarDias = (iso, n) => { const d = new Date(iso + "T12:00:00"); d.setDate(d.getDate() + n); return d; };
+const fechaCorta = d => d.toLocaleDateString("es-AR", { day: "2-digit", month: "2-digit", year: "numeric" });
 
 document.addEventListener('DOMContentLoaded', () => {
     const seccionLogin = document.getElementById('seccion-login');
@@ -73,10 +77,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     await deleteDoc(documento.ref);
                 }
 
-                arrayOrdenes.push({ orden, equipo: data.equipo, estado: data.estado, detalle: data.detalle });
+                arrayOrdenes.push({ orden, equipo: data.equipo, estado: data.estado, detalle: data.detalle, fechaEntrega: data.fechaEntrega, garantiaDias: data.garantiaDias });
             }
 
-            arrayOrdenes.sort((a, b) => parseInt(a.orden, 10) - parseInt(b.orden, 10));
+            // Las entregadas (en garantía) van al final
+            arrayOrdenes.sort((a, b) => (a.estado === "Entregado") - (b.estado === "Entregado") || parseInt(a.orden, 10) - parseInt(b.orden, 10));
 
             if (arrayOrdenes.length === 0) {
                 listaOrdenesContainer.innerHTML = `<p style="color: #777; font-size: 0.9rem;">No hay reparaciones cargadas actualmente.</p>`;
@@ -93,6 +98,11 @@ document.addEventListener('DOMContentLoaded', () => {
                             <div style="flex: 1; min-width: 180px;">
                                 <strong style="color: var(--color-cian);">#${escaparHTML(item.orden)}</strong> - ${escaparHTML(item.equipo)}
                                 <select class="select-estado" data-id="${escaparHTML(item.orden)}" style="display: block; margin-top: 6px; padding: 6px; border-radius: 6px; border: 1px solid #444; background: #1a1a1a; color: #ddd; font-family: inherit;">${opciones}</select>
+                                ${item.estado === "Entregado" && item.fechaEntrega ? (() => {
+                                    const fin = sumarDias(item.fechaEntrega, item.garantiaDias || GARANTIA_DIAS);
+                                    const vigente = fin >= new Date();
+                                    return `<small style="display: block; margin-top: 6px; color: ${vigente ? "#7dffa8" : "#888"};">🛡️ Garantía ${vigente ? "hasta" : "vencida el"} ${fechaCorta(fin)}</small>`;
+                                })() : ""}
                             </div>
                             <button class="btn-eliminar" data-id="${escaparHTML(item.orden)}" style="background: #ff4c4c; color: white; border: none; padding: 8px 12px; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 0.85rem;">Eliminar</button>
                         </div>`;
@@ -101,7 +111,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 listaOrdenesContainer.querySelectorAll('.select-estado').forEach(select => {
                     select.addEventListener('change', async (e) => {
                         try {
-                            await updateDoc(doc(db, "reparaciones", e.target.dataset.id), { estado: e.target.value });
+                            const cambios = { estado: e.target.value };
+                            // Al entregar, arranca la garantía de la reparación
+                            if (e.target.value === "Entregado") { cambios.fechaEntrega = hoyISO(); cambios.garantiaDias = GARANTIA_DIAS; }
+                            await updateDoc(doc(db, "reparaciones", e.target.dataset.id), cambios);
+                            if (e.target.value === "Entregado") actualizarPanel();
                         } catch (err) {
                             console.error(err);
                             alert("No se pudo actualizar el estado.");
@@ -155,7 +169,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            await setDoc(doc(db, "reparaciones", orden), { orden, equipo, estado, detalle });
+            const nueva = { orden, equipo, estado, detalle };
+            if (estado === "Entregado") { nueva.fechaEntrega = hoyISO(); nueva.garantiaDias = GARANTIA_DIAS; }
+            await setDoc(doc(db, "reparaciones", orden), nueva);
 
             mensajeExito.style.display = 'block';
             formReparacion.reset();
