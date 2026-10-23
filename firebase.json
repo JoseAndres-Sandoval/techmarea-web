@@ -42,7 +42,8 @@
       "*funcions*/**",
       "scripts/**",
       "**/*.log",
-      "**/*.md"
+      "**/*.md",
+      "videos/**"
     ],
     "cleanUrls": false,
     "rewrites": [
