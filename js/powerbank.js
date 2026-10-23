@@ -47,8 +47,7 @@ const catalogoPowerBanksTodos = [
         nombre: "Power Bank Inalámbrico Tars 20000 mAh MODX-00CE XAEA",
         categoria: "inalambrico",
         color: "Blanco",
-        imagen: "assets/img/powerbank-tars-caja.webp",
-        imagenHover: "assets/img/powerbank-tars-modx-00ce.webp",
+        imagen: "assets/img/powerbank-tars-modx-00ce.webp",
         specs: "<li><strong>Capacidad:</strong> 20.000 mAh</li><li><strong>Carga inalámbrica:</strong> 15 W magnética</li><li><strong>Carga por cable:</strong> 22.5 W rápida</li><li><strong>Incluye:</strong> Cables Tipo C y Lightning integrados</li><li><strong>Extras:</strong> Soporte plegable y protección inteligente</li><li><strong>Color:</strong> Blanco</li>",
         precio: 39200
     },
@@ -57,8 +56,7 @@ const catalogoPowerBanksTodos = [
         nombre: "Power Bank Inalámbrico Tars 20000 mAh MODX-00CE XAEA",
         categoria: "inalambrico",
         color: "Negro",
-        imagen: "assets/img/powerbank-tars-caja.webp",
-        imagenHover: "assets/img/powerbank-tars-modx-00ce.webp",
+        imagen: "assets/img/powerbank-tars-modx-00ce.webp",
         specs: "<li><strong>Capacidad:</strong> 20.000 mAh</li><li><strong>Carga inalámbrica:</strong> 15 W magnética</li><li><strong>Carga por cable:</strong> 22.5 W rápida</li><li><strong>Incluye:</strong> Cables Tipo C y Lightning integrados</li><li><strong>Extras:</strong> Soporte plegable y protección inteligente</li><li><strong>Color:</strong> Negro</li>",
         precio: 39200
     }
