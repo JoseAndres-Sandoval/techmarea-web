@@ -17,41 +17,48 @@ const catalogoCargadoresTodos = [
         color: "Blanco",
         imagen: "assets/img/ADAPTADOR-CARGADOR 220V MODX-507 RAPTOR – 5,1A – 45W – 1TC + PD – XAEA – BLANCO.webp",
         imagenHover: "assets/img/ADAPTADOR-CARGADOR 220V MODX-507 RAPTOR – 5,1A – 45W – 1TC + PD – XAEA – BLANCO1.webp",
-        specs: "<li><strong>Potencia:</strong> 45W de salida máxima</li><li><strong>Amperaje y Voltaje:</strong> 5.1A / 9VCC</li><li><strong>Conexión:</strong> 1 Puerto Tipo C (Power Delivery)</li><li><strong>Material:</strong> Plástico ABS resistente</li>",
+        specs: "<li><strong>Potencia:</strong> 45W de salida máxima</li><li><strong>Amperaje y Voltaje:</strong> 5.1A / 9VCC</li><li><strong>Conexión:</strong> 1 Puerto Tipo C (Power Delivery)</li><li><strong>Material:</strong> Plástico ABS resistente</li><li><strong>Incluye:</strong> Solo el adaptador (sin cable)</li>",
+        precio: 7000
+    },
+    {
+        id: 308,
+        nombre: "Cargador 220V Raptor 45W MODX-003W + Cable Tipo C XAEA (Blanco)",
+        categoria: "cargador-pared",
+        color: "Blanco",
+        imagen: "assets/img/ADAPTADOR-CARGADOR 220V MODX-507 RAPTOR – 5,1A – 45W – 1TC + PD – XAEA – BLANCO.webp",
+        imagenHover: "assets/img/ADAPTADOR-CARGADOR 220V MODX-507 RAPTOR – 5,1A – 45W – 1TC + PD – XAEA – BLANCO1.webp",
+        specs: "<li><strong>Potencia:</strong> 45W de salida máxima</li><li><strong>Amperaje:</strong> 5.1A</li><li><strong>Conexión:</strong> 1 Puerto Tipo C (Power Delivery)</li><li><strong>Incluye:</strong> Cable Tipo C</li>",
         precio: 11000
     },
     {
         id: 301,
-        agotado: true, // sin stock: no se muestra ni se cobra
-        nombre: "Adaptador Cargador 220V MODX-516 Hyper 55W XAEA (Blanco)",
+        nombre: "Cargador 220V Hyper 5,4A USB + Tipo C + Cable C a C MODX-00JJ XAEA Premium (Blanco)",
         categoria: "cargador-pared",
         color: "Blanco",
         imagen: "assets/img/ADAPTADOR-CARGADOR 220V MODX-516 HYPER – 5,4A – 1USB + 1TC – XAEA – BLANCO.webp",
         imagenHover: "assets/img/ADAPTADOR-CARGADOR 220V MODX-516 HYPER – 5,4A – 1USB + 1TC – XAEA – BLANCO1.webp",
-        specs: "<li><strong>Potencia:</strong> 55W Total (USB-C: 55W / USB-A: 18W)</li><li><strong>Amperaje:</strong> 5.4A</li><li><strong>Conexión:</strong> 1 Puerto Tipo C + 1 Puerto USB-A</li><li><strong>Tensión de Entrada:</strong> AC 100-220V</li>",
-        precio: 10518
+        specs: "<li><strong>Potencia:</strong> 55W Total (USB-C: 55W / USB-A: 18W)</li><li><strong>Amperaje:</strong> 5.4A</li><li><strong>Conexión:</strong> 1 Puerto Tipo C + 1 Puerto USB-A</li><li><strong>Tensión de Entrada:</strong> AC 100-220V</li><li><strong>Incluye:</strong> Cable Tipo C a Tipo C</li>",
+        precio: 19000
     },
     {
         id: 302,
-        agotado: true, // sin stock: no se muestra ni se cobra
-        nombre: "Adaptador Cargador 220V MODX-616 Extreme 65W XAEA (Blanco)",
+        nombre: "Cargador 220V Extreme 6,2A USB + 2 Tipo C + Cable C a C MODX-00JK XAEA Premium (Blanco)",
         categoria: "cargador-pared",
         color: "Blanco",
         imagen: "assets/img/ADAPTADOR-CARGADOR 220V MODX-616 EXTREME – 6,2A – 1USB + 2TC – XAEA – BLANCO.webp",
         imagenHover: "assets/img/ADAPTADOR-CARGADOR 220V MODX-616 EXTREME – 6,2A – 1USB + 2TC – XAEA – BLANCO1.webp",
-        specs: "<li><strong>Potencia:</strong> 65W Total (USB-C: 65W / USB-A: 18W)</li><li><strong>Amperaje:</strong> 6.2A</li><li><strong>Conexión:</strong> 2 Puertos Tipo C + 1 Puerto USB-A</li><li><strong>Material:</strong> Plástico ABS resistente</li>",
-        precio: 13655
+        specs: "<li><strong>Potencia:</strong> 65W Total (USB-C: 65W / USB-A: 18W)</li><li><strong>Amperaje:</strong> 6.2A</li><li><strong>Conexión:</strong> 2 Puertos Tipo C + 1 Puerto USB-A</li><li><strong>Incluye:</strong> Cable Tipo C a Tipo C</li>",
+        precio: 21000
     },
     {
         id: 303,
-        agotado: true, // sin stock: no se muestra ni se cobra
-        nombre: "Adaptador Cargador 220V MODX-A016 Optimum 45W XAEA (Blanco)",
+        nombre: "Cargador 220V Optimum 5A Tipo C + Cable C a iPhone MODX-00JH XAEA (Blanco)",
         categoria: "cargador-pared",
         color: "Blanco",
         imagen: "assets/img/ADAPTADOR-CARGADOR 220V MODX-A016 OPTIMUM – 5A – TIPO C – XAEA.webp",
         imagenHover: "assets/img/ADAPTADOR-CARGADOR 220V MODX-A016 OPTIMUM – 5A – TIPO C – XAEA1.webp",
-        specs: "<li><strong>Potencia:</strong> 45W (Power Delivery)</li><li><strong>Amperaje y Voltaje:</strong> 5A / 9VCC</li><li><strong>Conexión:</strong> 1 Puerto Tipo C</li><li><strong>Material:</strong> Plástico ABS resistente</li>",
-        precio: 5289
+        specs: "<li><strong>Potencia:</strong> 45W (Power Delivery)</li><li><strong>Amperaje y Voltaje:</strong> 5A / 9VCC</li><li><strong>Conexión:</strong> 1 Puerto Tipo C</li><li><strong>Incluye:</strong> Cable Tipo C a iPhone (Lightning)</li>",
+        precio: 11000
     },
     {
         id: 304,

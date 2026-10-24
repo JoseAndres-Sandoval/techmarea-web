@@ -541,12 +541,39 @@
   },
   "300": {
     "nombre": "Adaptador Cargador 220V MODX-507 Raptor 45W XAEA (Blanco) - Blanco",
-    "precio": 11000,
+    "precio": 7000,
     "archivo": "cargador",
     "base": "Adaptador Cargador 220V MODX-507 Raptor 45W XAEA (Blanco)",
     "color": "Blanco",
     "imagen": "assets/img/ADAPTADOR-CARGADOR 220V MODX-507 RAPTOR – 5,1A – 45W – 1TC + PD – XAEA – BLANCO.webp",
-    "descripcion": "Potencia: 45W de salida máxima. Amperaje y Voltaje: 5.1A / 9VCC. Conexión: 1 Puerto Tipo C (Power Delivery). Material: Plástico ABS resistente."
+    "descripcion": "Potencia: 45W de salida máxima. Amperaje y Voltaje: 5.1A / 9VCC. Conexión: 1 Puerto Tipo C (Power Delivery). Material: Plástico ABS resistente. Incluye: Solo el adaptador (sin cable)."
+  },
+  "301": {
+    "nombre": "Cargador 220V Hyper 5,4A USB + Tipo C + Cable C a C MODX-00JJ XAEA Premium (Blanco) - Blanco",
+    "precio": 19000,
+    "archivo": "cargador",
+    "base": "Cargador 220V Hyper 5,4A USB + Tipo C + Cable C a C MODX-00JJ XAEA Premium (Blanco)",
+    "color": "Blanco",
+    "imagen": "assets/img/ADAPTADOR-CARGADOR 220V MODX-516 HYPER – 5,4A – 1USB + 1TC – XAEA – BLANCO.webp",
+    "descripcion": "Potencia: 55W Total (USB-C: 55W / USB-A: 18W). Amperaje: 5.4A. Conexión: 1 Puerto Tipo C + 1 Puerto USB-A. Tensión de Entrada: AC 100-220V. Incluye: Cable Tipo C a Tipo C."
+  },
+  "302": {
+    "nombre": "Cargador 220V Extreme 6,2A USB + 2 Tipo C + Cable C a C MODX-00JK XAEA Premium (Blanco) - Blanco",
+    "precio": 21000,
+    "archivo": "cargador",
+    "base": "Cargador 220V Extreme 6,2A USB + 2 Tipo C + Cable C a C MODX-00JK XAEA Premium (Blanco)",
+    "color": "Blanco",
+    "imagen": "assets/img/ADAPTADOR-CARGADOR 220V MODX-616 EXTREME – 6,2A – 1USB + 2TC – XAEA – BLANCO.webp",
+    "descripcion": "Potencia: 65W Total (USB-C: 65W / USB-A: 18W). Amperaje: 6.2A. Conexión: 2 Puertos Tipo C + 1 Puerto USB-A. Incluye: Cable Tipo C a Tipo C."
+  },
+  "303": {
+    "nombre": "Cargador 220V Optimum 5A Tipo C + Cable C a iPhone MODX-00JH XAEA (Blanco) - Blanco",
+    "precio": 11000,
+    "archivo": "cargador",
+    "base": "Cargador 220V Optimum 5A Tipo C + Cable C a iPhone MODX-00JH XAEA (Blanco)",
+    "color": "Blanco",
+    "imagen": "assets/img/ADAPTADOR-CARGADOR 220V MODX-A016 OPTIMUM – 5A – TIPO C – XAEA.webp",
+    "descripcion": "Potencia: 45W (Power Delivery). Amperaje y Voltaje: 5A / 9VCC. Conexión: 1 Puerto Tipo C. Incluye: Cable Tipo C a iPhone (Lightning)."
   },
   "304": {
     "nombre": "Cargador Intensify 30W 1USB 1TC + Cable USB a Tipo C XAEA (Blanco) - Blanco",
@@ -574,6 +601,15 @@
     "color": "",
     "imagen": "assets/img/cargador-notebook-bosscharge.webp",
     "descripcion": "Potencia: 96 W. Voltajes: 12 / 15 / 16 / 18 / 19 / 20 / 24 V (con selector). Fichas: 9 intercambiables (incluye Tipo C). Entrada: 100-240 V."
+  },
+  "308": {
+    "nombre": "Cargador 220V Raptor 45W MODX-003W + Cable Tipo C XAEA (Blanco) - Blanco",
+    "precio": 11000,
+    "archivo": "cargador",
+    "base": "Cargador 220V Raptor 45W MODX-003W + Cable Tipo C XAEA (Blanco)",
+    "color": "Blanco",
+    "imagen": "assets/img/ADAPTADOR-CARGADOR 220V MODX-507 RAPTOR – 5,1A – 45W – 1TC + PD – XAEA – BLANCO.webp",
+    "descripcion": "Potencia: 45W de salida máxima. Amperaje: 5.1A. Conexión: 1 Puerto Tipo C (Power Delivery). Incluye: Cable Tipo C."
   },
   "403": {
     "nombre": "Power Bank Inalámbrico Tars 20000 mAh MODX-00CE XAEA - Blanco",
@@ -2293,5 +2329,14 @@
     "color": "Negro",
     "imagen": "assets/img/real-humidificador-flama.webp",
     "descripcion": "Capacidad: 260 ml. Efecto: Llama con luz LED. Uso: Humidificador y aromatizador. Color: Negro."
+  },
+  "904": {
+    "nombre": "Micrófono Doble Inalámbrico XAEA Dual Mic MODX-065 - Negro",
+    "precio": 45000,
+    "archivo": "accesorios",
+    "base": "Micrófono Doble Inalámbrico XAEA Dual Mic MODX-065",
+    "color": "Negro",
+    "imagen": "assets/img/mic-dual-xaea-modx-065.webp",
+    "descripcion": "Tipo: 2 micrófonos de mano inalámbricos. Conexión: Inalámbrica 2.4G con receptor de ficha plug. Alcance: Hasta 35 m. Uso: Karaoke, vivos, clases y eventos."
   }
 }

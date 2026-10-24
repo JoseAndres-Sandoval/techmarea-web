@@ -41,6 +41,16 @@ const catalogoAccesorios = [
         imagen: "assets/img/real-humidificador-flama.webp",
         specs: "<li><strong>Capacidad:</strong> 260 ml</li><li><strong>Efecto:</strong> Llama con luz LED</li><li><strong>Uso:</strong> Humidificador y aromatizador</li><li><strong>Color:</strong> Negro</li>",
         precio: 35000
+    },
+    {
+        id: 904,
+        nombre: "Micrófono Doble Inalámbrico XAEA Dual Mic MODX-065",
+        categoria: "microfono",
+        color: "Negro",
+        imagen: "assets/img/mic-dual-xaea-modx-065.webp",
+        imagenHover: "assets/img/mic-dual-xaea-modx-065-2.webp",
+        specs: "<li><strong>Tipo:</strong> 2 micrófonos de mano inalámbricos</li><li><strong>Conexión:</strong> Inalámbrica 2.4G con receptor de ficha plug</li><li><strong>Alcance:</strong> Hasta 35 m</li><li><strong>Uso:</strong> Karaoke, vivos, clases y eventos</li>",
+        precio: 45000
     }
 ];
 
