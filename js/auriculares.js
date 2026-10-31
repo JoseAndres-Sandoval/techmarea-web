@@ -3,7 +3,9 @@
 // =========================================
 import { doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
-import { db, auth, pagarConMercadoPago, WHATSAPP } from "./config.js";
+import { db, auth, pagarConMercadoPago, WHATSAPP, stockPromise } from "./config.js";
+
+let stockActual = {};
 
 // =========================================
 // 1. BASE DE DATOS DE PRODUCTOS (AURICULARES: 100 - 199)
@@ -306,28 +308,55 @@ const catalogoAuriculares = catalogoAuricularesTodos.filter(p => !p.agotado);
 const contenedor = document.getElementById("contenedor-productos");
 
 function cargarProductos(productosAMostrar = catalogoAuriculares) {
-    let htmlGenerado = ""; 
+    let htmlGenerado = "";
+
+    // Productos sin stock (según el panel) no se muestran
+    productosAMostrar = productosAMostrar.filter(p => !(stockActual[p.id] !== undefined && stockActual[p.id] <= 0));
 
     if (productosAMostrar.length === 0) {
-        contenedor.innerHTML = '<p style="color: white; grid-column: 1 / -1; text-align: center; padding: 20px;">No se encontraron auriculares con esa búsqueda.</p>';
+        contenedor.innerHTML = '<p style="color: white; grid-column: 1 / -1; text-align: center; padding: 20px;">No se encontraron productos con esa búsqueda.</p>';
         return;
     }
 
-    productosAMostrar.forEach(producto => {
+    // Mismo producto en varios colores = una sola tarjeta con los colores disponibles
+    const grupos = [];
+    productosAMostrar.forEach(p => {
+        const g = grupos.find(x => x[0].nombre === p.nombre && p.color);
+        if (g) g.push(p); else grupos.push([p]);
+    });
+
+    grupos.forEach((variantes, i) => {
+        const producto = variantes[0];
+        const varios = variantes.length > 1;
         let bloqueImagen = "";
 
         if (producto.imagenHover) {
             bloqueImagen = `
                 <div class="carrusel-hover">
-                    <img src="${producto.imagen}" alt="${producto.nombre} - Foto 1" class="img-deslizante img-1 img-producto">
+                    <img src="${producto.imagen}" alt="${producto.nombre} - Foto 1" class="img-deslizante img-1 img-producto" data-grupo="${i}">
                     <img src="${producto.imagenHover}" alt="${producto.nombre} - Foto 2" class="img-deslizante img-2 img-producto">
                 </div>
             `;
         } else {
-            bloqueImagen = `<img src="${producto.imagen}" alt="${producto.nombre}" class="imagen-articulo img-producto">`;
+            bloqueImagen = `<img src="${producto.imagen}" alt="${producto.nombre}" class="imagen-articulo img-producto" data-grupo="${i}">`;
         }
 
         let precioFormateado = producto.precio.toLocaleString("es-AR");
+        let specs = producto.specs;
+        let selector = "";
+        let boton = `<button class="btn-neon-pequeno btn-agregar" data-id="${producto.id}" style="width: 100%; border: none; cursor: pointer; font-family: inherit;">Agregar al carrito</button>`;
+
+        if (varios) {
+            const colores = variantes.map(v => v.color);
+            specs = specs.replace(/<li><strong>Color:<\/strong>[^<]*<\/li>/, "") +
+                `<li><strong>Colores disponibles:</strong> ${colores.join(", ")}</li>`;
+            selector = `
+                <select class="select-categoria select-modelo select-color" data-grupo="${i}" style="width: 100%; margin: 10px 0;">
+                    <option value="">Elegí el color</option>
+                    ${variantes.map(v => `<option value="${v.id}">${v.color}</option>`).join("")}
+                </select>`;
+            boton = `<button class="btn-neon-pequeno btn-agregar-color" data-grupo="${i}" style="width: 100%; border: none; cursor: pointer; font-family: inherit;">Agregar al carrito</button>`;
+        }
 
         htmlGenerado += `
             <article class="tarjeta-articulo">
@@ -335,12 +364,11 @@ function cargarProductos(productosAMostrar = catalogoAuriculares) {
                 <div class="info-articulo">
                     <h3>${producto.nombre}</h3>
                     <ul class="lista-specs">
-                        ${producto.specs}
+                        ${specs}
                     </ul>
+                    ${selector}
                     <span class="precio">$${precioFormateado}</span>
-                    <button class="btn-neon-pequeno btn-agregar" data-id="${producto.id}" style="width: 100%; border: none; cursor: pointer; font-family: inherit;">
-                        Agregar al carrito
-                    </button>
+                    ${boton}
                 </div>
             </article>
         `;
@@ -348,11 +376,31 @@ function cargarProductos(productosAMostrar = catalogoAuriculares) {
 
     contenedor.innerHTML = htmlGenerado;
 
-    const botonesAgregar = document.querySelectorAll('.btn-agregar');
-    botonesAgregar.forEach(boton => {
+    contenedor.querySelectorAll('.btn-agregar').forEach(boton => {
         boton.addEventListener('click', (e) => {
             const id = parseInt(e.target.getAttribute('data-id'));
             agregarAlCarrito(id);
+        });
+    });
+
+    // Al elegir un color, se muestra su foto
+    contenedor.querySelectorAll('.select-color').forEach(sel => {
+        sel.addEventListener('change', () => {
+            const v = catalogoAuriculares.find(p => p.id === parseInt(sel.value));
+            const img = contenedor.querySelector(`img[data-grupo="${sel.dataset.grupo}"]`);
+            if (v && img) img.src = v.imagen;
+        });
+    });
+
+    contenedor.querySelectorAll('.btn-agregar-color').forEach(boton => {
+        boton.addEventListener('click', () => {
+            const sel = contenedor.querySelector(`.select-color[data-grupo="${boton.dataset.grupo}"]`);
+            if (!sel.value) {
+                alert("Primero elegí el color.");
+                sel.focus();
+                return;
+            }
+            agregarAlCarrito(parseInt(sel.value));
         });
     });
 }
@@ -380,6 +428,7 @@ if (inputBuscador) inputBuscador.addEventListener("input", filtrarCatalogo);
 if (selectCategoria) selectCategoria.addEventListener("change", filtrarCatalogo);
 
 cargarProductos();
+stockPromise.then(mapa => { stockActual = mapa; filtrarCatalogo(); });
 
 // =========================================
 // 4. LÓGICA DEL PANEL DEL CARRITO (ABRIR/CERRAR)
