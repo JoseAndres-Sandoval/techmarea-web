@@ -258,6 +258,42 @@ const catalogoAuricularesTodos = [
         imagen: "assets/img/real-explosion-blanco.webp",
         specs: "<li><strong>Conexión:</strong> Ficha 3.5 mm</li><li><strong>Micrófono:</strong> Integrado, función manos libres</li><li><strong>Largo:</strong> 1 m</li><li><strong>Color:</strong> Rosa</li>",
         precio: 6000
+    },
+    {
+        id: 125,
+        nombre: "Auriculares Bluetooth Deportivos Sport Sound Pro MODX-00KD XAEA",
+        categoria: "in-ear",
+        color: "Negro",
+        imagen: "assets/img/sport-sound-pro-negro.webp",
+        specs: "<li><strong>Tipo:</strong> Inalámbricos TWS deportivos con gancho</li><li><strong>Conexión:</strong> Bluetooth 6.0</li><li><strong>Estuche:</strong> De carga con pantalla de batería</li><li><strong>Color:</strong> Negro</li>",
+        precio: 40600
+    },
+    {
+        id: 126,
+        nombre: "Auriculares Bluetooth Deportivos Sport Sound Pro MODX-00KD XAEA",
+        categoria: "in-ear",
+        color: "Gris",
+        imagen: "assets/img/sport-sound-pro-gris.webp",
+        specs: "<li><strong>Tipo:</strong> Inalámbricos TWS deportivos con gancho</li><li><strong>Conexión:</strong> Bluetooth 6.0</li><li><strong>Estuche:</strong> De carga con pantalla de batería</li><li><strong>Color:</strong> Gris</li>",
+        precio: 40600
+    },
+    {
+        id: 127,
+        nombre: "Auricular con cable Tipo C Onix-C MODX-00KG XAEA",
+        categoria: "in-ear",
+        color: "Negro",
+        imagen: "assets/img/onix-c-negro.webp",
+        specs: "<li><strong>Conexión:</strong> Tipo C</li><li><strong>Diseño:</strong> In-ear con puntas metálicas imantadas (no se enredan)</li><li><strong>Color:</strong> Negro</li>",
+        precio: 4300
+    },
+    {
+        id: 128,
+        nombre: "Auricular con cable Tipo C Onix-C MODX-00KG XAEA",
+        categoria: "in-ear",
+        color: "Dorado",
+        imagen: "assets/img/onix-c-dorado.webp",
+        specs: "<li><strong>Conexión:</strong> Tipo C</li><li><strong>Diseño:</strong> In-ear con puntas metálicas imantadas (no se enredan)</li><li><strong>Color:</strong> Dorado</li>",
+        precio: 4300
     }
 ];
 

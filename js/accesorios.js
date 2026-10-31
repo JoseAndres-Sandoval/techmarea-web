@@ -51,6 +51,128 @@ const catalogoAccesorios = [
         imagenHover: "assets/img/mic-dual-xaea-modx-065-2.webp",
         specs: "<li><strong>Tipo:</strong> 2 micrófonos de mano inalámbricos</li><li><strong>Conexión:</strong> Inalámbrica 2.4G con receptor de ficha plug</li><li><strong>Alcance:</strong> Hasta 35 m</li><li><strong>Uso:</strong> Karaoke, vivos, clases y eventos</li>",
         precio: 45000
+    },
+    {
+        id: 905,
+        nombre: "Ventilador Portátil Recargable G6630GA",
+        categoria: "ventilador",
+        color: "Negro",
+        imagen: "assets/img/ventilador-g6630ga-negro.webp",
+        imagenHover: "assets/img/ventilador-g6630ga-real.webp",
+        specs: "<li><strong>Tipo:</strong> Ventilador de escritorio, ángulo ajustable</li><li><strong>Velocidades:</strong> 3</li><li><strong>Carga:</strong> USB (2 a 4 h), batería desmontable</li><li><strong>Color:</strong> Negro</li>",
+        precio: 18700
+    },
+    {
+        id: 906,
+        nombre: "Ventilador Portátil Recargable G6630GA",
+        categoria: "ventilador",
+        color: "Blanco",
+        imagen: "assets/img/ventilador-g6630ga-blanco.webp",
+        imagenHover: "assets/img/ventilador-g6630ga-real.webp",
+        specs: "<li><strong>Tipo:</strong> Ventilador de escritorio, ángulo ajustable</li><li><strong>Velocidades:</strong> 3</li><li><strong>Carga:</strong> USB (2 a 4 h), batería desmontable</li><li><strong>Color:</strong> Blanco</li>",
+        precio: 18700
+    },
+    {
+        id: 907,
+        nombre: "Mini Ventilador de Mano Recargable DD8191A",
+        categoria: "ventilador",
+        color: "Verde",
+        imagen: "assets/img/ventilador-dd8191a-verde.webp",
+        imagenHover: "assets/img/ventilador-dd8191a-real.webp",
+        specs: "<li><strong>Velocidades:</strong> 3</li><li><strong>Carga:</strong> Tipo C (3 h)</li><li><strong>Batería:</strong> 1200 mAh, hasta 5 h de uso</li><li><strong>Color:</strong> Verde</li>",
+        precio: 11000
+    },
+    {
+        id: 908,
+        nombre: "Mini Ventilador de Mano Recargable DD8191A",
+        categoria: "ventilador",
+        color: "Amarillo",
+        imagen: "assets/img/ventilador-dd8191a-amarillo.webp",
+        imagenHover: "assets/img/ventilador-dd8191a-real.webp",
+        specs: "<li><strong>Velocidades:</strong> 3</li><li><strong>Carga:</strong> Tipo C (3 h)</li><li><strong>Batería:</strong> 1200 mAh, hasta 5 h de uso</li><li><strong>Color:</strong> Amarillo</li>",
+        precio: 11000
+    },
+    {
+        id: 909,
+        nombre: "Mini Ventilador Portátil Recargable DD8193B",
+        categoria: "ventilador",
+        color: "Gris",
+        imagen: "assets/img/ventilador-dd8193b-real.webp",
+        specs: "<li><strong>Tipo:</strong> Mini ventilador portátil recargable</li><li><strong>Color:</strong> Gris</li>",
+        precio: 10300
+    },
+    {
+        id: 910,
+        nombre: "Mini Ventilador Portátil Recargable DD8193B",
+        categoria: "ventilador",
+        color: "Rosa",
+        imagen: "assets/img/ventilador-dd8193b-real.webp",
+        specs: "<li><strong>Tipo:</strong> Mini ventilador portátil recargable</li><li><strong>Color:</strong> Rosa</li>",
+        precio: 10300
+    },
+    {
+        id: 911,
+        nombre: "Mini Ventilador Portátil Recargable DD8193B",
+        categoria: "ventilador",
+        color: "Verde",
+        imagen: "assets/img/ventilador-dd8193b-real.webp",
+        specs: "<li><strong>Tipo:</strong> Mini ventilador portátil recargable</li><li><strong>Color:</strong> Verde</li>",
+        precio: 10300
+    },
+    {
+        id: 912,
+        nombre: "Funda Sumergible Universal para Celular",
+        categoria: "agua",
+        color: "Azul",
+        imagen: "assets/img/funda-sumergible-azul-real.webp",
+        imagenHover: "assets/img/funda-sumergible-real.webp",
+        specs: "<li><strong>Uso:</strong> Protege el celular del agua (pileta, playa, lluvia)</li><li><strong>Compatibilidad:</strong> Universal</li><li><strong>Color:</strong> Azul</li>",
+        precio: 3400
+    },
+    {
+        id: 913,
+        nombre: "Funda Sumergible Universal para Celular",
+        categoria: "agua",
+        color: "Celeste",
+        imagen: "assets/img/funda-sumergible-real.webp",
+        specs: "<li><strong>Uso:</strong> Protege el celular del agua (pileta, playa, lluvia)</li><li><strong>Compatibilidad:</strong> Universal</li><li><strong>Color:</strong> Celeste</li>",
+        precio: 3400
+    },
+    {
+        id: 914,
+        nombre: "Funda Sumergible Universal para Celular",
+        categoria: "agua",
+        color: "Rosa",
+        imagen: "assets/img/funda-sumergible-real.webp",
+        specs: "<li><strong>Uso:</strong> Protege el celular del agua (pileta, playa, lluvia)</li><li><strong>Compatibilidad:</strong> Universal</li><li><strong>Color:</strong> Rosa</li>",
+        precio: 3400
+    },
+    {
+        id: 915,
+        nombre: "Funda Sumergible Universal para Celular",
+        categoria: "agua",
+        color: "Fucsia",
+        imagen: "assets/img/funda-sumergible-real.webp",
+        specs: "<li><strong>Uso:</strong> Protege el celular del agua (pileta, playa, lluvia)</li><li><strong>Compatibilidad:</strong> Universal</li><li><strong>Color:</strong> Fucsia</li>",
+        precio: 3400
+    },
+    {
+        id: 916,
+        nombre: "Linterna LED Mini Recargable con Luz Lateral",
+        categoria: "luz",
+        imagen: "assets/img/linterna-led-real.webp",
+        imagenHover: "assets/img/linterna-led-real-2.webp",
+        specs: "<li><strong>Luz:</strong> LED frontal con zoom + luz lateral COB</li><li><strong>Carga:</strong> USB (cable incluido)</li><li><strong>Incluye:</strong> Estuche rígido y correa</li>",
+        precio: 6500
+    },
+    {
+        id: 917,
+        nombre: "Modulador FM Bluetooth ALS-A09 para Auto",
+        categoria: "auto",
+        color: "Negro",
+        imagen: "assets/img/modulador-fm-als-a09.webp",
+        specs: "<li><strong>Conexión:</strong> Bluetooth 5.0 (música y manos libres)</li><li><strong>Carga:</strong> Doble USB, hasta 3.1 A</li><li><strong>Extras:</strong> Lee pendrive y muestra el voltaje de la batería</li>",
+        precio: 21800
     }
 ];
 

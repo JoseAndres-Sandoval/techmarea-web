@@ -476,6 +476,42 @@
     "imagen": "assets/img/real-explosion-blanco.webp",
     "descripcion": "Conexión: Ficha 3.5 mm. Micrófono: Integrado, función manos libres. Largo: 1 m. Color: Rosa."
   },
+  "125": {
+    "nombre": "Auriculares Bluetooth Deportivos Sport Sound Pro MODX-00KD XAEA - Negro",
+    "precio": 40600,
+    "archivo": "auriculares",
+    "base": "Auriculares Bluetooth Deportivos Sport Sound Pro MODX-00KD XAEA",
+    "color": "Negro",
+    "imagen": "assets/img/sport-sound-pro-negro.webp",
+    "descripcion": "Tipo: Inalámbricos TWS deportivos con gancho. Conexión: Bluetooth 6.0. Estuche: De carga con pantalla de batería. Color: Negro."
+  },
+  "126": {
+    "nombre": "Auriculares Bluetooth Deportivos Sport Sound Pro MODX-00KD XAEA - Gris",
+    "precio": 40600,
+    "archivo": "auriculares",
+    "base": "Auriculares Bluetooth Deportivos Sport Sound Pro MODX-00KD XAEA",
+    "color": "Gris",
+    "imagen": "assets/img/sport-sound-pro-gris.webp",
+    "descripcion": "Tipo: Inalámbricos TWS deportivos con gancho. Conexión: Bluetooth 6.0. Estuche: De carga con pantalla de batería. Color: Gris."
+  },
+  "127": {
+    "nombre": "Auricular con cable Tipo C Onix-C MODX-00KG XAEA - Negro",
+    "precio": 4300,
+    "archivo": "auriculares",
+    "base": "Auricular con cable Tipo C Onix-C MODX-00KG XAEA",
+    "color": "Negro",
+    "imagen": "assets/img/onix-c-negro.webp",
+    "descripcion": "Conexión: Tipo C. Diseño: In-ear con puntas metálicas imantadas (no se enredan). Color: Negro."
+  },
+  "128": {
+    "nombre": "Auricular con cable Tipo C Onix-C MODX-00KG XAEA - Dorado",
+    "precio": 4300,
+    "archivo": "auriculares",
+    "base": "Auricular con cable Tipo C Onix-C MODX-00KG XAEA",
+    "color": "Dorado",
+    "imagen": "assets/img/onix-c-dorado.webp",
+    "descripcion": "Conexión: Tipo C. Diseño: In-ear con puntas metálicas imantadas (no se enredan). Color: Dorado."
+  },
   "200": {
     "nombre": "Cable Sync-C Plus MODX-008S XAEA (Blanco) - Blanco",
     "precio": 6000,
@@ -538,6 +574,60 @@
     "color": "Negro",
     "imagen": "assets/img/real-aux-spiral-negro.webp",
     "descripcion": "Conexión: Ficha 3.5 mm a 3.5 mm (una en L). Largo: 1.8 m, cable espiral. Conectores: Metálicos dorados. Color: Negro."
+  },
+  "224": {
+    "nombre": "Cable USB a Lightning Qualy MOD 75 XAEA - Blanco",
+    "precio": 4600,
+    "archivo": "cables",
+    "base": "Cable USB a Lightning Qualy MOD 75 XAEA",
+    "color": "Blanco",
+    "imagen": "assets/img/cable-qualy-lightning-real.webp",
+    "descripcion": "Conexión: USB-A a Lightning (iPhone). Carga: Rápida hasta 4.4 A. Construcción: Núcleo 100% cobre puro. Largo: 1 m."
+  },
+  "225": {
+    "nombre": "Cable Zeus Tipo C - Lightning MODX-00MD XAEA - Champagne",
+    "precio": 7700,
+    "archivo": "cables",
+    "base": "Cable Zeus Tipo C - Lightning MODX-00MD XAEA",
+    "color": "Champagne",
+    "imagen": "assets/img/cable-zeus-c-lightning-champagne.webp",
+    "descripcion": "Conexión: Tipo C a Lightning (iPhone). Carga: Rápida hasta 60 W (3 A). Construcción: 110 hilos de cobre. Largo: 1 m."
+  },
+  "226": {
+    "nombre": "Cable Hera Tipo C - Lightning MODX-106 XAEA - Negro",
+    "precio": 9400,
+    "archivo": "cables",
+    "base": "Cable Hera Tipo C - Lightning MODX-106 XAEA",
+    "color": "Negro",
+    "imagen": "assets/img/cable-hera-c-lightning-negro.webp",
+    "descripcion": "Conexión: Tipo C a Lightning (iPhone). Carga: Rápida, alta velocidad de datos. Largo: 1.5 m."
+  },
+  "227": {
+    "nombre": "Adaptador Tipo C a Auxiliar 3.5 mm",
+    "precio": 6200,
+    "archivo": "cables",
+    "base": "Adaptador Tipo C a Auxiliar 3.5 mm",
+    "color": "",
+    "imagen": "assets/img/adaptador-tc-35-real.webp",
+    "descripcion": "Conexión: Tipo C (macho) a ficha 3.5 mm (hembra). Uso: Conectá auriculares con ficha a tu celular."
+  },
+  "228": {
+    "nombre": "Adaptador Lightning (iPhone) a Auxiliar 3.5 mm",
+    "precio": 6600,
+    "archivo": "cables",
+    "base": "Adaptador Lightning (iPhone) a Auxiliar 3.5 mm",
+    "color": "",
+    "imagen": "assets/img/adaptador-lightning-35-real.webp",
+    "descripcion": "Conexión: Lightning (macho) a ficha 3.5 mm (hembra). Uso: Conectá auriculares con ficha a tu iPhone."
+  },
+  "229": {
+    "nombre": "Cable de Audio 3.5 mm a 2 RCA",
+    "precio": 2900,
+    "archivo": "cables",
+    "base": "Cable de Audio 3.5 mm a 2 RCA",
+    "color": "",
+    "imagen": "assets/img/cable-2rca-real.webp",
+    "descripcion": "Conexión: Ficha 3.5 mm a 2 RCA. Largo: 1.5 m."
   },
   "300": {
     "nombre": "Adaptador Cargador 220V MODX-507 Raptor 45W XAEA (Blanco) - Blanco",
@@ -781,6 +871,42 @@
     "color": "Celeste",
     "imagen": "assets/img/mouse-00dv-celeste-real.webp",
     "descripcion": "Conexión: Dual: Bluetooth 5.1 + 2.4 GHz. Batería: Recargable 500 mAh por Tipo C (hasta 8 h de uso). DPI: 1000 / 1200 / 1800. Botones: 4 comandos configurables. Ahorro: Suspensión automática a los 60 s. Color: Celeste."
+  },
+  "652": {
+    "nombre": "Pendrive 64 GB MODS-980 - Negro",
+    "precio": 35000,
+    "archivo": "computacion",
+    "base": "Pendrive 64 GB MODS-980",
+    "color": "Negro",
+    "imagen": "assets/img/pendrive-64gb.webp",
+    "descripcion": "Capacidad: 64 GB. Conexión: USB 3.2. Diseño: Retráctil, sin tapa."
+  },
+  "653": {
+    "nombre": "Pendrive 32 GB MODS-979 - Negro",
+    "precio": 23400,
+    "archivo": "computacion",
+    "base": "Pendrive 32 GB MODS-979",
+    "color": "Negro",
+    "imagen": "assets/img/pendrive-32gb.webp",
+    "descripcion": "Capacidad: 32 GB. Conexión: USB 3.2. Diseño: Retráctil, sin tapa."
+  },
+  "654": {
+    "nombre": "Hub Adaptador Tipo C 3 en 1 (HDMI 4K + USB 3.0 + Tipo C PD) MODV-0013 XAEA - Plateado",
+    "precio": 11200,
+    "archivo": "computacion",
+    "base": "Hub Adaptador Tipo C 3 en 1 (HDMI 4K + USB 3.0 + Tipo C PD) MODV-0013 XAEA",
+    "color": "Plateado",
+    "imagen": "assets/img/hub-modv-0013-real.webp",
+    "descripcion": "Entrada: Tipo C (con cable). Salidas: HDMI 4K, USB 3.0 y Tipo C PD (carga rápida). Uso: Conectá tu notebook o celular a un TV o monitor."
+  },
+  "655": {
+    "nombre": "Adaptador WiFi USB con Antena 1200 Mbps",
+    "precio": 9600,
+    "archivo": "computacion",
+    "base": "Adaptador WiFi USB con Antena 1200 Mbps",
+    "color": "",
+    "imagen": "assets/img/antena-wifi-1200-real.webp",
+    "descripcion": "Velocidad: Hasta 1200 Mbps (802.11n, 2.4 GHz). Conexión: USB 2.0. Antena: Externa desmontable para mejor señal. Compatible: Windows, Mac y Linux."
   },
   "700": {
     "nombre": "Vidrio Templado Común - Motorola E13",
@@ -1411,6 +1537,24 @@
     "color": "",
     "imagen": "assets/img/vidrios-templados-local.webp",
     "descripcion": "Modelo: iPhone 16 Plus"
+  },
+  "770": {
+    "nombre": "Vidrio Templado Premium Autoinstalable - iPhone 16 Pro Max",
+    "precio": 7000,
+    "archivo": "vidrios",
+    "base": "Vidrio Templado Premium Autoinstalable - iPhone 16 Pro Max",
+    "color": "",
+    "imagen": "assets/img/vidrios-templados-local.webp",
+    "descripcion": "Modelo: iPhone 16 Pro Max"
+  },
+  "771": {
+    "nombre": "Vidrio Templado Premium Autoinstalable - Samsung S26 Ultra",
+    "precio": 7000,
+    "archivo": "vidrios",
+    "base": "Vidrio Templado Premium Autoinstalable - Samsung S26 Ultra",
+    "color": "",
+    "imagen": "assets/img/vidrios-templados-local.webp",
+    "descripcion": "Modelo: Samsung S26 Ultra"
   },
   "800": {
     "nombre": "Funda iPhone 13 Pro - 2 Colores (Lila / Rosa)",
@@ -2338,5 +2482,122 @@
     "color": "Negro",
     "imagen": "assets/img/mic-dual-xaea-modx-065.webp",
     "descripcion": "Tipo: 2 micrófonos de mano inalámbricos. Conexión: Inalámbrica 2.4G con receptor de ficha plug. Alcance: Hasta 35 m. Uso: Karaoke, vivos, clases y eventos."
+  },
+  "905": {
+    "nombre": "Ventilador Portátil Recargable G6630GA - Negro",
+    "precio": 18700,
+    "archivo": "accesorios",
+    "base": "Ventilador Portátil Recargable G6630GA",
+    "color": "Negro",
+    "imagen": "assets/img/ventilador-g6630ga-negro.webp",
+    "descripcion": "Tipo: Ventilador de escritorio, ángulo ajustable. Velocidades: 3. Carga: USB (2 a 4 h), batería desmontable. Color: Negro."
+  },
+  "906": {
+    "nombre": "Ventilador Portátil Recargable G6630GA - Blanco",
+    "precio": 18700,
+    "archivo": "accesorios",
+    "base": "Ventilador Portátil Recargable G6630GA",
+    "color": "Blanco",
+    "imagen": "assets/img/ventilador-g6630ga-blanco.webp",
+    "descripcion": "Tipo: Ventilador de escritorio, ángulo ajustable. Velocidades: 3. Carga: USB (2 a 4 h), batería desmontable. Color: Blanco."
+  },
+  "907": {
+    "nombre": "Mini Ventilador de Mano Recargable DD8191A - Verde",
+    "precio": 11000,
+    "archivo": "accesorios",
+    "base": "Mini Ventilador de Mano Recargable DD8191A",
+    "color": "Verde",
+    "imagen": "assets/img/ventilador-dd8191a-verde.webp",
+    "descripcion": "Velocidades: 3. Carga: Tipo C (3 h). Batería: 1200 mAh, hasta 5 h de uso. Color: Verde."
+  },
+  "908": {
+    "nombre": "Mini Ventilador de Mano Recargable DD8191A - Amarillo",
+    "precio": 11000,
+    "archivo": "accesorios",
+    "base": "Mini Ventilador de Mano Recargable DD8191A",
+    "color": "Amarillo",
+    "imagen": "assets/img/ventilador-dd8191a-amarillo.webp",
+    "descripcion": "Velocidades: 3. Carga: Tipo C (3 h). Batería: 1200 mAh, hasta 5 h de uso. Color: Amarillo."
+  },
+  "909": {
+    "nombre": "Mini Ventilador Portátil Recargable DD8193B - Gris",
+    "precio": 10300,
+    "archivo": "accesorios",
+    "base": "Mini Ventilador Portátil Recargable DD8193B",
+    "color": "Gris",
+    "imagen": "assets/img/ventilador-dd8193b-real.webp",
+    "descripcion": "Tipo: Mini ventilador portátil recargable. Color: Gris."
+  },
+  "910": {
+    "nombre": "Mini Ventilador Portátil Recargable DD8193B - Rosa",
+    "precio": 10300,
+    "archivo": "accesorios",
+    "base": "Mini Ventilador Portátil Recargable DD8193B",
+    "color": "Rosa",
+    "imagen": "assets/img/ventilador-dd8193b-real.webp",
+    "descripcion": "Tipo: Mini ventilador portátil recargable. Color: Rosa."
+  },
+  "911": {
+    "nombre": "Mini Ventilador Portátil Recargable DD8193B - Verde",
+    "precio": 10300,
+    "archivo": "accesorios",
+    "base": "Mini Ventilador Portátil Recargable DD8193B",
+    "color": "Verde",
+    "imagen": "assets/img/ventilador-dd8193b-real.webp",
+    "descripcion": "Tipo: Mini ventilador portátil recargable. Color: Verde."
+  },
+  "912": {
+    "nombre": "Funda Sumergible Universal para Celular - Azul",
+    "precio": 3400,
+    "archivo": "accesorios",
+    "base": "Funda Sumergible Universal para Celular",
+    "color": "Azul",
+    "imagen": "assets/img/funda-sumergible-azul-real.webp",
+    "descripcion": "Uso: Protege el celular del agua (pileta, playa, lluvia). Compatibilidad: Universal. Color: Azul."
+  },
+  "913": {
+    "nombre": "Funda Sumergible Universal para Celular - Celeste",
+    "precio": 3400,
+    "archivo": "accesorios",
+    "base": "Funda Sumergible Universal para Celular",
+    "color": "Celeste",
+    "imagen": "assets/img/funda-sumergible-real.webp",
+    "descripcion": "Uso: Protege el celular del agua (pileta, playa, lluvia). Compatibilidad: Universal. Color: Celeste."
+  },
+  "914": {
+    "nombre": "Funda Sumergible Universal para Celular - Rosa",
+    "precio": 3400,
+    "archivo": "accesorios",
+    "base": "Funda Sumergible Universal para Celular",
+    "color": "Rosa",
+    "imagen": "assets/img/funda-sumergible-real.webp",
+    "descripcion": "Uso: Protege el celular del agua (pileta, playa, lluvia). Compatibilidad: Universal. Color: Rosa."
+  },
+  "915": {
+    "nombre": "Funda Sumergible Universal para Celular - Fucsia",
+    "precio": 3400,
+    "archivo": "accesorios",
+    "base": "Funda Sumergible Universal para Celular",
+    "color": "Fucsia",
+    "imagen": "assets/img/funda-sumergible-real.webp",
+    "descripcion": "Uso: Protege el celular del agua (pileta, playa, lluvia). Compatibilidad: Universal. Color: Fucsia."
+  },
+  "916": {
+    "nombre": "Linterna LED Mini Recargable con Luz Lateral",
+    "precio": 6500,
+    "archivo": "accesorios",
+    "base": "Linterna LED Mini Recargable con Luz Lateral",
+    "color": "",
+    "imagen": "assets/img/linterna-led-real.webp",
+    "descripcion": "Luz: LED frontal con zoom + luz lateral COB. Carga: USB (cable incluido). Incluye: Estuche rígido y correa."
+  },
+  "917": {
+    "nombre": "Modulador FM Bluetooth ALS-A09 para Auto - Negro",
+    "precio": 21800,
+    "archivo": "accesorios",
+    "base": "Modulador FM Bluetooth ALS-A09 para Auto",
+    "color": "Negro",
+    "imagen": "assets/img/modulador-fm-als-a09.webp",
+    "descripcion": "Conexión: Bluetooth 5.0 (música y manos libres). Carga: Doble USB, hasta 3.1 A. Extras: Lee pendrive y muestra el voltaje de la batería."
   }
 }

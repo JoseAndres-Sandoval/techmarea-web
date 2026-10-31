@@ -99,6 +99,42 @@ const catalogoComputacion = [
         imagen: "assets/img/mouse-00dv-celeste-real.webp",
         specs: "<li><strong>Conexión:</strong> Dual: Bluetooth 5.1 + 2.4 GHz</li><li><strong>Batería:</strong> Recargable 500 mAh por Tipo C (hasta 8 h de uso)</li><li><strong>DPI:</strong> 1000 / 1200 / 1800</li><li><strong>Botones:</strong> 4 comandos configurables</li><li><strong>Ahorro:</strong> Suspensión automática a los 60 s</li><li><strong>Color:</strong> Celeste</li>",
         precio: 16000
+    },
+    {
+        id: 652,
+        nombre: "Pendrive 64 GB MODS-980",
+        categoria: "almacenamiento",
+        color: "Negro",
+        imagen: "assets/img/pendrive-64gb.webp",
+        specs: "<li><strong>Capacidad:</strong> 64 GB</li><li><strong>Conexión:</strong> USB 3.2</li><li><strong>Diseño:</strong> Retráctil, sin tapa</li>",
+        precio: 35000
+    },
+    {
+        id: 653,
+        nombre: "Pendrive 32 GB MODS-979",
+        categoria: "almacenamiento",
+        color: "Negro",
+        imagen: "assets/img/pendrive-32gb.webp",
+        specs: "<li><strong>Capacidad:</strong> 32 GB</li><li><strong>Conexión:</strong> USB 3.2</li><li><strong>Diseño:</strong> Retráctil, sin tapa</li>",
+        precio: 23400
+    },
+    {
+        id: 654,
+        nombre: "Hub Adaptador Tipo C 3 en 1 (HDMI 4K + USB 3.0 + Tipo C PD) MODV-0013 XAEA",
+        categoria: "conectividad",
+        color: "Plateado",
+        imagen: "assets/img/hub-modv-0013-real.webp",
+        imagenHover: "assets/img/hub-modv-0013-real-2.webp",
+        specs: "<li><strong>Entrada:</strong> Tipo C (con cable)</li><li><strong>Salidas:</strong> HDMI 4K, USB 3.0 y Tipo C PD (carga rápida)</li><li><strong>Uso:</strong> Conectá tu notebook o celular a un TV o monitor</li>",
+        precio: 11200
+    },
+    {
+        id: 655,
+        nombre: "Adaptador WiFi USB con Antena 1200 Mbps",
+        categoria: "conectividad",
+        imagen: "assets/img/antena-wifi-1200-real.webp",
+        specs: "<li><strong>Velocidad:</strong> Hasta 1200 Mbps (802.11n, 2.4 GHz)</li><li><strong>Conexión:</strong> USB 2.0</li><li><strong>Antena:</strong> Externa desmontable para mejor señal</li><li><strong>Compatible:</strong> Windows, Mac y Linux</li>",
+        precio: 9600
     }
 ];
 

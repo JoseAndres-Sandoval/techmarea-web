@@ -43,7 +43,8 @@
       "scripts/**",
       "**/*.log",
       "**/*.md",
-      "videos/**"
+      "videos/**",
+      "**/*.xlsx"
     ],
     "cleanUrls": false,
     "rewrites": [
