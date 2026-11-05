@@ -1210,3 +1210,12 @@ body {
     .mitad-izquierda { padding-top: 120px; }
     .mitad-derecha { padding-top: 80px; }
 }
+
+/* Todas las imágenes de categorías del mismo tamaño */
+.tarjeta-categoria .imagen-producto {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center;
+}
