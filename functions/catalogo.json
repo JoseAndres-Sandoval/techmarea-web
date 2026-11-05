@@ -917,6 +917,15 @@
     "imagen": "assets/img/antena-wifi-1200-real.webp",
     "descripcion": "Velocidad: Hasta 1200 Mbps (802.11n, 2.4 GHz). Conexión: USB 2.0. Antena: Externa desmontable para mejor señal. Compatible: Windows, Mac y Linux."
   },
+  "656": {
+    "nombre": "Hub USB 3.0 de 4 Puertos MODV-0011 XAEA (conexión USB-A) - Plateado",
+    "precio": 8000,
+    "archivo": "computacion",
+    "base": "Hub USB 3.0 de 4 Puertos MODV-0011 XAEA (conexión USB-A)",
+    "color": "Plateado",
+    "imagen": "assets/img/hub-modv-0011-real.webp",
+    "descripcion": "Puertos: 4 USB 3.0. Velocidad: Transferencia de hasta 5 Gbps. Conexión: USB-A (con cable). Compatibilidad: Múltiples sistemas."
+  },
   "700": {
     "nombre": "Vidrio Templado Común - Motorola E13",
     "precio": 7000,

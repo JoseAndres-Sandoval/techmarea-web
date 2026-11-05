@@ -129,6 +129,16 @@ const catalogoComputacion = [
         precio: 12000
     },
     {
+        id: 656,
+        nombre: "Hub USB 3.0 de 4 Puertos MODV-0011 XAEA (conexión USB-A)",
+        categoria: "conectividad",
+        color: "Plateado",
+        imagen: "assets/img/hub-modv-0011-real.webp",
+        imagenHover: "assets/img/hub-modv-0011-real-2.webp",
+        specs: "<li><strong>Puertos:</strong> 4 USB 3.0</li><li><strong>Velocidad:</strong> Transferencia de hasta 5 Gbps</li><li><strong>Conexión:</strong> USB-A (con cable)</li><li><strong>Compatibilidad:</strong> Múltiples sistemas</li>",
+        precio: 8000
+    },
+    {
         id: 655,
         nombre: "Adaptador WiFi USB con Antena 1200 Mbps",
         categoria: "conectividad",
