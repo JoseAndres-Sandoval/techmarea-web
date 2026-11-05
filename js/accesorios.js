@@ -62,7 +62,7 @@ const catalogoAccesorios = [
         imagen: "assets/img/ventilador-g6630ga-negro.webp",
         imagenHover: "assets/img/ventilador-g6630ga-real.webp",
         specs: "<li><strong>Tipo:</strong> Ventilador de escritorio, ángulo ajustable</li><li><strong>Velocidades:</strong> 3</li><li><strong>Carga:</strong> USB (2 a 4 h), batería desmontable</li><li><strong>Color:</strong> Negro</li>",
-        precio: 18700
+        precio: 19000
     },
     {
         id: 906,
@@ -72,7 +72,7 @@ const catalogoAccesorios = [
         imagen: "assets/img/ventilador-g6630ga-blanco.webp",
         imagenHover: "assets/img/ventilador-g6630ga-real.webp",
         specs: "<li><strong>Tipo:</strong> Ventilador de escritorio, ángulo ajustable</li><li><strong>Velocidades:</strong> 3</li><li><strong>Carga:</strong> USB (2 a 4 h), batería desmontable</li><li><strong>Color:</strong> Blanco</li>",
-        precio: 18700
+        precio: 19000
     },
     {
         id: 907,
@@ -101,7 +101,7 @@ const catalogoAccesorios = [
         color: "Gris",
         imagen: "assets/img/ventilador-dd8193b-real.webp",
         specs: "<li><strong>Tipo:</strong> Mini ventilador portátil recargable</li><li><strong>Color:</strong> Gris</li>",
-        precio: 10300
+        precio: 12000
     },
     {
         id: 910,
@@ -110,7 +110,7 @@ const catalogoAccesorios = [
         color: "Rosa",
         imagen: "assets/img/ventilador-dd8193b-real.webp",
         specs: "<li><strong>Tipo:</strong> Mini ventilador portátil recargable</li><li><strong>Color:</strong> Rosa</li>",
-        precio: 10300
+        precio: 12000
     },
     {
         id: 911,
@@ -119,7 +119,7 @@ const catalogoAccesorios = [
         color: "Verde",
         imagen: "assets/img/ventilador-dd8193b-real.webp",
         specs: "<li><strong>Tipo:</strong> Mini ventilador portátil recargable</li><li><strong>Color:</strong> Verde</li>",
-        precio: 10300
+        precio: 12000
     },
     {
         id: 912,
@@ -129,7 +129,7 @@ const catalogoAccesorios = [
         imagen: "assets/img/funda-sumergible-azul-real.webp",
         imagenHover: "assets/img/funda-sumergible-real.webp",
         specs: "<li><strong>Uso:</strong> Protege el celular del agua (pileta, playa, lluvia)</li><li><strong>Compatibilidad:</strong> Universal</li><li><strong>Color:</strong> Azul</li>",
-        precio: 3400
+        precio: 5000
     },
     {
         id: 913,
@@ -138,7 +138,7 @@ const catalogoAccesorios = [
         color: "Celeste",
         imagen: "assets/img/funda-sumergible-real.webp",
         specs: "<li><strong>Uso:</strong> Protege el celular del agua (pileta, playa, lluvia)</li><li><strong>Compatibilidad:</strong> Universal</li><li><strong>Color:</strong> Celeste</li>",
-        precio: 3400
+        precio: 5000
     },
     {
         id: 914,
@@ -147,7 +147,7 @@ const catalogoAccesorios = [
         color: "Rosa",
         imagen: "assets/img/funda-sumergible-real.webp",
         specs: "<li><strong>Uso:</strong> Protege el celular del agua (pileta, playa, lluvia)</li><li><strong>Compatibilidad:</strong> Universal</li><li><strong>Color:</strong> Rosa</li>",
-        precio: 3400
+        precio: 5000
     },
     {
         id: 915,
@@ -156,7 +156,7 @@ const catalogoAccesorios = [
         color: "Fucsia",
         imagen: "assets/img/funda-sumergible-real.webp",
         specs: "<li><strong>Uso:</strong> Protege el celular del agua (pileta, playa, lluvia)</li><li><strong>Compatibilidad:</strong> Universal</li><li><strong>Color:</strong> Fucsia</li>",
-        precio: 3400
+        precio: 5000
     },
     {
         id: 916,
@@ -165,7 +165,7 @@ const catalogoAccesorios = [
         imagen: "assets/img/linterna-led-real.webp",
         imagenHover: "assets/img/linterna-led-real-2.webp",
         specs: "<li><strong>Luz:</strong> LED frontal con zoom + luz lateral COB</li><li><strong>Carga:</strong> USB (cable incluido)</li><li><strong>Incluye:</strong> Estuche rígido y correa</li>",
-        precio: 6500
+        precio: 9000
     },
     {
         id: 917,
@@ -174,7 +174,16 @@ const catalogoAccesorios = [
         color: "Negro",
         imagen: "assets/img/modulador-fm-als-a09.webp",
         specs: "<li><strong>Conexión:</strong> Bluetooth 5.0 (música y manos libres)</li><li><strong>Carga:</strong> Doble USB, hasta 3.1 A</li><li><strong>Extras:</strong> Lee pendrive y muestra el voltaje de la batería</li>",
-        precio: 21800
+        precio: 22000
+    },
+    {
+        id: 918,
+        nombre: "Organizador de Cables Grande MODS-781",
+        categoria: "hogar",
+        color: "Negro",
+        imagen: "assets/img/logo-olas.svg",
+        specs: "<li><strong>Uso:</strong> Ordena cables, cargadores y auriculares</li><li><strong>Tamaño:</strong> Grande</li><li><strong>Color:</strong> Negro</li>",
+        precio: 3000
     }
 ];
 

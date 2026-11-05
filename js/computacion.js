@@ -116,7 +116,7 @@ const catalogoComputacion = [
         color: "Negro",
         imagen: "assets/img/pendrive-32gb.webp",
         specs: "<li><strong>Capacidad:</strong> 32 GB</li><li><strong>Conexión:</strong> USB 3.2</li><li><strong>Diseño:</strong> Retráctil, sin tapa</li>",
-        precio: 23400
+        precio: 25000
     },
     {
         id: 654,
@@ -126,7 +126,7 @@ const catalogoComputacion = [
         imagen: "assets/img/hub-modv-0013-real.webp",
         imagenHover: "assets/img/hub-modv-0013-real-2.webp",
         specs: "<li><strong>Entrada:</strong> Tipo C (con cable)</li><li><strong>Salidas:</strong> HDMI 4K, USB 3.0 y Tipo C PD (carga rápida)</li><li><strong>Uso:</strong> Conectá tu notebook o celular a un TV o monitor</li>",
-        precio: 11200
+        precio: 12000
     },
     {
         id: 655,
@@ -134,7 +134,7 @@ const catalogoComputacion = [
         categoria: "conectividad",
         imagen: "assets/img/antena-wifi-1200-real.webp",
         specs: "<li><strong>Velocidad:</strong> Hasta 1200 Mbps (802.11n, 2.4 GHz)</li><li><strong>Conexión:</strong> USB 2.0</li><li><strong>Antena:</strong> Externa desmontable para mejor señal</li><li><strong>Compatible:</strong> Windows, Mac y Linux</li>",
-        precio: 9600
+        precio: 10000
     }
 ];
 

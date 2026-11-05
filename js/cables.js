@@ -266,7 +266,7 @@ const catalogoCablesTodos = [
         imagen: "assets/img/cable-qualy-lightning-real.webp",
         imagenHover: "assets/img/cable-qualy-lightning-real-2.webp",
         specs: "<li><strong>Conexión:</strong> USB-A a Lightning (iPhone)</li><li><strong>Carga:</strong> Rápida hasta 4.4 A</li><li><strong>Construcción:</strong> Núcleo 100% cobre puro</li><li><strong>Largo:</strong> 1 m</li>",
-        precio: 4600
+        precio: 8000
     },
     {
         id: 225,
@@ -275,7 +275,7 @@ const catalogoCablesTodos = [
         color: "Champagne",
         imagen: "assets/img/cable-zeus-c-lightning-champagne.webp",
         specs: "<li><strong>Conexión:</strong> Tipo C a Lightning (iPhone)</li><li><strong>Carga:</strong> Rápida hasta 60 W (3 A)</li><li><strong>Construcción:</strong> 110 hilos de cobre</li><li><strong>Largo:</strong> 1 m</li>",
-        precio: 7700
+        precio: 8000
     },
     {
         id: 226,
@@ -284,7 +284,7 @@ const catalogoCablesTodos = [
         color: "Negro",
         imagen: "assets/img/cable-hera-c-lightning-negro.webp",
         specs: "<li><strong>Conexión:</strong> Tipo C a Lightning (iPhone)</li><li><strong>Carga:</strong> Rápida, alta velocidad de datos</li><li><strong>Largo:</strong> 1.5 m</li>",
-        precio: 9400
+        precio: 8000
     },
     {
         id: 227,
@@ -292,7 +292,7 @@ const catalogoCablesTodos = [
         categoria: "auxiliar",
         imagen: "assets/img/adaptador-tc-35-real.webp",
         specs: "<li><strong>Conexión:</strong> Tipo C (macho) a ficha 3.5 mm (hembra)</li><li><strong>Uso:</strong> Conectá auriculares con ficha a tu celular</li>",
-        precio: 6200
+        precio: 7000
     },
     {
         id: 228,
@@ -300,7 +300,7 @@ const catalogoCablesTodos = [
         categoria: "auxiliar",
         imagen: "assets/img/adaptador-lightning-35-real.webp",
         specs: "<li><strong>Conexión:</strong> Lightning (macho) a ficha 3.5 mm (hembra)</li><li><strong>Uso:</strong> Conectá auriculares con ficha a tu iPhone</li>",
-        precio: 6600
+        precio: 7000
     },
     {
         id: 229,
@@ -308,7 +308,7 @@ const catalogoCablesTodos = [
         categoria: "auxiliar",
         imagen: "assets/img/cable-2rca-real.webp",
         specs: "<li><strong>Conexión:</strong> Ficha 3.5 mm a 2 RCA</li><li><strong>Largo:</strong> 1.5 m</li>",
-        precio: 2900
+        precio: 6000
     }
 ];
 

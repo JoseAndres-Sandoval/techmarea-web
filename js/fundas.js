@@ -56,6 +56,8 @@ const catalogoFundas = [
     { id: 844, nombre: "Funda iPhone 17 Pro - MagSafe Cosmic (Azul)", marca: "iPhone", modelo: "17 Pro", detalle: "MagSafe Cosmic · Azul", precio: 15000 },
     { id: 845, nombre: "Funda iPhone 17 Pro - Silicona Lens (Lila)", marca: "iPhone", modelo: "17 Pro", detalle: "Silicona Lens · Lila", precio: 11000 },
     { id: 846, nombre: "Funda iPhone 17 Pro - Silicona Lens (Rosa)", marca: "iPhone", modelo: "17 Pro", detalle: "Silicona Lens · Rosa", precio: 11000 },
+    { id: 898, nombre: "Funda iPhone 17 Pro - Espacio MagSafe (Violeta)", marca: "iPhone", modelo: "17 Pro", detalle: "Espacio MagSafe · Violeta", precio: 15000 },
+    { id: 899, nombre: "Funda iPhone 17 Pro - Cristal X", marca: "iPhone", modelo: "17 Pro", detalle: "Cristal X", precio: 9000 },
     { id: 847, nombre: "Funda iPhone 17 Pro Max - Shade (Azul)", marca: "iPhone", modelo: "17 Pro Max", detalle: "Shade · Azul", precio: 11000 },
     { id: 848, nombre: "Funda iPhone 17 Pro Max - Shade (Marrón)", marca: "iPhone", modelo: "17 Pro Max", detalle: "Shade · Marrón", precio: 11000 },
     { id: 849, nombre: "Funda Samsung A05 - Espacio (Gris)", marca: "Samsung", modelo: "A05", detalle: "Espacio · Gris", precio: 9000 },

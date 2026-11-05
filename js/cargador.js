@@ -18,7 +18,7 @@ const catalogoCargadoresTodos = [
         imagen: "assets/img/ADAPTADOR-CARGADOR 220V MODX-507 RAPTOR – 5,1A – 45W – 1TC + PD – XAEA – BLANCO.webp",
         imagenHover: "assets/img/ADAPTADOR-CARGADOR 220V MODX-507 RAPTOR – 5,1A – 45W – 1TC + PD – XAEA – BLANCO1.webp",
         specs: "<li><strong>Potencia:</strong> 45W de salida máxima</li><li><strong>Amperaje y Voltaje:</strong> 5.1A / 9VCC</li><li><strong>Conexión:</strong> 1 Puerto Tipo C (Power Delivery)</li><li><strong>Material:</strong> Plástico ABS resistente</li><li><strong>Incluye:</strong> Solo el adaptador (sin cable)</li>",
-        precio: 7000
+        precio: 8000
     },
     {
         id: 308,
@@ -38,7 +38,7 @@ const catalogoCargadoresTodos = [
         imagen: "assets/img/ADAPTADOR-CARGADOR 220V MODX-516 HYPER – 5,4A – 1USB + 1TC – XAEA – BLANCO.webp",
         imagenHover: "assets/img/ADAPTADOR-CARGADOR 220V MODX-516 HYPER – 5,4A – 1USB + 1TC – XAEA – BLANCO1.webp",
         specs: "<li><strong>Potencia:</strong> 55W Total (USB-C: 55W / USB-A: 18W)</li><li><strong>Amperaje:</strong> 5.4A</li><li><strong>Conexión:</strong> 1 Puerto Tipo C + 1 Puerto USB-A</li><li><strong>Tensión de Entrada:</strong> AC 100-220V</li><li><strong>Incluye:</strong> Cable Tipo C a Tipo C</li>",
-        precio: 19000
+        precio: 20000
     },
     {
         id: 302,
@@ -48,7 +48,7 @@ const catalogoCargadoresTodos = [
         imagen: "assets/img/ADAPTADOR-CARGADOR 220V MODX-616 EXTREME – 6,2A – 1USB + 2TC – XAEA – BLANCO.webp",
         imagenHover: "assets/img/ADAPTADOR-CARGADOR 220V MODX-616 EXTREME – 6,2A – 1USB + 2TC – XAEA – BLANCO1.webp",
         specs: "<li><strong>Potencia:</strong> 65W Total (USB-C: 65W / USB-A: 18W)</li><li><strong>Amperaje:</strong> 6.2A</li><li><strong>Conexión:</strong> 2 Puertos Tipo C + 1 Puerto USB-A</li><li><strong>Incluye:</strong> Cable Tipo C a Tipo C</li>",
-        precio: 21000
+        precio: 25000
     },
     {
         id: 303,
@@ -58,7 +58,7 @@ const catalogoCargadoresTodos = [
         imagen: "assets/img/ADAPTADOR-CARGADOR 220V MODX-A016 OPTIMUM – 5A – TIPO C – XAEA.webp",
         imagenHover: "assets/img/ADAPTADOR-CARGADOR 220V MODX-A016 OPTIMUM – 5A – TIPO C – XAEA1.webp",
         specs: "<li><strong>Potencia:</strong> 45W (Power Delivery)</li><li><strong>Amperaje y Voltaje:</strong> 5A / 9VCC</li><li><strong>Conexión:</strong> 1 Puerto Tipo C</li><li><strong>Incluye:</strong> Cable Tipo C a iPhone (Lightning)</li>",
-        precio: 11000
+        precio: 14000
     },
     {
         id: 304,
@@ -68,6 +68,15 @@ const catalogoCargadoresTodos = [
         imagen: "assets/img/CARGADOR 220V MODX-C015 – INTENSIFY – 1USB 1TC + CABLE USB A TIPO C – XAEA – BLANCO.webp",
         imagenHover: "assets/img/CARGADOR 220V MODX-C015 – INTENSIFY – 1USB 1TC + CABLE USB A TIPO C – XAEA – BLANCO1.webp",
         specs: "<li><strong>Potencia:</strong> 30W</li><li><strong>Conexión:</strong> 1 Puerto Tipo C + 1 Puerto USB-A</li><li><strong>Tensión y Salida:</strong> AC 100-220V / 5VCC</li><li><strong>Extras:</strong> Incluye cable USB a Tipo C (1 metro, 2A)</li>",
+        precio: 9000
+    },
+    {
+        id: 309,
+        nombre: "Cargador Intensify 2 USB + Cable USB a V8 (Micro USB) MODO-A015 XAEA",
+        categoria: "cargador-pared",
+        color: "Blanco",
+        imagen: "assets/img/Cargador.webp",
+        specs: "<li><strong>Conexión:</strong> 2 puertos USB-A</li><li><strong>Tensión:</strong> AC 100-220V</li><li><strong>Extras:</strong> Incluye cable USB a V8 (Micro USB)</li>",
         precio: 9000
     },
     {

@@ -478,7 +478,7 @@
   },
   "125": {
     "nombre": "Auriculares Bluetooth Deportivos Sport Sound Pro MODX-00KD XAEA - Negro",
-    "precio": 40600,
+    "precio": 35000,
     "archivo": "auriculares",
     "base": "Auriculares Bluetooth Deportivos Sport Sound Pro MODX-00KD XAEA",
     "color": "Negro",
@@ -487,7 +487,7 @@
   },
   "126": {
     "nombre": "Auriculares Bluetooth Deportivos Sport Sound Pro MODX-00KD XAEA - Gris",
-    "precio": 40600,
+    "precio": 35000,
     "archivo": "auriculares",
     "base": "Auriculares Bluetooth Deportivos Sport Sound Pro MODX-00KD XAEA",
     "color": "Gris",
@@ -496,7 +496,7 @@
   },
   "127": {
     "nombre": "Auricular con cable Tipo C Onix-C MODX-00KG XAEA - Negro",
-    "precio": 4300,
+    "precio": 7900,
     "archivo": "auriculares",
     "base": "Auricular con cable Tipo C Onix-C MODX-00KG XAEA",
     "color": "Negro",
@@ -505,7 +505,7 @@
   },
   "128": {
     "nombre": "Auricular con cable Tipo C Onix-C MODX-00KG XAEA - Dorado",
-    "precio": 4300,
+    "precio": 7900,
     "archivo": "auriculares",
     "base": "Auricular con cable Tipo C Onix-C MODX-00KG XAEA",
     "color": "Dorado",
@@ -577,7 +577,7 @@
   },
   "224": {
     "nombre": "Cable USB a Lightning Qualy MOD 75 XAEA - Blanco",
-    "precio": 4600,
+    "precio": 8000,
     "archivo": "cables",
     "base": "Cable USB a Lightning Qualy MOD 75 XAEA",
     "color": "Blanco",
@@ -586,7 +586,7 @@
   },
   "225": {
     "nombre": "Cable Zeus Tipo C - Lightning MODX-00MD XAEA - Champagne",
-    "precio": 7700,
+    "precio": 8000,
     "archivo": "cables",
     "base": "Cable Zeus Tipo C - Lightning MODX-00MD XAEA",
     "color": "Champagne",
@@ -595,7 +595,7 @@
   },
   "226": {
     "nombre": "Cable Hera Tipo C - Lightning MODX-106 XAEA - Negro",
-    "precio": 9400,
+    "precio": 8000,
     "archivo": "cables",
     "base": "Cable Hera Tipo C - Lightning MODX-106 XAEA",
     "color": "Negro",
@@ -604,7 +604,7 @@
   },
   "227": {
     "nombre": "Adaptador Tipo C a Auxiliar 3.5 mm",
-    "precio": 6200,
+    "precio": 7000,
     "archivo": "cables",
     "base": "Adaptador Tipo C a Auxiliar 3.5 mm",
     "color": "",
@@ -613,7 +613,7 @@
   },
   "228": {
     "nombre": "Adaptador Lightning (iPhone) a Auxiliar 3.5 mm",
-    "precio": 6600,
+    "precio": 7000,
     "archivo": "cables",
     "base": "Adaptador Lightning (iPhone) a Auxiliar 3.5 mm",
     "color": "",
@@ -622,7 +622,7 @@
   },
   "229": {
     "nombre": "Cable de Audio 3.5 mm a 2 RCA",
-    "precio": 2900,
+    "precio": 6000,
     "archivo": "cables",
     "base": "Cable de Audio 3.5 mm a 2 RCA",
     "color": "",
@@ -631,7 +631,7 @@
   },
   "300": {
     "nombre": "Adaptador Cargador 220V MODX-507 Raptor 45W XAEA (Blanco) - Blanco",
-    "precio": 7000,
+    "precio": 8000,
     "archivo": "cargador",
     "base": "Adaptador Cargador 220V MODX-507 Raptor 45W XAEA (Blanco)",
     "color": "Blanco",
@@ -640,7 +640,7 @@
   },
   "301": {
     "nombre": "Cargador 220V Hyper 5,4A USB + Tipo C + Cable C a C MODX-00JJ XAEA Premium (Blanco) - Blanco",
-    "precio": 19000,
+    "precio": 20000,
     "archivo": "cargador",
     "base": "Cargador 220V Hyper 5,4A USB + Tipo C + Cable C a C MODX-00JJ XAEA Premium (Blanco)",
     "color": "Blanco",
@@ -649,7 +649,7 @@
   },
   "302": {
     "nombre": "Cargador 220V Extreme 6,2A USB + 2 Tipo C + Cable C a C MODX-00JK XAEA Premium (Blanco) - Blanco",
-    "precio": 21000,
+    "precio": 25000,
     "archivo": "cargador",
     "base": "Cargador 220V Extreme 6,2A USB + 2 Tipo C + Cable C a C MODX-00JK XAEA Premium (Blanco)",
     "color": "Blanco",
@@ -658,7 +658,7 @@
   },
   "303": {
     "nombre": "Cargador 220V Optimum 5A Tipo C + Cable C a iPhone MODX-00JH XAEA (Blanco) - Blanco",
-    "precio": 11000,
+    "precio": 14000,
     "archivo": "cargador",
     "base": "Cargador 220V Optimum 5A Tipo C + Cable C a iPhone MODX-00JH XAEA (Blanco)",
     "color": "Blanco",
@@ -700,6 +700,15 @@
     "color": "Blanco",
     "imagen": "assets/img/ADAPTADOR-CARGADOR 220V MODX-507 RAPTOR – 5,1A – 45W – 1TC + PD – XAEA – BLANCO.webp",
     "descripcion": "Potencia: 45W de salida máxima. Amperaje: 5.1A. Conexión: 1 Puerto Tipo C (Power Delivery). Incluye: Cable Tipo C."
+  },
+  "309": {
+    "nombre": "Cargador Intensify 2 USB + Cable USB a V8 (Micro USB) MODO-A015 XAEA - Blanco",
+    "precio": 9000,
+    "archivo": "cargador",
+    "base": "Cargador Intensify 2 USB + Cable USB a V8 (Micro USB) MODO-A015 XAEA",
+    "color": "Blanco",
+    "imagen": "assets/img/Cargador.webp",
+    "descripcion": "Conexión: 2 puertos USB-A. Tensión: AC 100-220V. Extras: Incluye cable USB a V8 (Micro USB)."
   },
   "403": {
     "nombre": "Power Bank Inalámbrico Tars 20000 mAh MODX-00CE XAEA - Blanco",
@@ -883,7 +892,7 @@
   },
   "653": {
     "nombre": "Pendrive 32 GB MODS-979 - Negro",
-    "precio": 23400,
+    "precio": 25000,
     "archivo": "computacion",
     "base": "Pendrive 32 GB MODS-979",
     "color": "Negro",
@@ -892,7 +901,7 @@
   },
   "654": {
     "nombre": "Hub Adaptador Tipo C 3 en 1 (HDMI 4K + USB 3.0 + Tipo C PD) MODV-0013 XAEA - Plateado",
-    "precio": 11200,
+    "precio": 12000,
     "archivo": "computacion",
     "base": "Hub Adaptador Tipo C 3 en 1 (HDMI 4K + USB 3.0 + Tipo C PD) MODV-0013 XAEA",
     "color": "Plateado",
@@ -901,7 +910,7 @@
   },
   "655": {
     "nombre": "Adaptador WiFi USB con Antena 1200 Mbps",
-    "precio": 9600,
+    "precio": 10000,
     "archivo": "computacion",
     "base": "Adaptador WiFi USB con Antena 1200 Mbps",
     "color": "",
@@ -1540,7 +1549,7 @@
   },
   "770": {
     "nombre": "Vidrio Templado Premium Autoinstalable - iPhone 16 Pro Max",
-    "precio": 7000,
+    "precio": 9000,
     "archivo": "vidrios",
     "base": "Vidrio Templado Premium Autoinstalable - iPhone 16 Pro Max",
     "color": "",
@@ -1549,7 +1558,7 @@
   },
   "771": {
     "nombre": "Vidrio Templado Premium Autoinstalable - Samsung S26 Ultra",
-    "precio": 7000,
+    "precio": 9000,
     "archivo": "vidrios",
     "base": "Vidrio Templado Premium Autoinstalable - Samsung S26 Ultra",
     "color": "",
@@ -2438,6 +2447,24 @@
     "imagen": "assets/img/fundas-local.webp",
     "descripcion": "Modelo: Redmi Note 15 Pro. Silicona Color · Negro"
   },
+  "898": {
+    "nombre": "Funda iPhone 17 Pro - Espacio MagSafe (Violeta)",
+    "precio": 15000,
+    "archivo": "fundas",
+    "base": "Funda iPhone 17 Pro - Espacio MagSafe (Violeta)",
+    "color": "",
+    "imagen": "assets/img/fundas-local.webp",
+    "descripcion": "Modelo: 17 Pro. Espacio MagSafe · Violeta"
+  },
+  "899": {
+    "nombre": "Funda iPhone 17 Pro - Cristal X",
+    "precio": 9000,
+    "archivo": "fundas",
+    "base": "Funda iPhone 17 Pro - Cristal X",
+    "color": "",
+    "imagen": "assets/img/fundas-local.webp",
+    "descripcion": "Modelo: 17 Pro. Cristal X"
+  },
   "900": {
     "nombre": "Micrófono Inalámbrico K8 (Tipo C + iPhone)",
     "precio": 12000,
@@ -2485,7 +2512,7 @@
   },
   "905": {
     "nombre": "Ventilador Portátil Recargable G6630GA - Negro",
-    "precio": 18700,
+    "precio": 19000,
     "archivo": "accesorios",
     "base": "Ventilador Portátil Recargable G6630GA",
     "color": "Negro",
@@ -2494,7 +2521,7 @@
   },
   "906": {
     "nombre": "Ventilador Portátil Recargable G6630GA - Blanco",
-    "precio": 18700,
+    "precio": 19000,
     "archivo": "accesorios",
     "base": "Ventilador Portátil Recargable G6630GA",
     "color": "Blanco",
@@ -2521,7 +2548,7 @@
   },
   "909": {
     "nombre": "Mini Ventilador Portátil Recargable DD8193B - Gris",
-    "precio": 10300,
+    "precio": 12000,
     "archivo": "accesorios",
     "base": "Mini Ventilador Portátil Recargable DD8193B",
     "color": "Gris",
@@ -2530,7 +2557,7 @@
   },
   "910": {
     "nombre": "Mini Ventilador Portátil Recargable DD8193B - Rosa",
-    "precio": 10300,
+    "precio": 12000,
     "archivo": "accesorios",
     "base": "Mini Ventilador Portátil Recargable DD8193B",
     "color": "Rosa",
@@ -2539,7 +2566,7 @@
   },
   "911": {
     "nombre": "Mini Ventilador Portátil Recargable DD8193B - Verde",
-    "precio": 10300,
+    "precio": 12000,
     "archivo": "accesorios",
     "base": "Mini Ventilador Portátil Recargable DD8193B",
     "color": "Verde",
@@ -2548,7 +2575,7 @@
   },
   "912": {
     "nombre": "Funda Sumergible Universal para Celular - Azul",
-    "precio": 3400,
+    "precio": 5000,
     "archivo": "accesorios",
     "base": "Funda Sumergible Universal para Celular",
     "color": "Azul",
@@ -2557,7 +2584,7 @@
   },
   "913": {
     "nombre": "Funda Sumergible Universal para Celular - Celeste",
-    "precio": 3400,
+    "precio": 5000,
     "archivo": "accesorios",
     "base": "Funda Sumergible Universal para Celular",
     "color": "Celeste",
@@ -2566,7 +2593,7 @@
   },
   "914": {
     "nombre": "Funda Sumergible Universal para Celular - Rosa",
-    "precio": 3400,
+    "precio": 5000,
     "archivo": "accesorios",
     "base": "Funda Sumergible Universal para Celular",
     "color": "Rosa",
@@ -2575,7 +2602,7 @@
   },
   "915": {
     "nombre": "Funda Sumergible Universal para Celular - Fucsia",
-    "precio": 3400,
+    "precio": 5000,
     "archivo": "accesorios",
     "base": "Funda Sumergible Universal para Celular",
     "color": "Fucsia",
@@ -2584,7 +2611,7 @@
   },
   "916": {
     "nombre": "Linterna LED Mini Recargable con Luz Lateral",
-    "precio": 6500,
+    "precio": 9000,
     "archivo": "accesorios",
     "base": "Linterna LED Mini Recargable con Luz Lateral",
     "color": "",
@@ -2593,11 +2620,20 @@
   },
   "917": {
     "nombre": "Modulador FM Bluetooth ALS-A09 para Auto - Negro",
-    "precio": 21800,
+    "precio": 22000,
     "archivo": "accesorios",
     "base": "Modulador FM Bluetooth ALS-A09 para Auto",
     "color": "Negro",
     "imagen": "assets/img/modulador-fm-als-a09.webp",
     "descripcion": "Conexión: Bluetooth 5.0 (música y manos libres). Carga: Doble USB, hasta 3.1 A. Extras: Lee pendrive y muestra el voltaje de la batería."
+  },
+  "918": {
+    "nombre": "Organizador de Cables Grande MODS-781 - Negro",
+    "precio": 3000,
+    "archivo": "accesorios",
+    "base": "Organizador de Cables Grande MODS-781",
+    "color": "Negro",
+    "imagen": "assets/img/logo-olas.svg",
+    "descripcion": "Uso: Ordena cables, cargadores y auriculares. Tamaño: Grande. Color: Negro."
   }
 }

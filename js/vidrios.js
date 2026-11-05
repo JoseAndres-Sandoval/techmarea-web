@@ -79,8 +79,8 @@ const catalogoVidrios = [
     { id: 721, nombre: "Vidrio Templado Premium - Motorola G75 5G", tipo: "premium", modelo: "Motorola G75 5G", precio: 7000 },
     { id: 722, nombre: "Vidrio Templado Premium - Motorola G86", tipo: "premium", modelo: "Motorola G86", precio: 7000 },
     { id: 734, nombre: "Vidrio Templado Premium - Xiaomi Redmi 14C", tipo: "premium", modelo: "Xiaomi Redmi 14C", precio: 7000 },
-    { id: 770, nombre: "Vidrio Templado Premium Autoinstalable - iPhone 16 Pro Max", tipo: "premium", modelo: "iPhone 16 Pro Max", precio: 7000 },
-    { id: 771, nombre: "Vidrio Templado Premium Autoinstalable - Samsung S26 Ultra", tipo: "premium", modelo: "Samsung S26 Ultra", precio: 7000 }
+    { id: 770, nombre: "Vidrio Templado Premium Autoinstalable - iPhone 16 Pro Max", tipo: "premium", modelo: "iPhone 16 Pro Max", precio: 9000 },
+    { id: 771, nombre: "Vidrio Templado Premium Autoinstalable - Samsung S26 Ultra", tipo: "premium", modelo: "Samsung S26 Ultra", precio: 9000 }
 ];
 
 // =========================================

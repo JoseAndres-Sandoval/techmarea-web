@@ -268,7 +268,7 @@ const catalogoAuricularesTodos = [
         color: "Negro",
         imagen: "assets/img/sport-sound-pro-negro.webp",
         specs: "<li><strong>Tipo:</strong> Inalámbricos TWS deportivos con gancho</li><li><strong>Conexión:</strong> Bluetooth 6.0</li><li><strong>Estuche:</strong> De carga con pantalla de batería</li><li><strong>Color:</strong> Negro</li>",
-        precio: 40600
+        precio: 35000
     },
     {
         id: 126,
@@ -277,7 +277,7 @@ const catalogoAuricularesTodos = [
         color: "Gris",
         imagen: "assets/img/sport-sound-pro-gris.webp",
         specs: "<li><strong>Tipo:</strong> Inalámbricos TWS deportivos con gancho</li><li><strong>Conexión:</strong> Bluetooth 6.0</li><li><strong>Estuche:</strong> De carga con pantalla de batería</li><li><strong>Color:</strong> Gris</li>",
-        precio: 40600
+        precio: 35000
     },
     {
         id: 127,
@@ -286,7 +286,7 @@ const catalogoAuricularesTodos = [
         color: "Negro",
         imagen: "assets/img/onix-c-negro.webp",
         specs: "<li><strong>Conexión:</strong> Tipo C</li><li><strong>Diseño:</strong> In-ear con puntas metálicas imantadas (no se enredan)</li><li><strong>Color:</strong> Negro</li>",
-        precio: 4300
+        precio: 7900
     },
     {
         id: 128,
@@ -295,7 +295,7 @@ const catalogoAuricularesTodos = [
         color: "Dorado",
         imagen: "assets/img/onix-c-dorado.webp",
         specs: "<li><strong>Conexión:</strong> Tipo C</li><li><strong>Diseño:</strong> In-ear con puntas metálicas imantadas (no se enredan)</li><li><strong>Color:</strong> Dorado</li>",
-        precio: 4300
+        precio: 7900
     }
 ];
 
