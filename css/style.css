@@ -213,9 +213,19 @@ body {
 }
 
 .tarjeta-categoria h3 {
-    font-size: 1.5rem;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 900;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
     margin-bottom: 15px;
     color: var(--color-cian);
+    background: linear-gradient(90deg, #78f5ff, #f578eb);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 8px rgba(0, 229, 255, 0.35));
 }
 
 .tarjeta-categoria p {
