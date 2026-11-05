@@ -1148,3 +1148,13 @@ body {
 .item-confianza-link:hover { transform: translateY(-2px); }
 .item-confianza-link:hover .icono-confianza { box-shadow: 0 0 20px rgba(0, 229, 255, 0.6), inset 0 0 12px rgba(0, 229, 255, 0.2); }
 .item-confianza-link span::after { content: " · Ver en el mapa →"; color: var(--color-cian); }
+
+/* Botón Consultar estado con estilo neón */
+.btn-consultar { background: transparent !important; border: 2px solid var(--color-cian) !important; color: var(--color-cian) !important; }
+.btn-consultar:hover { background: var(--color-cian) !important; color: #0b0c10 !important; box-shadow: 0 0 18px rgba(0, 229, 255, 0.5); }
+/* Ícono propio de WhatsApp */
+.whatsapp-flotante svg { width: 34px; height: 34px; }
+@media (max-width: 768px) {
+    .whatsapp-flotante { width: 46px; height: 46px; bottom: 74px; right: 14px; }
+    .whatsapp-flotante svg { width: 28px; height: 28px; }
+}
